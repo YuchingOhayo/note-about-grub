@@ -1,0 +1,29 @@
+#!/bin/sh
+exec tail -n +3 $0
+# This file provides an easy way to add custom menu entries.  Simply type the
+# menu entries you want to add after this comment.  Be careful not to change
+# the 'exec tail' line above.
+
+
+menuentry "Archcraft Xfce 2021.06.20 ISO" --class Archcraft {
+	set use_driver="free"
+	set iso_file="/opt/iso/archcraft/21.06/xfce/archcraft-2021.06.20-x86_64.iso"
+	search --no-floppy -f --set=iso_partition $iso_file
+	probe -u $iso_partition --set=iso_partition_uuid
+	set img_dev="/dev/disk/by-uuid/$iso_partition_uuid"
+	loopback loop ($iso_partition)$iso_file
+	linux (loop)/arch/boot/x86_64/vmlinuz-linux img_dev=$img_dev img_loop=$iso_file driver=$use_driver quiet splash vt.global_cursor_default=0 loglevel=2 rd.systemd.show_status=false rd.udev.log-priority=3 sysrq_always_enabled=1 cow_spacesize=2G
+	initrd (loop)/arch/boot/intel-ucode.img (loop)/arch/boot/amd-ucode.img (loop)/arch/boot/x86_64/initramfs-linux.img
+}
+
+
+menuentry "Archcraft Openbox 2021.06.20 ISO" --class Archcraft {
+	set use_driver="free"
+	set iso_file="/opt/iso/archcraft/21.06/openbox/archcraft-2021.06.06-x86_64.iso"
+	search --no-floppy -f --set=iso_partition $iso_file
+	probe -u $iso_partition --set=iso_partition_uuid
+	set img_dev="/dev/disk/by-uuid/$iso_partition_uuid"
+	loopback loop ($iso_partition)$iso_file
+	linux (loop)/arch/boot/x86_64/vmlinuz-linux img_dev=$img_dev img_loop=$iso_file driver=$use_driver quiet splash vt.global_cursor_default=0 loglevel=2 rd.systemd.show_status=false rd.udev.log-priority=3 sysrq_always_enabled=1 cow_spacesize=2G
+	initrd (loop)/arch/boot/intel-ucode.img (loop)/arch/boot/amd-ucode.img (loop)/arch/boot/x86_64/initramfs-linux.img
+}
