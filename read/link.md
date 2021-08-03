@@ -38,7 +38,6 @@ has_children: true
 * [https://archcraft.io/wiki/installation/boot/grub/](https://archcraft.io/wiki/installation/boot/grub/)
 * [https://github.com/thias/glim](https://github.com/thias/glim)
 * [http://www.jinbuguo.com/linux/grub.cfg.html](http://www.jinbuguo.com/linux/grub.cfg.html)
-
 * [https://ttys3.dev/post/how-to-boot-fedora32-live-cd-iso-from-grub2/](https://ttys3.dev/post/how-to-boot-fedora32-live-cd-iso-from-grub2/)
 * [https://ttys3.dev/post/how-to-boot-ubuntu-live-cd-iso-from-grub2/](https://ttys3.dev/post/how-to-boot-ubuntu-live-cd-iso-from-grub2/)
 
