@@ -807,10 +807,34 @@ sys_grub_config_update () {
 
 
 
-sys_grub_theme_get () {
+sys_grub_theme_get_v1 () {
 
+	local theme_txt_path="$(sys_grub_theme_get_path)"
+	local name="$(dirname "$theme_txt_path")"
+	name="$(basename "$name")"
+	echo "$name"
+}
+
+sys_grub_theme_get_v2 () {
+
+	local theme_txt_path="$(sys_grub_theme_get_path)"
+
+	## https://zh.wikipedia.org/wiki/Dirname
+	local name="${theme_txt_path%/*}"
+	## https://zh.wikipedia.org/wiki/Basename
+	name="${name##*/}"
+	echo "$name"
+}
+
+sys_grub_theme_get () {
+	#sys_grub_theme_get_v1
+	sys_grub_theme_get_v2
+}
+
+sys_grub_theme_get_path () {
 	grep '^GRUB_THEME=' "$THE_GRUBRC_MASTER_CONFIG_FILE_PATH" | cut -d '=' -f 2 | cut -d '"' -f 2
 }
+
 
 sys_grub_theme_set () {
 
@@ -1057,6 +1081,26 @@ mod_grubrc_theme_remove () {
 
 
 ################################################################################
+### Head: Model mod_grubrc_theme_path_get
+##
+
+mod_grubrc_theme_path_get () {
+	#echo "mod_grubrc_theme_path_get"
+	#echo "$@"
+
+	# grubrc-theme-ctrl path_get
+	# /etc/grub/default
+
+	sys_grub_theme_get_path
+
+}
+
+##
+### Tail: Model mod_grubrc_theme_path_get
+################################################################################
+
+
+################################################################################
 ### Head: SubCmd
 ##
 
@@ -1119,6 +1163,12 @@ sub_run_remove () {
 	mod_grubrc_theme_remove "$@"
 }
 
+
+sub_run_path_get () {
+	#echo "sub_run_path_get"
+	mod_grubrc_theme_path_get "$@"
+}
+
 ##
 ### Tail: SubCmd
 ################################################################################
@@ -1172,6 +1222,8 @@ Example:
 		$ $cmd_name install dracula https://github.com/zshzero/dracula-grub2.git
 
 		$ $cmd_name remove dracula
+
+		$ $cmd_name path_get
 
 
 Debug:
