@@ -6,9 +6,9 @@
 
 is_grubrc_theme_dir () {
 	local dir_path="$1"
-	local grubrc_theme_file_path="$dir_path/theme.txt" ## ~/.config/grub/themes/demo/up
+	local grubrc_theme_file_path="$dir_path/$THE_GRUBRC_THEME_CONFIG_FILE_NAME" ## /boot/grub/themes/demo/theme.txt
 
-	if ! [ -f "$grubrc_theme_file_path" ]; then ## check ~/.config/grub/themes/demo/up
+	if ! [ -f "$grubrc_theme_file_path" ]; then ## check /boot/grub/themes/demo/theme.txt
 		return 1
 	fi
 
@@ -17,9 +17,9 @@ is_grubrc_theme_dir () {
 
 is_not_grubrc_theme_dir () {
 	local dir_path="$1"
-	local grubrc_theme_file_path="$dir_path/theme.txt" ## ~/.config/grub/themes/demo/up
+	local grubrc_theme_file_path="$dir_path/$THE_GRUBRC_THEME_CONFIG_FILE_NAME" ## /boot/grub/themes/demo/theme.txt
 
-	if [ -f "$grubrc_theme_file_path" ]; then ## check ~/.config/grub/themes/demo/up
+	if [ -f "$grubrc_theme_file_path" ]; then ## check /boot/grub/themes/demo/theme.txt
 		return 1
 	fi
 
@@ -62,7 +62,7 @@ grubrc_theme_repo_clone () {
 
 
 	local now="$(date +%Y%m%d_%s)"
-	local temp_dir_path="/tmp/grub.bak.${now}"
+	local temp_dir_path="$THE_GRUBRC_REPO_TEMP_BASE_DIR_PATH/${THE_GRUBRC_REPO_TEMP_BASE_DIR_NAME}.${now}"
 
 	util_error_echo "sudo mkdir -p $THE_GRUBRC_THEMES_DIR_PATH"
 	sudo mkdir -p "$THE_GRUBRC_THEMES_DIR_PATH"
@@ -78,6 +78,75 @@ grubrc_theme_repo_clone () {
 
 	util_error_echo "sudo cp -a $name $target_theme_path"
 	sudo cp -a "$name" "$target_theme_path"
+
+	util_error_echo "cd $OLDPWD"
+	cd "$OLDPWD"
+
+}
+
+grubrc_theme_repo_clone_to_tmp () {
+
+	## $ grubrc-theme-ctrl install dracula https://github.com/zshzero/dracula-grub2.git
+
+	local name="$1"
+	local repo_url="$2"
+
+	if [ "none$name" = "none" ]; then
+		util_error_echo
+		util_error_echo "## Need name: "
+		util_error_echo
+		return 1
+	fi
+
+	if [ "none$repo_url" = "none" ]; then
+		util_error_echo
+		util_error_echo "## Need repo_url: "
+		util_error_echo
+		return 1
+	fi
+
+	local now="$(date +%Y%m%d_%s)"
+	local temp_dir_path="$THE_GRUBRC_REPO_TEMP_BASE_DIR_PATH/${THE_GRUBRC_REPO_TEMP_BASE_DIR_NAME}.${now}"
+
+	util_error_echo "mkdir -p $temp_dir_path"
+	mkdir -p "$temp_dir_path"
+
+	util_error_echo "cd $temp_dir_path"
+	cd "$temp_dir_path"
+
+	util_error_echo "git clone --recursive $repo_url $name"
+	git clone --recursive "$repo_url" "$name" ## git clone --recursive https://github.com/zshzero/dracula-grub2.git dracula
+
+	#util_error_echo "cd $OLDPWD"
+	#cd "$OLDPWD"
+
+}
+
+grubrc_theme_repo_copy_from_tmp () {
+
+	local name="$1"
+
+	if [ "none$name" = "none" ]; then
+		util_error_echo
+		util_error_echo "## Need name: "
+		util_error_echo
+		return 1
+	fi
+
+
+	local target_theme_path="$THE_GRUBRC_THEMES_DIR_PATH/$name"
+
+	if [ -d "$target_theme_path" ]; then
+		util_error_echo "## Theme is Exist: $target_theme_path"
+		return 1
+	fi
+
+	util_error_echo "sudo mkdir -p $THE_GRUBRC_THEMES_DIR_PATH"
+	sudo mkdir -p "$THE_GRUBRC_THEMES_DIR_PATH"
+
+	util_error_echo "sudo cp -a $name $target_theme_path"
+	sudo cp -a "$name" "$target_theme_path"
+
 
 	util_error_echo "cd $OLDPWD"
 	cd "$OLDPWD"

@@ -115,19 +115,23 @@ base_var_init () {
 
 	## grub
 	THE_GRUBRC_DIR_NAME="grub"
-	THE_GRUBRC_DIR_PATH="/boot/$THE_GRUBRC_DIR_NAME"
+	THE_GRUBRC_DIR_PATH="/boot/$THE_GRUBRC_DIR_NAME" ## /boot/grub
+
+	THE_GRUBRC_THEME_CONFIG_FILE_NAME="theme.txt"
 
 	THE_GRUBRC_THEMES_DIR_NAME="themes"
-	THE_GRUBRC_THEMES_DIR_PATH="$THE_GRUBRC_DIR_PATH/$THE_GRUBRC_THEMES_DIR_NAME"
+	THE_GRUBRC_THEMES_DIR_PATH="$THE_GRUBRC_DIR_PATH/$THE_GRUBRC_THEMES_DIR_NAME" ## /boot/grub/themes
 
 	THE_GRUBRC_MASTER_CONFIG_FILE_NAME="grub"
-	THE_GRUBRC_MASTER_CONFIG_FILE_PATH="/etc/default/$THE_GRUBRC_MASTER_CONFIG_FILE_NAME"
-	THE_GRUBRC_MASTER_CONFIG_TEMP_FILE_PATH="/tmp/$THE_GRUBRC_MASTER_CONFIG_FILE_NAME"
+	THE_GRUBRC_MASTER_CONFIG_FILE_PATH="/etc/default/$THE_GRUBRC_MASTER_CONFIG_FILE_NAME" ## /etc/default/grub
+	THE_GRUBRC_MASTER_CONFIG_TEMP_FILE_PATH="/tmp/$THE_GRUBRC_MASTER_CONFIG_FILE_NAME" ## /tmp/grub
 
-	THE_GRUBRC_MASTER_CONFIG_BASE_BACKUP_DIR_PATH="$HOME/.backup"
-	THE_GRUBRC_MASTER_CONFIG_BACKUP_DIR_PATH="$THE_GRUBRC_MASTER_CONFIG_BASE_BACKUP_DIR_PATH"
-	THE_GRUBRC_MASTER_CONFIG_BACKUP_FILE_PATH="$THE_GRUBRC_MASTER_CONFIG_BACKUP_DIR_PATH/$THE_GRUBRC_MASTER_CONFIG_FILE_NAME"
+	THE_GRUBRC_MASTER_CONFIG_BASE_BACKUP_DIR_PATH="$HOME/.backup" ## ~/.backup
+	THE_GRUBRC_MASTER_CONFIG_BACKUP_DIR_PATH="$THE_GRUBRC_MASTER_CONFIG_BASE_BACKUP_DIR_PATH" ## ~/.backup
+	THE_GRUBRC_MASTER_CONFIG_BACKUP_FILE_PATH="$THE_GRUBRC_MASTER_CONFIG_BACKUP_DIR_PATH/$THE_GRUBRC_MASTER_CONFIG_FILE_NAME" ## ~/.backup/grub
 
+	THE_GRUBRC_REPO_TEMP_BASE_DIR_NAME="grub.bak"
+	THE_GRUBRC_REPO_TEMP_BASE_DIR_PATH="/tmp/$THE_GRUBRC_REPO_TEMP_BASE_DIR_NAME" ## /tmp/grub.bak
 
 }
 
@@ -176,12 +180,29 @@ base_var_dump () {
 	util_debug_echo "THE_CACHE_DIR_PATH=$THE_CACHE_DIR_PATH"
 
 
+	## grub
 	util_debug_echo "THE_GRUBRC_DIR_NAME=$THE_GRUBRC_DIR_NAME"
 	util_debug_echo "THE_GRUBRC_DIR_PATH=$THE_GRUBRC_DIR_PATH"
 
+	util_debug_echo "THE_GRUBRC_THEME_CONFIG_FILE_NAME=$THE_GRUBRC_THEME_CONFIG_FILE_NAME"
 
 	util_debug_echo "THE_GRUBRC_THEMES_DIR_NAME=$THE_GRUBRC_THEMES_DIR_NAME"
 	util_debug_echo "THE_GRUBRC_THEMES_DIR_PATH=$THE_GRUBRC_THEMES_DIR_PATH"
+
+
+	util_debug_echo "THE_GRUBRC_MASTER_CONFIG_FILE_NAME=$THE_GRUBRC_MASTER_CONFIG_FILE_NAME"
+	util_debug_echo "THE_GRUBRC_MASTER_CONFIG_FILE_PATH=$THE_GRUBRC_MASTER_CONFIG_FILE_PATH"
+	util_debug_echo "THE_GRUBRC_MASTER_CONFIG_TEMP_FILE_PATH=$THE_GRUBRC_MASTER_CONFIG_TEMP_FILE_PATH"
+
+
+	util_debug_echo "THE_GRUBRC_MASTER_CONFIG_BASE_BACKUP_DIR_PATH=$THE_GRUBRC_MASTER_CONFIG_BASE_BACKUP_DIR_PATH"
+	util_debug_echo "THE_GRUBRC_MASTER_CONFIG_BACKUP_DIR_PATH=$THE_GRUBRC_MASTER_CONFIG_BACKUP_DIR_PATH"
+	util_debug_echo "THE_GRUBRC_MASTER_CONFIG_BACKUP_FILE_PATH=$THE_GRUBRC_MASTER_CONFIG_BACKUP_FILE_PATH"
+
+
+	util_debug_echo "THE_GRUBRC_REPO_TEMP_BASE_DIR_NAME=$THE_GRUBRC_REPO_TEMP_BASE_DIR_NAME"
+	util_debug_echo "THE_GRUBRC_REPO_TEMP_BASE_DIR_PATH=$THE_GRUBRC_REPO_TEMP_BASE_DIR_PATH"
+
 
 	util_debug_echo "#"
 	util_debug_echo "##"
@@ -393,9 +414,9 @@ util_self_actions () {
 
 is_grubrc_theme_dir () {
 	local dir_path="$1"
-	local grubrc_theme_file_path="$dir_path/theme.txt" ## ~/.config/grub/themes/demo/up
+	local grubrc_theme_file_path="$dir_path/$THE_GRUBRC_THEME_CONFIG_FILE_NAME" ## /boot/grub/themes/demo/theme.txt
 
-	if ! [ -f "$grubrc_theme_file_path" ]; then ## check ~/.config/grub/themes/demo/up
+	if ! [ -f "$grubrc_theme_file_path" ]; then ## check /boot/grub/themes/demo/theme.txt
 		return 1
 	fi
 
@@ -404,9 +425,9 @@ is_grubrc_theme_dir () {
 
 is_not_grubrc_theme_dir () {
 	local dir_path="$1"
-	local grubrc_theme_file_path="$dir_path/theme.txt" ## ~/.config/grub/themes/demo/up
+	local grubrc_theme_file_path="$dir_path/$THE_GRUBRC_THEME_CONFIG_FILE_NAME" ## /boot/grub/themes/demo/theme.txt
 
-	if [ -f "$grubrc_theme_file_path" ]; then ## check ~/.config/grub/themes/demo/up
+	if [ -f "$grubrc_theme_file_path" ]; then ## check /boot/grub/themes/demo/theme.txt
 		return 1
 	fi
 
@@ -449,7 +470,7 @@ grubrc_theme_repo_clone () {
 
 
 	local now="$(date +%Y%m%d_%s)"
-	local temp_dir_path="/tmp/grub.bak.${now}"
+	local temp_dir_path="$THE_GRUBRC_REPO_TEMP_BASE_DIR_PATH/${THE_GRUBRC_REPO_TEMP_BASE_DIR_NAME}.${now}"
 
 	util_error_echo "sudo mkdir -p $THE_GRUBRC_THEMES_DIR_PATH"
 	sudo mkdir -p "$THE_GRUBRC_THEMES_DIR_PATH"
@@ -465,6 +486,75 @@ grubrc_theme_repo_clone () {
 
 	util_error_echo "sudo cp -a $name $target_theme_path"
 	sudo cp -a "$name" "$target_theme_path"
+
+	util_error_echo "cd $OLDPWD"
+	cd "$OLDPWD"
+
+}
+
+grubrc_theme_repo_clone_to_tmp () {
+
+	## $ grubrc-theme-ctrl install dracula https://github.com/zshzero/dracula-grub2.git
+
+	local name="$1"
+	local repo_url="$2"
+
+	if [ "none$name" = "none" ]; then
+		util_error_echo
+		util_error_echo "## Need name: "
+		util_error_echo
+		return 1
+	fi
+
+	if [ "none$repo_url" = "none" ]; then
+		util_error_echo
+		util_error_echo "## Need repo_url: "
+		util_error_echo
+		return 1
+	fi
+
+	local now="$(date +%Y%m%d_%s)"
+	local temp_dir_path="$THE_GRUBRC_REPO_TEMP_BASE_DIR_PATH/${THE_GRUBRC_REPO_TEMP_BASE_DIR_NAME}.${now}"
+
+	util_error_echo "mkdir -p $temp_dir_path"
+	mkdir -p "$temp_dir_path"
+
+	util_error_echo "cd $temp_dir_path"
+	cd "$temp_dir_path"
+
+	util_error_echo "git clone --recursive $repo_url $name"
+	git clone --recursive "$repo_url" "$name" ## git clone --recursive https://github.com/zshzero/dracula-grub2.git dracula
+
+	#util_error_echo "cd $OLDPWD"
+	#cd "$OLDPWD"
+
+}
+
+grubrc_theme_repo_copy_from_tmp () {
+
+	local name="$1"
+
+	if [ "none$name" = "none" ]; then
+		util_error_echo
+		util_error_echo "## Need name: "
+		util_error_echo
+		return 1
+	fi
+
+
+	local target_theme_path="$THE_GRUBRC_THEMES_DIR_PATH/$name"
+
+	if [ -d "$target_theme_path" ]; then
+		util_error_echo "## Theme is Exist: $target_theme_path"
+		return 1
+	fi
+
+	util_error_echo "sudo mkdir -p $THE_GRUBRC_THEMES_DIR_PATH"
+	sudo mkdir -p "$THE_GRUBRC_THEMES_DIR_PATH"
+
+	util_error_echo "sudo cp -a $name $target_theme_path"
+	sudo cp -a "$name" "$target_theme_path"
+
 
 	util_error_echo "cd $OLDPWD"
 	cd "$OLDPWD"
@@ -824,6 +914,63 @@ mod_theme_dracula_install () {
 
 
 ################################################################################
+### Head: Model theme_virtual_future
+##
+
+mod_theme_virtual_future_install () {
+
+	##
+	## https://www.gnome-look.org/p/1529571/
+	## https://gitlab.com/deck451/virtual_future_grub_theme
+	## https://gitlab.com/deck451/virtual_future_grub_theme/-/tree/main/virtual_future
+	##
+
+	local name='virtual_future'
+	local repo_url='https://gitlab.com/deck451/virtual_future_grub_theme.git'
+
+
+	if [ "none$name" = "none" ]; then
+		util_error_echo
+		util_error_echo "## Need name: "
+		util_error_echo
+		return 1
+	fi
+
+
+	local target_theme_path="$THE_GRUBRC_THEMES_DIR_PATH/$name"
+
+	if [ -d "$target_theme_path" ]; then
+		util_error_echo "## Theme is Exist: $target_theme_path"
+		util_error_echo "## Please Remove First:"
+		util_error_echo "grubrc-theme-ctrl remove $name"
+		return 1
+	fi
+
+	util_error_echo "sudo mkdir -p $THE_GRUBRC_THEMES_DIR_PATH"
+	sudo mkdir -p "$THE_GRUBRC_THEMES_DIR_PATH"
+
+
+	util_error_echo
+	grubrc_theme_repo_clone_to_tmp "$name" "$repo_url"
+	util_error_echo
+
+
+	util_error_echo "sudo cp -a $name/virtual_future $target_theme_path"
+	sudo cp -a "$name/virtual_future" "$target_theme_path"
+
+	util_error_echo
+	util_error_echo "cd $OLDPWD"
+	cd "$OLDPWD"
+
+
+}
+
+##
+### Tail: Model theme_virtual_future
+################################################################################
+
+
+################################################################################
 ### Head: SubCmd
 ##
 
@@ -860,6 +1007,12 @@ sub_run_all () {
 sub_run_dracula () {
 	#echo "sub_run_dracula_rounded"
 	mod_theme_dracula_install "$@"
+}
+
+
+sub_run_virtual_future () {
+	#echo "sub_run_virtual_future_rounded"
+	mod_theme_virtual_future_install "$@"
 }
 
 ##
@@ -907,6 +1060,8 @@ Example:
 		$ $cmd_name all
 
 		$ $cmd_name dracula
+
+		$ $cmd_name virtual_future
 
 
 Debug:
