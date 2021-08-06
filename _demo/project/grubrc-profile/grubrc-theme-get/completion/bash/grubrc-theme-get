@@ -1,0 +1,18 @@
+
+## /usr/local/share/bash-completion/completions/grubrc-theme-get
+## $ sudo install -Dm644 ./grubrc-theme-get /usr/local/share/bash-completion/completions/grubrc-theme-get
+
+_grubrc_theme_get () {
+
+	local cur prev words cword
+	_init_completion || return
+
+	if [ "$cword" = "1" ]; then
+		local action_list=$(DEBUG_GRUBRC_THEME_GET=false grubrc-theme-get self_actions)
+		COMPREPLY=( $( compgen -W "$action_list" -- "$cur" ) )
+	fi
+
+	return 0
+}
+
+complete -F _grubrc_theme_get grubrc-theme-get
