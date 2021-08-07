@@ -396,17 +396,17 @@ sys_grub_config_update () {
 
 
 
-sys_grub_theme_get_v1 () {
+sys_grub_theme_get_name_v1 () {
 
-	local theme_txt_path="$(sys_grub_theme_get_path)"
+	local theme_txt_path="$(sys_grub_theme_get)"
 	local name="$(dirname "$theme_txt_path")"
 	name="$(basename "$name")"
 	echo "$name"
 }
 
-sys_grub_theme_get_v2 () {
+sys_grub_theme_get_name_v2 () {
 
-	local theme_txt_path="$(sys_grub_theme_get_path)"
+	local theme_txt_path="$(sys_grub_theme_get)"
 
 	## https://zh.wikipedia.org/wiki/Dirname
 	local name="${theme_txt_path%/*}"
@@ -415,12 +415,12 @@ sys_grub_theme_get_v2 () {
 	echo "$name"
 }
 
-sys_grub_theme_get () {
-	#sys_grub_theme_get_v1
-	sys_grub_theme_get_v2
+sys_grub_theme_get_name () {
+	#sys_grub_theme_get_name_v1
+	sys_grub_theme_get_name_v2
 }
 
-sys_grub_theme_get_path () {
+sys_grub_theme_get () {
 	grep '^GRUB_THEME=' "$THE_GRUBRC_MASTER_CONFIG_FILE_PATH" | cut -d '=' -f 2 | cut -d '"' -f 2
 }
 

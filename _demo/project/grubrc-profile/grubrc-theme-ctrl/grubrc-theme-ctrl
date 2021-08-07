@@ -807,17 +807,17 @@ sys_grub_config_update () {
 
 
 
-sys_grub_theme_get_v1 () {
+sys_grub_theme_get_name_v1 () {
 
-	local theme_txt_path="$(sys_grub_theme_get_path)"
+	local theme_txt_path="$(sys_grub_theme_get)"
 	local name="$(dirname "$theme_txt_path")"
 	name="$(basename "$name")"
 	echo "$name"
 }
 
-sys_grub_theme_get_v2 () {
+sys_grub_theme_get_name_v2 () {
 
-	local theme_txt_path="$(sys_grub_theme_get_path)"
+	local theme_txt_path="$(sys_grub_theme_get)"
 
 	## https://zh.wikipedia.org/wiki/Dirname
 	local name="${theme_txt_path%/*}"
@@ -826,12 +826,12 @@ sys_grub_theme_get_v2 () {
 	echo "$name"
 }
 
-sys_grub_theme_get () {
-	#sys_grub_theme_get_v1
-	sys_grub_theme_get_v2
+sys_grub_theme_get_name () {
+	#sys_grub_theme_get_name_v1
+	sys_grub_theme_get_name_v2
 }
 
-sys_grub_theme_get_path () {
+sys_grub_theme_get () {
 	grep '^GRUB_THEME=' "$THE_GRUBRC_MASTER_CONFIG_FILE_PATH" | cut -d '=' -f 2 | cut -d '"' -f 2
 }
 
@@ -969,7 +969,7 @@ mod_grubrc_theme_get () {
 	# grubrc-theme-ctrl get
 	# /etc/grub/default
 
-	sys_grub_theme_get
+	sys_grub_theme_get_name
 
 }
 
@@ -1137,12 +1137,50 @@ mod_grubrc_theme_path_get () {
 	# grubrc-theme-ctrl path_get
 	# /etc/grub/default
 
-	sys_grub_theme_get_path
+	sys_grub_theme_get
 
 }
 
 ##
 ### Tail: Model mod_grubrc_theme_path_get
+################################################################################
+
+
+################################################################################
+### Head: Model mod_grubrc_theme_path_set
+##
+
+mod_grubrc_theme_path_set () {
+	#echo "mod_grubrc_theme_path_set"
+	#echo "$@"
+
+
+	## $ grubrc-theme-ctrl path_set demo
+
+
+	local target_file_path="$1"
+	local theme_txt_path="$(realpath -s "$target_file_path")"
+
+	if [ -f "$theme_txt_path" ] ; then ## check /boot/grub/themes/demo/theme.txt
+		util_error_echo
+		util_error_echo "## Grub Theme Txt Not Exist: $theme_txt_path"
+		util_error_echo
+		util_error_echo '## Please Run:'
+		util_error_echo '	$ grubrc-theme-ctrl path_list'
+		util_error_echo '## to find valid grub theme txt.'
+		util_error_echo
+		return 1
+	fi
+
+
+	util_error_echo
+	sys_grub_theme_set "$theme_txt_path"
+
+}
+
+
+##
+### Tail: Model mod_grubrc_theme_path_set
 ################################################################################
 
 
@@ -1221,6 +1259,12 @@ sub_run_path_get () {
 	mod_grubrc_theme_path_get "$@"
 }
 
+
+sub_run_path_set () {
+	#echo "sub_run_path_set"
+	mod_grubrc_theme_path_set "$@"
+}
+
 ##
 ### Tail: SubCmd
 ################################################################################
@@ -1278,6 +1322,8 @@ Example:
 		$ $cmd_name path_list
 
 		$ $cmd_name path_get
+
+		$ $cmd_name path_set /boot/grub/themes/demo/theme.txt
 
 
 Debug:

@@ -29,6 +29,7 @@ mod_fzf () {
 local selected="$(fzf << EOF
 all
 dracula
+virtual_future
 EOF
 )"
 

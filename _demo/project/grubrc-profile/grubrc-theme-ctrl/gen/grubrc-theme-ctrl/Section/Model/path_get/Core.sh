@@ -11,7 +11,7 @@ mod_grubrc_theme_path_get () {
 	# grubrc-theme-ctrl path_get
 	# /etc/grub/default
 
-	sys_grub_theme_get_path
+	sys_grub_theme_get
 
 }
 
