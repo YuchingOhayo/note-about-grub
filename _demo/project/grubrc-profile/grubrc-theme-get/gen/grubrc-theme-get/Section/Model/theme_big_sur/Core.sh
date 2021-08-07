@@ -1,19 +1,19 @@
 
 
 ################################################################################
-### Head: Model theme_virtual_future
+### Head: Model theme_big_sur
 ##
 
-mod_theme_virtual_future_install () {
+mod_theme_big_sur_install () {
 
 	##
-	## https://www.gnome-look.org/p/1529571/
-	## https://gitlab.com/deck451/virtual_future_grub_theme
-	## https://gitlab.com/deck451/virtual_future_grub_theme/-/tree/main/virtual_future
+	## https://www.gnome-look.org/p/1443844/
+	## https://github.com/Teraskull/bigsur-grub2-theme
+	## https://github.com/Teraskull/bigsur-grub2-theme/tree/master/bigsur
 	##
 
-	local name='virtual_future'
-	local repo_url='https://gitlab.com/deck451/virtual_future_grub_theme.git'
+	local name='big_sur'
+	local repo_url='https://github.com/Teraskull/bigsur-grub2-theme.git'
 
 
 	if [ "none$name" = "none" ]; then
@@ -42,13 +42,12 @@ mod_theme_virtual_future_install () {
 	util_error_echo
 
 
-	util_error_echo "sudo cp -a $name/virtual_future $target_theme_path"
-	sudo cp -a "$name/virtual_future" "$target_theme_path"
+	util_error_echo "sudo cp -a $name/bigsur $target_theme_path"
+	sudo cp -a "$name/bigsur" "$target_theme_path"
 
 	util_error_echo
 	util_error_echo "cd $OLDPWD"
 	cd "$OLDPWD"
-
 
 	util_error_echo
 	util_error_echo "## Please Run to Change:"
@@ -59,5 +58,5 @@ mod_theme_virtual_future_install () {
 }
 
 ##
-### Tail: Model theme_virtual_future
+### Tail: Model theme_big_sur
 ################################################################################

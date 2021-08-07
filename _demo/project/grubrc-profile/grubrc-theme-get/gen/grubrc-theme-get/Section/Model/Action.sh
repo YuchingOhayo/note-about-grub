@@ -4,3 +4,4 @@
 <?php include_once(__DIR__ . '/theme_virtual_future/Action.sh'); ?>
 <?php include_once(__DIR__ . '/theme_deepin/Action.sh'); ?>
 <?php include_once(__DIR__ . '/theme_main/Action.sh'); ?>
+<?php include_once(__DIR__ . '/theme_big_sur/Action.sh'); ?>

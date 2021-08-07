@@ -63,6 +63,12 @@ mod_theme_deepin_install () {
 	cd "$OLDPWD"
 
 
+	util_error_echo
+	util_error_echo "## Please Run to Change:"
+	util_error_echo
+	util_error_echo "grubrc-theme-ctrl set $name"
+	util_error_echo
+
 }
 
 ##

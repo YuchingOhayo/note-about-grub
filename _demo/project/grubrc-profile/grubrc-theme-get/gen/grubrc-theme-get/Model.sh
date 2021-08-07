@@ -5,3 +5,4 @@
 <?php include_once(__DIR__ . '/Section/Model/theme_virtual_future/Core.sh'); ?>
 <?php include_once(__DIR__ . '/Section/Model/theme_deepin/Core.sh'); ?>
 <?php include_once(__DIR__ . '/Section/Model/theme_main/Core.sh'); ?>
+<?php include_once(__DIR__ . '/Section/Model/theme_big_sur/Core.sh'); ?>

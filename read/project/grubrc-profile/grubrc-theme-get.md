@@ -21,7 +21,9 @@ grand_parent: 專案
 | [fzf](#fzf) | 提供fzf列表選項安裝 | |
 | [all](#all) | 安裝以下所有的「theme」| |
 | [dracula](#dracula) | [Dracula](https://github.com/zshzero/dracula-grub2/) | /boot/grub/themes/dracula |
-
+| [virtual_future](#virtual_future) | [Virtual Future](https://gitlab.com/deck451/virtual_future_grub_theme) | /boot/grub/themes/virtual_future |
+| [deepin](#deepin) | [Deepin](https://github.com/linuxdeepin/deepin-grub2-themes) | /boot/grub/themes/deepin |
+| [big_sur](#big_sur) | [Big Sur](https://github.com/Teraskull/bigsur-grub2-theme) | /boot/grub/themes/big_sur |
 
 
 ### fzf
@@ -46,4 +48,28 @@ grubrc-theme-get all
 
 ``` sh
 grubrc-theme-get dracula
+```
+
+### virtual_future
+
+執行下面指令，單一安裝「theme / [virtual_future](https://gitlab.com/deck451/virtual_future_grub_theme/-/tree/main/virtual_future)」
+
+``` sh
+grubrc-theme-get virtual_future
+```
+
+### deepin
+
+執行下面指令，單一安裝「theme / [deepin](https://github.com/linuxdeepin/deepin-grub2-themes/tree/master/themes/deepin)」
+
+``` sh
+grubrc-theme-get deepin
+```
+
+### big_sur
+
+執行下面指令，單一安裝「theme / [big_sur](https://github.com/Teraskull/bigsur-grub2-theme/tree/master/bigsur)」
+
+``` sh
+grubrc-theme-get big_sur
 ```

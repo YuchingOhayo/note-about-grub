@@ -31,6 +31,7 @@ all
 dracula
 virtual_future
 deepin
+big_sur
 EOF
 )"
 
