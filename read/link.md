@@ -48,6 +48,11 @@ has_children: true
 * [https://hugh712.gitbooks.io/grub/content/os-specific-notes.html](https://hugh712.gitbooks.io/grub/content/os-specific-notes.html)
 
 
+## grub-customizer
+
+* [manjaro-grub-customizer](https://github.com/mvidaldp/manjaro-grub-customizer)
+* [grub-customizer](https://launchpad.net/grub-customizer)
+
 
 
 ## Just the Docs
