@@ -561,7 +561,54 @@ grubrc_theme_repo_copy_from_tmp () {
 
 }
 
+grubrc_theme_deb_extrct_to_tmp () {
 
+
+	local name="$1"
+	local deb_url="$2"
+
+	if [ "none$name" = "none" ]; then
+		util_error_echo
+		util_error_echo "## Need name: "
+		util_error_echo
+		return 1
+	fi
+
+	if [ "none$deb_url" = "none" ]; then
+		util_error_echo
+		util_error_echo "## Need deb_url: "
+		util_error_echo
+		return 1
+	fi
+
+	local now="$(date +%Y%m%d_%s)"
+	local temp_dir_path="$THE_GRUBRC_REPO_TEMP_BASE_DIR_PATH/${THE_GRUBRC_REPO_TEMP_BASE_DIR_NAME}.${now}"
+
+	util_error_echo "mkdir -p $temp_dir_path"
+	mkdir -p "$temp_dir_path"
+
+	util_error_echo "cd $temp_dir_path"
+	cd "$temp_dir_path"
+
+
+	local deb_name="${name}.deb"
+
+	## download
+	util_error_echo "wget -c $deb_url"
+	wget -c "$deb_url" -O "$deb_name"
+
+	## extract
+	## https://github.com/samwhelp/note-about-deb/tree/gh-pages/_demo/deb/concept/start
+	ar x "$deb_name"
+
+	mkdir -p "$name"
+
+	tar -p -C "$name" -xf 'data.tar.xz'
+
+	#util_error_echo "cd $OLDPWD"
+	#cd "$OLDPWD"
+
+}
 
 ##
 ### Tail: Sys
@@ -877,6 +924,7 @@ local selected="$(fzf << EOF
 all
 dracula
 virtual_future
+deepin
 EOF
 )"
 
@@ -909,6 +957,7 @@ mod_all_install () {
 
 	mod_theme_dracula_install
 	mod_theme_virtual_future_install
+	mod_theme_deepin
 
 }
 
@@ -997,6 +1046,199 @@ mod_theme_virtual_future_install () {
 
 
 ################################################################################
+### Head: Model theme_deepin
+##
+
+mod_theme_deepin_install () {
+
+	##
+	## * https://github.com/samwhelp/note-about-deb/tree/gh-pages/_demo/deb/concept/start
+	## * https://github.com/linuxdeepin/deepin-grub2-themes
+	## * https://www.ubuntu-tw.org/modules/newbb/viewtopic.php?post_id=353942
+	## * http://packages.deepin.com/deepin/pool/main/g/grub-themes-deepin/
+	## * http://packages.deepin.com/deepin/pool/universe/g/grub-themes-deepin/
+	## * http://ftp.ubuntu-tw.org/mirror/deepin/pool/main/g/grub-themes-deepin/
+	## * http://ftp.ubuntu-tw.org/mirror/deepin/pool/universe/g/grub-themes-deepin/
+	##
+	## ```
+	## http://ftp.ubuntu-tw.org/mirror/deepin/pool/main/g/grub-themes-deepin/grub-themes-deepin_1.0.0-1.debian.tar.xz
+	## http://ftp.ubuntu-tw.org/mirror/deepin/pool/main/g/grub-themes-deepin/grub-themes-deepin_1.0.0-1.dsc
+	## http://ftp.ubuntu-tw.org/mirror/deepin/pool/main/g/grub-themes-deepin/grub-themes-deepin_1.0.0-1_all.deb
+	## http://ftp.ubuntu-tw.org/mirror/deepin/pool/main/g/grub-themes-deepin/grub-themes-deepin_1.0.0.orig.tar.xz
+	## ```
+	##
+
+	local name='deepin'
+	local deb_url='http://ftp.ubuntu-tw.org/mirror/deepin/pool/main/g/grub-themes-deepin/grub-themes-deepin_1.0.0-1_all.deb'
+
+	if [ "none$name" = "none" ]; then
+		util_error_echo
+		util_error_echo "## Need name: "
+		util_error_echo
+		return 1
+	fi
+
+
+	local target_theme_path="$THE_GRUBRC_THEMES_DIR_PATH/$name"
+
+	if [ -d "$target_theme_path" ]; then
+		util_error_echo "## Theme is Exist: $target_theme_path"
+		util_error_echo "## Please Remove First:"
+		util_error_echo "grubrc-theme-ctrl remove $name"
+		return 1
+	fi
+
+	util_error_echo "sudo mkdir -p $THE_GRUBRC_THEMES_DIR_PATH"
+	sudo mkdir -p "$THE_GRUBRC_THEMES_DIR_PATH"
+
+
+	util_error_echo
+	grubrc_theme_deb_extrct_to_tmp "$name" "$deb_url"
+	util_error_echo
+
+	util_error_echo
+	ls -l
+	util_error_echo
+
+	util_error_echo "sudo cp -a $name/boot/grub/themes/deepin $target_theme_path"
+	sudo cp -a "$name/boot/grub/themes/deepin" "$target_theme_path"
+
+	util_error_echo
+	util_error_echo "cd $OLDPWD"
+	cd "$OLDPWD"
+
+
+}
+
+##
+### Tail: Model theme_deepin
+################################################################################
+
+
+################################################################################
+### Head: Model theme_main
+##
+
+mod_theme_main_install () {
+
+	##
+	## * https://github.com/samwhelp/note-about-deb/tree/gh-pages/_demo/deb/concept/start
+	## * https://github.com/linuxdeepin/deepin-grub2-themes
+	## * https://www.ubuntu-tw.org/modules/newbb/viewtopic.php?post_id=353942
+	## * http://packages.deepin.com/deepin/pool/main/g/grub-themes-deepin/
+	## * http://packages.deepin.com/deepin/pool/universe/g/grub-themes-deepin/
+	## * http://ftp.ubuntu-tw.org/mirror/deepin/pool/main/g/grub-themes-deepin/
+	## * http://ftp.ubuntu-tw.org/mirror/deepin/pool/universe/g/grub-themes-deepin/
+	##
+	## ```
+	## http://ftp.ubuntu-tw.org/mirror/deepin/pool/main/g/grub-themes-deepin/grub-themes-deepin_1.0.0-1.debian.tar.xz
+	## http://ftp.ubuntu-tw.org/mirror/deepin/pool/main/g/grub-themes-deepin/grub-themes-deepin_1.0.0-1.dsc
+	## http://ftp.ubuntu-tw.org/mirror/deepin/pool/main/g/grub-themes-deepin/grub-themes-deepin_1.0.0-1_all.deb
+	## http://ftp.ubuntu-tw.org/mirror/deepin/pool/main/g/grub-themes-deepin/grub-themes-deepin_1.0.0.orig.tar.xz
+	## ```
+	##
+
+	local name='main'
+	local deb_url='http://ftp.ubuntu-tw.org/mirror/deepin/pool/main/g/grub-themes-deepin/grub-themes-deepin_1.0.0-1_all.deb'
+
+	if [ "none$name" = "none" ]; then
+		util_error_echo
+		util_error_echo "## Need name: "
+		util_error_echo
+		return 1
+	fi
+
+
+	local target_theme_path="$THE_GRUBRC_THEMES_DIR_PATH/$name"
+
+	if [ -d "$target_theme_path" ]; then
+		util_error_echo "## Theme is Exist: $target_theme_path"
+		util_error_echo "## Please Remove First:"
+		util_error_echo "grubrc-theme-ctrl remove $name"
+		return 1
+	fi
+
+	util_error_echo "sudo mkdir -p $THE_GRUBRC_THEMES_DIR_PATH"
+	sudo mkdir -p "$THE_GRUBRC_THEMES_DIR_PATH"
+
+
+	util_error_echo
+	grubrc_theme_deb_extrct_to_tmp "$name" "$deb_url"
+	util_error_echo
+
+
+	util_error_echo
+	ls -l
+	util_error_echo
+
+
+	util_error_echo "sudo cp -a $name/boot/grub/themes/deepin $target_theme_path"
+	sudo cp -a "$name/boot/grub/themes/deepin" "$target_theme_path"
+
+
+	mod_theme_main_install_change_background
+
+
+	util_error_echo
+	util_error_echo "cd $OLDPWD"
+	cd "$OLDPWD"
+
+
+
+
+}
+
+mod_theme_main_install_change_background () {
+
+	util_error_echo
+	util_error_echo "## Change Background"
+	util_error_echo
+
+	util_error_echo "sudo cp /boot/grub/themes/main/background.png /boot/grub/themes/main/background.ori.png"
+	sudo cp '/boot/grub/themes/main/background.png' '/boot/grub/themes/main/background.ori.png'
+
+
+	mod_theme_main_install_pickup_background
+
+	if ! [ -f 'background.png' ]; then
+		return
+	fi
+
+	util_error_echo "sudo cp background.png /boot/grub/themes/main/background.png"
+	sudo cp 'background.png' '/boot/grub/themes/main/background.png'
+
+}
+
+mod_theme_main_install_pickup_background () {
+
+	if [ -f "$HOME/Pictures/Wallpaper/background-grub.jpg" ]; then
+
+		# https://imagemagick.org/script/convert.php
+		util_error_echo "magick convert $HOME/Pictures/Wallpaper/background-grub.jpg background.png"
+		magick convert "$HOME/Pictures/Wallpaper/background-grub.jpg" 'background.png'
+
+		return
+	fi
+
+	if [ -f '/usr/share/backgrounds/wallpapers-2018/palm-wave.jpg' ]; then
+
+		# https://imagemagick.org/script/convert.php
+		util_error_echo "magick convert /usr/share/backgrounds/wallpapers-2018/palm-wave.jpg background.png"
+		magick convert '/usr/share/backgrounds/wallpapers-2018/palm-wave.jpg' 'background.png'
+
+		return
+	fi
+
+
+}
+
+
+##
+### Tail: Model theme_main
+################################################################################
+
+
+################################################################################
 ### Head: SubCmd
 ##
 
@@ -1039,6 +1281,18 @@ sub_run_dracula () {
 sub_run_virtual_future () {
 	#echo "sub_run_virtual_future_rounded"
 	mod_theme_virtual_future_install "$@"
+}
+
+
+sub_run_deepin () {
+	#echo "sub_run_deepin_rounded"
+	mod_theme_deepin_install "$@"
+}
+
+
+sub_run_main () {
+	#echo "sub_run_main_rounded"
+	mod_theme_main_install "$@"
 }
 
 ##
@@ -1088,6 +1342,10 @@ Example:
 		$ $cmd_name dracula
 
 		$ $cmd_name virtual_future
+
+		$ $cmd_name deepin
+
+		$ $cmd_name main
 
 
 Debug:

@@ -30,6 +30,7 @@ local selected="$(fzf << EOF
 all
 dracula
 virtual_future
+deepin
 EOF
 )"
 

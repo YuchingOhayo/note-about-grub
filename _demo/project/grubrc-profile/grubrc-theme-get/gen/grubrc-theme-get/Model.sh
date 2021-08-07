@@ -3,3 +3,5 @@
 <?php include_once(__DIR__ . '/Section/Model/all/Core.sh'); ?>
 <?php include_once(__DIR__ . '/Section/Model/theme_dracula/Core.sh'); ?>
 <?php include_once(__DIR__ . '/Section/Model/theme_virtual_future/Core.sh'); ?>
+<?php include_once(__DIR__ . '/Section/Model/theme_deepin/Core.sh'); ?>
+<?php include_once(__DIR__ . '/Section/Model/theme_main/Core.sh'); ?>

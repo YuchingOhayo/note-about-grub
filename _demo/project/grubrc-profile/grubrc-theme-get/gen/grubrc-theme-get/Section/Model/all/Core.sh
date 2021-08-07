@@ -8,6 +8,7 @@ mod_all_install () {
 
 	mod_theme_dracula_install
 	mod_theme_virtual_future_install
+	mod_theme_deepin
 
 }
 
