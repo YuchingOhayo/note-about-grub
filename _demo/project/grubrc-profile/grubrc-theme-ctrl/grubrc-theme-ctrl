@@ -1360,7 +1360,7 @@ Example:
 
 		$ $cmd_name get
 
-		$ $cmd_name set demo
+		$ $cmd_name set dracula
 
 		$ $cmd_name install dracula https://github.com/zshzero/dracula-grub2.git
 

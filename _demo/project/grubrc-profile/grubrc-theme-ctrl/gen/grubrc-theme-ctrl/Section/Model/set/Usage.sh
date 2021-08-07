@@ -1,2 +1,2 @@
 
-		$ $cmd_name set demo
+		$ $cmd_name set dracula
