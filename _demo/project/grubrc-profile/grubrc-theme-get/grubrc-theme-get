@@ -998,6 +998,96 @@ mod_all_install () {
 
 
 ################################################################################
+### Head: Model theme_poly_dark
+##
+
+mod_theme_poly_dark_install () {
+
+	## https://github.com/shvchk/poly-dark
+
+	local name='poly_dark'
+	local repo_url='https://github.com/shvchk/poly-dark.git'
+
+
+	util_error_echo
+	grubrc_theme_repo_clone "$name" "$repo_url"
+	util_error_echo
+
+
+	util_error_echo
+	util_error_echo "## Please Run to Change:"
+	util_error_echo
+	util_error_echo "grubrc-theme-ctrl set $name"
+	util_error_echo
+
+}
+
+##
+### Tail: Model theme_poly_dark
+################################################################################
+
+
+################################################################################
+### Head: Model theme_poly_light
+##
+
+mod_theme_poly_light_install () {
+
+	## https://github.com/shvchk/poly-light
+
+	local name='poly_light'
+	local repo_url='https://github.com/shvchk/poly-light.git'
+
+
+	util_error_echo
+	grubrc_theme_repo_clone "$name" "$repo_url"
+	util_error_echo
+
+
+	util_error_echo
+	util_error_echo "## Please Run to Change:"
+	util_error_echo
+	util_error_echo "grubrc-theme-ctrl set $name"
+	util_error_echo
+
+}
+
+##
+### Tail: Model theme_poly_light
+################################################################################
+
+
+################################################################################
+### Head: Model theme_fallout
+##
+
+mod_theme_fallout_install () {
+
+	## https://github.com/shvchk/fallout-grub-theme
+
+	local name='fallout'
+	local repo_url='https://github.com/shvchk/fallout-grub-theme.git'
+
+
+	util_error_echo
+	grubrc_theme_repo_clone "$name" "$repo_url"
+	util_error_echo
+
+
+	util_error_echo
+	util_error_echo "## Please Run to Change:"
+	util_error_echo
+	util_error_echo "grubrc-theme-ctrl set $name"
+	util_error_echo
+
+}
+
+##
+### Tail: Model theme_fallout
+################################################################################
+
+
+################################################################################
 ### Head: Model theme_dracula
 ##
 
@@ -1389,6 +1479,24 @@ sub_run_all () {
 }
 
 
+sub_run_poly_dark () {
+	#echo "sub_run_poly_dark_rounded"
+	mod_theme_poly_dark_install "$@"
+}
+
+
+sub_run_poly_light () {
+	#echo "sub_run_poly_light_rounded"
+	mod_theme_poly_light_install "$@"
+}
+
+
+sub_run_fallout () {
+	#echo "sub_run_fallout_rounded"
+	mod_theme_fallout_install "$@"
+}
+
+
 sub_run_dracula () {
 	#echo "sub_run_dracula_rounded"
 	mod_theme_dracula_install "$@"
@@ -1461,6 +1569,12 @@ Example:
 	## theme
 
 		$ $cmd_name all
+
+		$ $cmd_name poly_dark
+
+		$ $cmd_name poly_light
+
+		$ $cmd_name fallout
 
 		$ $cmd_name dracula
 
