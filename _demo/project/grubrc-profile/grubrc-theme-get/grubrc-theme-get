@@ -925,6 +925,7 @@ all
 dracula
 virtual_future
 deepin
+big_sur
 EOF
 )"
 
@@ -957,7 +958,8 @@ mod_all_install () {
 
 	mod_theme_dracula_install
 	mod_theme_virtual_future_install
-	mod_theme_deepin
+	mod_theme_deepin_install
+	mod_theme_big_sur_install
 
 }
 
@@ -976,8 +978,12 @@ mod_theme_dracula_install () {
 
 	## https://github.com/zshzero/dracula-grub2.git
 
+	local name='dracula'
+	local repo_url='https://github.com/zshzero/dracula-grub2.git'
+
+
 	util_error_echo
-	grubrc_theme_repo_clone 'dracula' 'https://github.com/zshzero/dracula-grub2.git'
+	grubrc_theme_repo_clone "$name" "$repo_url"
 	util_error_echo
 
 
