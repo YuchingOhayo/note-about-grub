@@ -23,9 +23,18 @@
 | [GRUB Boot ISO](https://samwhelp.github.io/note-about-grub/read/howto/boot_iso.html) | |
 
 
-### 專案
+## 專案
 
 | 工具 | 簡介 |
 | --- | --- |
 | [grubrc-theme-get](https://samwhelp.github.io/note-about-grub/read/project/grubrc-profile/grubrc-theme-get.html) | 用來輔助「安裝」GRUB佈景主題 |
 | [grubrc-theme-ctrl](https://samwhelp.github.io/note-about-grub/read/project/grubrc-profile/grubrc-theme-ctrl.html) | 用來輔助「切換」GRUB佈景主題 |
+
+
+## 輔助工具
+
+| 工具 | 簡介 |
+| --- | --- |
+| [grub2-theme-preview](https://samwhelp.github.io/note-about-manjaro/read/adjustment/tool/grub2-theme-preview.html) | 用來輔助「預覽」GRUB佈景主題 |
+
+
