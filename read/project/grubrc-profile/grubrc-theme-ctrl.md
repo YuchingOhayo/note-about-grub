@@ -9,12 +9,12 @@ grand_parent: 專案
 # grubrc-theme-ctrl
 
 
-## Link
+## 專案連結
 
 * [grubrc-theme-ctrl](https://github.com/samwhelp/note-about-grub/tree/gh-pages/_demo/project/grubrc-profile/grubrc-theme-ctrl)
 
 
-## Usage
+## 使用範例
 
 
 ### install
