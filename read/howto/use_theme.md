@@ -23,6 +23,8 @@ parent: 如何
 
 ## 手動安裝
 
+可以到這個「[網站](https://www.gnome-look.org/browse?cat=109&ord=latest)」找尋個人偏愛的「Grub佈景主題」。
+
 以下以安裝「[Dracula](https://github.com/zshzero/dracula-grub2/)」這個「GRUB 佈景主題」為例，
 
 執行下面指令，產生「/boot/grub/themes」這個資料夾。
