@@ -11,8 +11,16 @@
 
 ## 主題
 
+* [如何](#如何)
 * [專案](#專案)
-* [GRUB Boot ISO 範例](#grub-boot-iso-範例)
+
+
+## 如何
+
+| 議題 |
+| --- |
+| [GRUB Theme](https://samwhelp.github.io/note-about-grub/read/howto/use_theme.html) |
+| [GRUB Boot ISO](https://samwhelp.github.io/note-about-grub/read/howto/boot_iso.html) |
 
 
 ### 專案
@@ -21,8 +29,3 @@
 | --- | --- |
 | [grubrc-theme-get](https://samwhelp.github.io/note-about-grub/read/project/grubrc-profile/grubrc-theme-get.html) | 用來輔助「安裝」GRUB佈景主題 |
 | [grubrc-theme-ctrl](https://samwhelp.github.io/note-about-grub/read/project/grubrc-profile/grubrc-theme-ctrl.html) | 用來輔助「切換」GRUB佈景主題 |
-
-
-### GRUB Boot ISO 範例
-
-* [GRUB Boot ISO 範例](https://github.com/samwhelp/note-about-grub/tree/gh-pages/_demo/prototype/boot_iso)

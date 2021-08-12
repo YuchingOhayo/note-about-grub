@@ -9,5 +9,5 @@ has_children: true
 
 | 議題 |
 | --- |
-| [GRUB Boot ISO](howto/boot_iso) |
 | [GRUB Theme](howto/use_theme) |
+| [GRUB Boot ISO](howto/boot_iso) |
