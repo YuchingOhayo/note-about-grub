@@ -6,6 +6,9 @@
 
 mod_all_install () {
 
+	mod_theme_poly_dark_install
+	mod_theme_poly_light_install
+	mod_theme_fallout_install
 	mod_theme_dracula_install
 	mod_theme_virtual_future_install
 	mod_theme_deepin_install

@@ -28,6 +28,9 @@ mod_fzf () {
 	#https://en.wikipedia.org/wiki/Here_document
 local selected="$(fzf << EOF
 all
+poly_dark
+poly_light
+fallout
 dracula
 virtual_future
 deepin
