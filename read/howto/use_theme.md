@@ -8,6 +8,15 @@ parent: 如何
 
 # Use Theme
 
+## 主題
+
+* [放置路徑](#放置路徑)
+* [手動安裝](#手動安裝)
+* [設定採用](#設定採用)
+* [輔助工具](#輔助工具)
+* [預覽工具](#預覽工具)
+
+
 ## 放置路徑
 
 * /usr/share/grub/themes/
@@ -127,9 +136,9 @@ tree /boot/grub/themes/dracula
 1 directory, 37 files
 ```
 
-## 如何設定採用某個佈景主題
+## 設定採用
 
-接著來說明如何設定「Grub」採用某個佈景主題
+接著來說明，如何設定「GRUB」採用某個佈景主題
 
 主要是編輯「/etc/default/grub」這個檔案
 
@@ -195,3 +204,14 @@ grubrc-theme-ctrl set dracula
 這兩個工具還有其他的功能，就請參考上面所列的說明頁面。
 
 例如，可以執行「`grubrc-theme-ctrl fzf`」，就會顯示「所有的佈景主題選單」供您選擇採用。
+
+
+## 預覽工具
+
+可以採用「[grub2-theme-preview](https://samwhelp.github.io/note-about-manjaro/read/adjustment/tool/grub2-theme-preview.html)」，來預覽「GRUB佈景主題」。
+
+執行下面指令來預覽
+
+``` sh
+grub2-theme-preview /boot/grub/themes/dracula
+```
