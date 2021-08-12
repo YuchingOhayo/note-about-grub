@@ -57,7 +57,9 @@ sudo cp -a dracula /boot/grub/themes/dracula
 
 以上就已經安裝完成了。
 
-請確保「佈景主題」裡，有「theme.txt」這個檔案，也就是「/boot/grub/themes/dracula/theme.txt」這個檔案
+請確保「佈景主題」裡，有「theme.txt」這個檔案，
+
+也就是「/boot/grub/themes/dracula/theme.txt」這個檔案
 
 執行
 
@@ -139,7 +141,7 @@ sudo vi /etc/default/grub
 GRUB_THEME="/boot/grub/themes/dracula/theme.txt"
 ```
 
-接著執行下面指令，更新「grub」的設定
+接著執行下面指令，更新「grub的設定」
 
 ``` sh
 sudo update-grub
@@ -181,9 +183,11 @@ grubrc-theme-get dracula
 grubrc-theme-ctrl set dracula
 ```
 
-就會編輯「/etc/default/grub」這個檔案，並且執行「sudo update-grub」這個動作。
+就會編輯「/etc/default/grub」這個檔案，設定「GRUB_THEME="/boot/grub/themes/dracula/theme.txt"」，
+
+並且執行「`sudo update-grub`」這個動作。
 
 
 這兩個工具還有其他的功能，就請參考上面所列的說明頁面。
 
-例如，可以執行「`grubrc-theme-ctrl fzf`」，就會顯示「所有的佈景主題選單」供您選擇。
+例如，可以執行「`grubrc-theme-ctrl fzf`」，就會顯示「所有的佈景主題選單」供您選擇採用。
