@@ -888,6 +888,33 @@ sys_grub_theme_set () {
 	sys_grub_config_update
 }
 
+sys_grub_theme_preview () {
+
+	local theme_txt_path="$1"
+	local theme_dir_path="$(dirname "$theme_txt_path")"
+
+	#echo "$theme_dir_path"
+
+	if ! is_command_exist 'grub2-theme-preview'; then
+
+		util_error_echo '## Need: grub2-theme-preview'
+		util_error_echo '# * https://github.com/hartwork/grub2-theme-preview'
+		util_error_echo '# * https://aur.archlinux.org/packages/grub2-theme-preview/'
+		util_error_echo
+		util_error_echo '## Manjaro Install:'
+		util_error_echo '# $ pamac build grub2-theme-preview'
+		util_error_echo
+
+		return 1
+
+	fi
+
+
+	util_error_echo "grub2-theme-preview $theme_dir_path"
+	util_error_echo
+	grub2-theme-preview "$theme_dir_path"
+}
+
 
 ##
 ### Tail: Sys / Grub Theme
@@ -1431,7 +1458,7 @@ Example:
 
 		$ $cmd_name fzf
 
-	## profile
+	## theme
 
 		$ $cmd_name all
 

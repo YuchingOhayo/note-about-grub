@@ -1,11 +1,11 @@
 
 
 ################################################################################
-### Head: Model fzf
+### Head: Model preview_fzf
 ##
 
-mod_fzf () {
-	#echo "mod_fzf"
+mod_preview_fzf () {
+	#echo "mod_preview_fzf"
 	#echo "$@"
 
 	if ! is_command_exist 'fzf'; then
@@ -39,11 +39,11 @@ mod_fzf () {
 	fi
 
 	util_error_echo "# [ $selected ]"
-	mod_grubrc_theme_set "$selected"
+	mod_grubrc_theme_preview "$selected"
 
 
 }
 
 ##
-### Tail: Model fzf
+### Tail: Model preview_fzf
 ################################################################################

@@ -34,7 +34,7 @@ Example:
 	## fzf
 <?php include_once(dirname(__DIR__) . '/Model/fzf/Usage.sh'); ?>
 
-	## profile
+	## theme
 <?php include_once(dirname(__DIR__) . '/Model/Usage.sh'); ?>
 
 

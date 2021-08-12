@@ -891,6 +891,33 @@ sys_grub_theme_set () {
 	sys_grub_config_update
 }
 
+sys_grub_theme_preview () {
+
+	local theme_txt_path="$1"
+	local theme_dir_path="$(dirname "$theme_txt_path")"
+
+	#echo "$theme_dir_path"
+
+	if ! is_command_exist 'grub2-theme-preview'; then
+
+		util_error_echo '## Need: grub2-theme-preview'
+		util_error_echo '# * https://github.com/hartwork/grub2-theme-preview'
+		util_error_echo '# * https://aur.archlinux.org/packages/grub2-theme-preview/'
+		util_error_echo
+		util_error_echo '## Manjaro Install:'
+		util_error_echo '# $ pamac build grub2-theme-preview'
+		util_error_echo
+
+		return 1
+
+	fi
+
+
+	util_error_echo "grub2-theme-preview $theme_dir_path"
+	util_error_echo
+	grub2-theme-preview "$theme_dir_path"
+}
+
 
 ##
 ### Tail: Sys / Grub Theme
@@ -917,7 +944,7 @@ mod_fzf () {
 		util_error_echo '# $ sudo apt-get install fzf'
 		util_error_echo
 
-	return 1
+		return 1
 
 	fi
 
@@ -1063,6 +1090,94 @@ mod_grubrc_theme_set () {
 
 
 ################################################################################
+### Head: Model mod_grubrc_theme_preview
+##
+
+mod_grubrc_theme_preview () {
+	#echo "mod_grubrc_theme_preview"
+	#echo "$@"
+
+
+	## $ grubrc-theme-ctrl preview demo
+
+	local name="$1"
+	local source_dir_path="$THE_GRUBRC_THEMES_DIR_PATH/$name"
+
+	if is_not_grubrc_theme_dir "$source_dir_path"; then ## check /boot/grub/themes/demo
+		util_error_echo
+		util_error_echo "## Not Valid Grub Theme Dir: $source_dir_path"
+		util_error_echo
+		util_error_echo '## Please Run:'
+		util_error_echo '	$ grubrc-theme-ctrl list'
+		util_error_echo '## to find valid grubrc_theme dir.'
+		util_error_echo
+		return 1
+	fi
+
+
+
+
+	util_error_echo
+	sys_grub_theme_preview "$source_dir_path/theme.txt"
+
+}
+
+
+##
+### Tail: Model mod_grubrc_theme_preview
+################################################################################
+
+
+################################################################################
+### Head: Model preview_fzf
+##
+
+mod_preview_fzf () {
+	#echo "mod_preview_fzf"
+	#echo "$@"
+
+	if ! is_command_exist 'fzf'; then
+
+		util_error_echo '## Need: fzf'
+		util_error_echo '# * https://github.com/junegunn/fzf'
+		util_error_echo
+		util_error_echo '## Manjaro Install:'
+		util_error_echo '# $ pamac install fzf'
+		util_error_echo
+		util_error_echo '## Ubuntu Install:'
+		util_error_echo '# $ sudo apt-get install fzf'
+		util_error_echo
+
+		return 1
+
+	fi
+
+
+
+	local selected="$(mod_grubrc_theme_list | fzf)"
+
+
+	util_error_echo
+	util_error_echo "## Selected:"
+	util_error_echo
+
+	if [ "none$selected" = "none" ]; then
+		util_error_echo "# ! None Selected !"
+		return 1
+	fi
+
+	util_error_echo "# [ $selected ]"
+	mod_grubrc_theme_preview "$selected"
+
+
+}
+
+##
+### Tail: Model preview_fzf
+################################################################################
+
+
+################################################################################
 ### Head: Model grubrc_theme_install
 ##
 
@@ -1202,13 +1317,13 @@ mod_grubrc_theme_path_set () {
 	#echo "$@"
 
 
-	## $ grubrc-theme-ctrl path_set demo
+	## $ grubrc-theme-ctrl path_set /boot/grub/themes/dracula/theme.txt
 
 
 	local target_file_path="$1"
 	local theme_txt_path="$(realpath -s "$target_file_path")"
 
-	if [ -f "$theme_txt_path" ] ; then ## check /boot/grub/themes/demo/theme.txt
+	if ! [ -f "$theme_txt_path" ] ; then ## check /boot/grub/themes/dracula/theme.txt
 		util_error_echo
 		util_error_echo "## Grub Theme Txt Not Exist: $theme_txt_path"
 		util_error_echo
@@ -1228,6 +1343,44 @@ mod_grubrc_theme_path_set () {
 
 ##
 ### Tail: Model mod_grubrc_theme_path_set
+################################################################################
+
+
+################################################################################
+### Head: Model mod_grubrc_theme_path_preview
+##
+
+mod_grubrc_theme_path_preview () {
+	#echo "mod_grubrc_theme_path_preview"
+	#echo "$@"
+
+
+	## $ grubrc-theme-ctrl path_preview /boot/grub/themes/dracula/theme.txt
+
+
+	local target_file_path="$1"
+	local theme_txt_path="$(realpath -s "$target_file_path")"
+
+	if ! [ -f "$theme_txt_path" ] ; then ## check /boot/grub/themes/dracula/theme.txt
+		util_error_echo
+		util_error_echo "## Grub Theme Txt Not Exist: $theme_txt_path"
+		util_error_echo
+		util_error_echo '## Please Run:'
+		util_error_echo '	$ grubrc-theme-ctrl path_list'
+		util_error_echo '## to find valid grub theme txt.'
+		util_error_echo
+		return 1
+	fi
+
+
+	util_error_echo
+	sys_grub_theme_preview "$theme_txt_path"
+
+}
+
+
+##
+### Tail: Model mod_grubrc_theme_path_preview
 ################################################################################
 
 
@@ -1283,6 +1436,18 @@ sub_run_set () {
 }
 
 
+sub_run_preview () {
+	#echo "sub_run_preview"
+	mod_grubrc_theme_preview "$@"
+}
+
+
+sub_run_preview_fzf () {
+	#echo "sub_run_preview_fzf"
+	mod_preview_fzf "$@"
+}
+
+
 sub_run_install () {
 	#echo "sub_run_install"
 	mod_grubrc_theme_install "$@"
@@ -1310,6 +1475,12 @@ sub_run_path_get () {
 sub_run_path_set () {
 	#echo "sub_run_path_set"
 	mod_grubrc_theme_path_set "$@"
+}
+
+
+sub_run_path_preview () {
+	#echo "sub_run_path_preview"
+	mod_grubrc_theme_path_preview "$@"
 }
 
 ##
@@ -1352,7 +1523,7 @@ Example:
 
 		$ $cmd_name fzf
 
-	## profile
+	## theme
 
 		$ $cmd_name default
 
@@ -1362,6 +1533,10 @@ Example:
 
 		$ $cmd_name set dracula
 
+		$ $cmd_name preview dracula
+
+		$ $cmd_name preview_fzf
+
 		$ $cmd_name install dracula https://github.com/zshzero/dracula-grub2.git
 
 		$ $cmd_name remove dracula
@@ -1370,7 +1545,9 @@ Example:
 
 		$ $cmd_name path_get
 
-		$ $cmd_name path_set /boot/grub/themes/demo/theme.txt
+		$ $cmd_name path_set /boot/grub/themes/dracula/theme.txt
+
+		$ $cmd_name path_preview /boot/grub/themes/dracula/theme.txt
 
 
 Debug:

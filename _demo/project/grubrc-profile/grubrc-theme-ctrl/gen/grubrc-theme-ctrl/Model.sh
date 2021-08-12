@@ -4,8 +4,11 @@
 <?php include_once(__DIR__ . '/Section/Model/list/Core.sh'); ?>
 <?php include_once(__DIR__ . '/Section/Model/get/Core.sh'); ?>
 <?php include_once(__DIR__ . '/Section/Model/set/Core.sh'); ?>
+<?php include_once(__DIR__ . '/Section/Model/preview/Core.sh'); ?>
+<?php include_once(__DIR__ . '/Section/Model/preview_fzf/Core.sh'); ?>
 <?php include_once(__DIR__ . '/Section/Model/install/Core.sh'); ?>
 <?php include_once(__DIR__ . '/Section/Model/remove/Core.sh'); ?>
 <?php include_once(__DIR__ . '/Section/Model/path_list/Core.sh'); ?>
 <?php include_once(__DIR__ . '/Section/Model/path_get/Core.sh'); ?>
 <?php include_once(__DIR__ . '/Section/Model/path_set/Core.sh'); ?>
+<?php include_once(__DIR__ . '/Section/Model/path_preview/Core.sh'); ?>

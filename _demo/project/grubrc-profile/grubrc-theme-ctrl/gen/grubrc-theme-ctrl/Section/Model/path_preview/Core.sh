@@ -1,15 +1,15 @@
 
 
 ################################################################################
-### Head: Model mod_grubrc_theme_path_set
+### Head: Model mod_grubrc_theme_path_preview
 ##
 
-mod_grubrc_theme_path_set () {
-	#echo "mod_grubrc_theme_path_set"
+mod_grubrc_theme_path_preview () {
+	#echo "mod_grubrc_theme_path_preview"
 	#echo "$@"
 
 
-	## $ grubrc-theme-ctrl path_set /boot/grub/themes/dracula/theme.txt
+	## $ grubrc-theme-ctrl path_preview /boot/grub/themes/dracula/theme.txt
 
 
 	local target_file_path="$1"
@@ -28,11 +28,11 @@ mod_grubrc_theme_path_set () {
 
 
 	util_error_echo
-	sys_grub_theme_set "$theme_txt_path"
+	sys_grub_theme_preview "$theme_txt_path"
 
 }
 
 
 ##
-### Tail: Model mod_grubrc_theme_path_set
+### Tail: Model mod_grubrc_theme_path_preview
 ################################################################################
