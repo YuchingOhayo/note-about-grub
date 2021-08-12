@@ -9,13 +9,13 @@ mod_grubrc_theme_path_set () {
 	#echo "$@"
 
 
-	## $ grubrc-theme-ctrl path_set /boot/grub/themes/dracula/theme.txt
+	## $ grubrc-theme-ctrl path_set /boot/grub/themes/poly_dark/theme.txt
 
 
 	local target_file_path="$1"
 	local theme_txt_path="$(realpath -s "$target_file_path")"
 
-	if ! [ -f "$theme_txt_path" ] ; then ## check /boot/grub/themes/dracula/theme.txt
+	if ! [ -f "$theme_txt_path" ] ; then ## check /boot/grub/themes/poly_dark/theme.txt
 		util_error_echo
 		util_error_echo "## Grub Theme Txt Not Exist: $theme_txt_path"
 		util_error_echo

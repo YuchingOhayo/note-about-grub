@@ -34,7 +34,7 @@ grubrc_theme_find_dir_path_by_name () {
 
 grubrc_theme_repo_clone () {
 
-	## $ grubrc-theme-ctrl install dracula https://github.com/zshzero/dracula-grub2.git
+	## $ grubrc-theme-ctrl install poly_dark https://github.com/shvchk/poly-dark.git
 
 	local name="$1"
 	local repo_url="$2"
@@ -74,7 +74,7 @@ grubrc_theme_repo_clone () {
 	cd "$temp_dir_path"
 
 	util_error_echo "git clone --recursive $repo_url $name"
-	git clone --recursive "$repo_url" "$name" ## git clone --recursive https://github.com/zshzero/dracula-grub2.git dracula
+	git clone --recursive "$repo_url" "$name" ## git clone --recursive https://github.com/shvchk/poly-dark.git poly_dark
 
 	util_error_echo "sudo cp -a $name $target_theme_path"
 	sudo cp -a "$name" "$target_theme_path"
@@ -86,7 +86,7 @@ grubrc_theme_repo_clone () {
 
 grubrc_theme_repo_clone_to_tmp () {
 
-	## $ grubrc-theme-ctrl install dracula https://github.com/zshzero/dracula-grub2.git
+	## $ grubrc-theme-ctrl install poly_dark https://github.com/shvchk/poly-dark.git
 
 	local name="$1"
 	local repo_url="$2"
@@ -115,7 +115,7 @@ grubrc_theme_repo_clone_to_tmp () {
 	cd "$temp_dir_path"
 
 	util_error_echo "git clone --recursive $repo_url $name"
-	git clone --recursive "$repo_url" "$name" ## git clone --recursive https://github.com/zshzero/dracula-grub2.git dracula
+	git clone --recursive "$repo_url" "$name" ## git clone --recursive https://github.com/shvchk/poly-dark.git poly_dark
 
 	#util_error_echo "cd $OLDPWD"
 	#cd "$OLDPWD"

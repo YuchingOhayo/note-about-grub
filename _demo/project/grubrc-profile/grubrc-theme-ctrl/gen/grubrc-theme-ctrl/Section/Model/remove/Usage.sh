@@ -1,2 +1,2 @@
 
-		$ $cmd_name remove dracula
+		$ $cmd_name remove poly_dark

@@ -1,2 +1,2 @@
 
-		$ $cmd_name preview dracula
+		$ $cmd_name preview poly_dark

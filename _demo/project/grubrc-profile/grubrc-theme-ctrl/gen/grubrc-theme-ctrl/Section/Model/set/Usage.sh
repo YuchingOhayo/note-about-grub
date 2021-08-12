@@ -1,2 +1,2 @@
 
-		$ $cmd_name set dracula
+		$ $cmd_name set poly_dark

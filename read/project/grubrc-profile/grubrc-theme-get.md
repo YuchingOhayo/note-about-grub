@@ -100,3 +100,22 @@ grubrc-theme-get deepin
 ``` sh
 grubrc-theme-get big_sur
 ```
+
+
+## 搭配使用範例
+
+
+安裝某個「GRUB佈景主題後」，舉例，安裝完「[poly_dark](poly_dark)」後，
+
+
+若要預覽，則要搭配執行下面指令
+
+``` sh
+grubrc-theme-ctrl preview poly_dark
+```
+
+若要採用，則要搭配執行下面指令
+
+``` sh
+grubrc-theme-ctrl set poly_dark
+```

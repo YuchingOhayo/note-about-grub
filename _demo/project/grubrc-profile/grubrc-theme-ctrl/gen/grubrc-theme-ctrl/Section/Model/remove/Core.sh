@@ -6,7 +6,7 @@
 
 mod_grubrc_theme_remove () {
 
-	## $ grubrc-theme-ctrl remove dracula
+	## $ grubrc-theme-ctrl remove poly_dark
 
 	local name="$1"
 	#echo $name

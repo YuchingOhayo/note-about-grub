@@ -445,7 +445,7 @@ grubrc_theme_find_dir_path_by_name () {
 
 grubrc_theme_repo_clone () {
 
-	## $ grubrc-theme-ctrl install dracula https://github.com/zshzero/dracula-grub2.git
+	## $ grubrc-theme-ctrl install poly_dark https://github.com/shvchk/poly-dark.git
 
 	local name="$1"
 	local repo_url="$2"
@@ -485,7 +485,7 @@ grubrc_theme_repo_clone () {
 	cd "$temp_dir_path"
 
 	util_error_echo "git clone --recursive $repo_url $name"
-	git clone --recursive "$repo_url" "$name" ## git clone --recursive https://github.com/zshzero/dracula-grub2.git dracula
+	git clone --recursive "$repo_url" "$name" ## git clone --recursive https://github.com/shvchk/poly-dark.git poly_dark
 
 	util_error_echo "sudo cp -a $name $target_theme_path"
 	sudo cp -a "$name" "$target_theme_path"
@@ -497,7 +497,7 @@ grubrc_theme_repo_clone () {
 
 grubrc_theme_repo_clone_to_tmp () {
 
-	## $ grubrc-theme-ctrl install dracula https://github.com/zshzero/dracula-grub2.git
+	## $ grubrc-theme-ctrl install poly_dark https://github.com/shvchk/poly-dark.git
 
 	local name="$1"
 	local repo_url="$2"
@@ -526,7 +526,7 @@ grubrc_theme_repo_clone_to_tmp () {
 	cd "$temp_dir_path"
 
 	util_error_echo "git clone --recursive $repo_url $name"
-	git clone --recursive "$repo_url" "$name" ## git clone --recursive https://github.com/zshzero/dracula-grub2.git dracula
+	git clone --recursive "$repo_url" "$name" ## git clone --recursive https://github.com/shvchk/poly-dark.git poly_dark
 
 	#util_error_echo "cd $OLDPWD"
 	#cd "$OLDPWD"
@@ -1183,7 +1183,7 @@ mod_preview_fzf () {
 
 mod_grubrc_theme_install () {
 
-	## $ grubrc-theme-ctrl install dracula https://github.com/zshzero/dracula-grub2.git
+	## $ grubrc-theme-ctrl install poly_dark https://github.com/shvchk/poly-dark.git
 
 	local name="$1"
 	local repo_url="$2"
@@ -1203,7 +1203,7 @@ mod_grubrc_theme_install () {
 
 mod_grubrc_theme_remove () {
 
-	## $ grubrc-theme-ctrl remove dracula
+	## $ grubrc-theme-ctrl remove poly_dark
 
 	local name="$1"
 	#echo $name
@@ -1317,13 +1317,13 @@ mod_grubrc_theme_path_set () {
 	#echo "$@"
 
 
-	## $ grubrc-theme-ctrl path_set /boot/grub/themes/dracula/theme.txt
+	## $ grubrc-theme-ctrl path_set /boot/grub/themes/poly_dark/theme.txt
 
 
 	local target_file_path="$1"
 	local theme_txt_path="$(realpath -s "$target_file_path")"
 
-	if ! [ -f "$theme_txt_path" ] ; then ## check /boot/grub/themes/dracula/theme.txt
+	if ! [ -f "$theme_txt_path" ] ; then ## check /boot/grub/themes/poly_dark/theme.txt
 		util_error_echo
 		util_error_echo "## Grub Theme Txt Not Exist: $theme_txt_path"
 		util_error_echo
@@ -1355,13 +1355,13 @@ mod_grubrc_theme_path_preview () {
 	#echo "$@"
 
 
-	## $ grubrc-theme-ctrl path_preview /boot/grub/themes/dracula/theme.txt
+	## $ grubrc-theme-ctrl path_preview /boot/grub/themes/poly_dark/theme.txt
 
 
 	local target_file_path="$1"
 	local theme_txt_path="$(realpath -s "$target_file_path")"
 
-	if ! [ -f "$theme_txt_path" ] ; then ## check /boot/grub/themes/dracula/theme.txt
+	if ! [ -f "$theme_txt_path" ] ; then ## check /boot/grub/themes/poly_dark/theme.txt
 		util_error_echo
 		util_error_echo "## Grub Theme Txt Not Exist: $theme_txt_path"
 		util_error_echo
@@ -1531,23 +1531,23 @@ Example:
 
 		$ $cmd_name get
 
-		$ $cmd_name set dracula
+		$ $cmd_name set poly_dark
 
-		$ $cmd_name preview dracula
+		$ $cmd_name preview poly_dark
 
 		$ $cmd_name preview_fzf
 
-		$ $cmd_name install dracula https://github.com/zshzero/dracula-grub2.git
+		$ $cmd_name install poly_dark https://github.com/shvchk/poly-dark.git
 
-		$ $cmd_name remove dracula
+		$ $cmd_name remove poly_dark
 
 		$ $cmd_name path_list
 
 		$ $cmd_name path_get
 
-		$ $cmd_name path_set /boot/grub/themes/dracula/theme.txt
+		$ $cmd_name path_set /boot/grub/themes/poly_dark/theme.txt
 
-		$ $cmd_name path_preview /boot/grub/themes/dracula/theme.txt
+		$ $cmd_name path_preview /boot/grub/themes/poly_dark/theme.txt
 
 
 Debug:

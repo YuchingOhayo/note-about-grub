@@ -1,2 +1,2 @@
 
-		$ $cmd_name path_preview /boot/grub/themes/dracula/theme.txt
+		$ $cmd_name path_preview /boot/grub/themes/poly_dark/theme.txt

@@ -6,7 +6,7 @@
 
 mod_grubrc_theme_install () {
 
-	## $ grubrc-theme-ctrl install dracula https://github.com/zshzero/dracula-grub2.git
+	## $ grubrc-theme-ctrl install poly_dark https://github.com/shvchk/poly-dark.git
 
 	local name="$1"
 	local repo_url="$2"

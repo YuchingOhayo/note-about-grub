@@ -1,2 +1,2 @@
 
-		$ $cmd_name install dracula https://github.com/zshzero/dracula-grub2.git
+		$ $cmd_name install poly_dark https://github.com/shvchk/poly-dark.git
