@@ -19,11 +19,15 @@ grand_parent: 專案
 
 ### install
 
+run
+
 ``` sh
 grubrc-theme-ctrl install poly_dark https://github.com/shvchk/poly-dark.git
 ```
 
 ### remove
+
+run
 
 ``` sh
 grubrc-theme-ctrl remove poly_dark
@@ -52,6 +56,8 @@ virtual_future
 
 ### set
 
+run
+
 ``` sh
 grubrc-theme-ctrl set poly_dark
 ```
@@ -73,12 +79,16 @@ poly_dark
 
 ### fzf
 
+run
+
 ``` sh
 grubrc-theme-ctrl fzf
 ```
 
 
 ### preview_fzf
+
+run
 
 ``` sh
 grubrc-theme-ctrl preview_fzf
@@ -87,15 +97,33 @@ grubrc-theme-ctrl preview_fzf
 
 ### path_list
 
+run
+
 ``` sh
 grubrc-theme-ctrl path_list
 ```
 
+show
+
+```
+/boot/grub/themes/big_sur/theme.txt
+/boot/grub/themes/deepin/theme.txt
+/boot/grub/themes/dracula/theme.txt
+/boot/grub/themes/fallout/theme.txt
+/boot/grub/themes/poly_dark/theme.txt
+/boot/grub/themes/poly_light/theme.txt
+/boot/grub/themes/virtual_future/theme.txt
+```
+
 ### path_preview
+
+run
 
 ``` sh
 grubrc-theme-ctrl path_preview /boot/grub/themes/poly_dark/theme.txt
 ```
+
+run
 
 ``` sh
 grubrc-theme-ctrl path_preview /usr/share/grub/themes/manjaro/theme.txt
@@ -104,9 +132,13 @@ grubrc-theme-ctrl path_preview /usr/share/grub/themes/manjaro/theme.txt
 
 ### path_set
 
+run
+
 ``` sh
 grubrc-theme-ctrl path_set /boot/grub/themes/poly_dark/theme.txt
 ```
+
+run
 
 ``` sh
 grubrc-theme-ctrl path_set /usr/share/grub/themes/manjaro/theme.txt
@@ -114,13 +146,13 @@ grubrc-theme-ctrl path_set /usr/share/grub/themes/manjaro/theme.txt
 
 ### path_get
 
-執行
+run
 
 ``` sh
 grubrc-theme-ctrl path_get
 ```
 
-顯示
+show
 
 ```
 /boot/grub/themes/poly_dark/theme.txt
