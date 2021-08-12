@@ -185,7 +185,9 @@ grubrc-theme-get dracula
 grubrc-theme-ctrl set dracula
 ```
 
-就會編輯「/etc/default/grub」這個檔案，設定「GRUB_THEME="/boot/grub/themes/dracula/theme.txt"」，
+就會編輯「/etc/default/grub」這個檔案，
+
+設定「GRUB_THEME="/boot/grub/themes/dracula/theme.txt"」，
 
 並且執行「`sudo update-grub`」這個動作。
 
