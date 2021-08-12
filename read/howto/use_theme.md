@@ -215,3 +215,8 @@ grubrc-theme-ctrl set dracula
 ``` sh
 grub2-theme-preview /boot/grub/themes/dracula
 ```
+
+
+## See Also
+
+* [Grub2 theme tutorial](http://wiki.rosalab.ru/en/index.php/Grub2_theme_tutorial)

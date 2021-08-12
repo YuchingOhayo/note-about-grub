@@ -60,6 +60,12 @@ has_children: true
 * AUR / [grub2-theme-preview](https://aur.archlinux.org/packages/grub2-theme-preview/)
 * Manjaro 探索筆記 / [grub2-theme-preview](https://samwhelp.github.io/note-about-manjaro/read/adjustment/tool/grub2-theme-preview.html)
 
+
+## Grub2 theme tutorial
+
+* [Grub2 theme tutorial](http://wiki.rosalab.ru/en/index.php/Grub2_theme_tutorial)
+
+
 ## Just the Docs
 
 * [Just the Docs](https://pmarsceill.github.io/just-the-docs/) ([GitHub](https://github.com/pmarsceill/just-the-docs))
