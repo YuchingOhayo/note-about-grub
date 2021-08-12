@@ -64,6 +64,7 @@ has_children: true
 ## Grub2 theme tutorial
 
 * [Grub2 theme tutorial](http://wiki.rosalab.ru/en/index.php/Grub2_theme_tutorial)
+* [Theme file format](https://www.gnu.org/software/grub/manual/grub/html_node/Theme-file-format.html)
 
 
 ## Just the Docs
