@@ -54,6 +54,11 @@ has_children: true
 * [grub-customizer](https://launchpad.net/grub-customizer)
 
 
+## grub2-theme-preview
+
+* GitHub / [grub2-theme-preview](https://github.com/hartwork/grub2-theme-preview)
+* AUR / [grub2-theme-preview](https://aur.archlinux.org/packages/grub2-theme-preview/)
+* Manjaro 探索筆記 / [grub2-theme-preview](https://samwhelp.github.io/note-about-manjaro/read/adjustment/tool/grub2-theme-preview.html)
 
 ## Just the Docs
 
