@@ -1,6 +1,6 @@
 
 
-# Demo Grub Boot ISO / Archcraft
+# Demo Grub Boot ISO / Manjaro / 21.0.7
 
 ## Grub Config
 
