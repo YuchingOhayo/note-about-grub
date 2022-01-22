@@ -1,6 +1,6 @@
 
 
-# Demo Grub Boot ISO / Manjaro / 21.2.1
+# Demo Grub Boot ISO / ArcoLinux / 21.2.1
 
 ## Grub Config
 
