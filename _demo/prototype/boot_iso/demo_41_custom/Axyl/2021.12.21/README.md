@@ -1,6 +1,6 @@
 
 
-# Demo Grub Boot ISO / AxylOS / 21.2.1
+# Demo Grub Boot ISO / AxylOS / 2021.12.21
 
 ## Grub Config
 
