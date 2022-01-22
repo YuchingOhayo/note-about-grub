@@ -21,7 +21,7 @@
 
 ## Menu Entry
 
-* [/opt/iso/ubuntu/21.04/https://releases.ubuntu.com/21.04/ubuntu-21.04-live-server-amd64.iso](https://releases.ubuntu.com/21.04/ubuntu-21.04-live-server-amd64.iso)
+* [/opt/iso/ubuntu/21.04/ubuntu-21.04-live-server-amd64.iso](https://releases.ubuntu.com/21.04/ubuntu-21.04-live-server-amd64.iso)
 * [/opt/iso/ubuntu/21.04/ubuntu-21.04-desktop-amd64.iso](https://releases.ubuntu.com/21.04/ubuntu-21.04-desktop-amd64.iso)
 * [/opt/iso/ubuntu/21.04/xubuntu-21.04-desktop-amd64.iso](https://cdimage.ubuntu.com/xubuntu/releases/21.04/release/xubuntu-21.04-desktop-amd64.iso)
 * [/opt/iso/ubuntu/21.04/lubuntu-21.04-desktop-amd64.iso](https://cdimage.ubuntu.com/lubuntu/releases/21.04/release/lubuntu-21.04-desktop-amd64.iso)
