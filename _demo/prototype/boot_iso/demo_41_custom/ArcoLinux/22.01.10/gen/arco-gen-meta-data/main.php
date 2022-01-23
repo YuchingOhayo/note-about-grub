@@ -1,10 +1,6 @@
 #!/usr/bin/env php
 <?php
 
-/*
-	* https://github.com/samwhelp/note-about-gcin/blob/gh-pages/ubuntu/18.04/tool/prototype/download-eliu-gcin-source/php-dom-xpath-wget/download.php
-	* https://www.php.net/manual/en/function.escapeshellcmd.php
-*/
 
 // http://php.net/manual/en/function.error-reporting.php
 error_reporting(E_ALL & ~(E_WARNING|E_NOTICE));
@@ -82,6 +78,8 @@ class App {
 
 		system($command);
 
+		//https://www.php.net/manual/en/function.escapeshellcmd.php
+
 		/*
 		$escaped_command = escapeshellcmd($command);
 		system($escaped_command);
@@ -90,6 +88,9 @@ class App {
 
 	protected function parseSourcePage ()
 	{
+
+		//https://github.com/samwhelp/note-about-gcin/blob/gh-pages/ubuntu/18.04/tool/prototype/download-eliu-gcin-source/php-dom-xpath-wget/download.php
+
 		$base_file_path = $this->source_html_file_path;
 		$base_url = $this->source_url;
 
