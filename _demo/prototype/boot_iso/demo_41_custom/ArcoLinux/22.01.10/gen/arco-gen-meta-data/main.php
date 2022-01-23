@@ -19,6 +19,8 @@ class App {
 		$this->source_html_file_path = __DIR__ . '/source.html';
 		$this->source_txt_file_path = __DIR__ . '/source.txt';
 		$this->serialize_txt_file_path = __DIR__ . '/serialize.txt';
+		$this->serialize_json_file_path = __DIR__ . '/serialize.json';
+		$this->serialize_csv_file_path = __DIR__ . '/serialize.csv';
 		$this->source_url = 'https://ant.seedhost.eu/arcolinux/iso/v22.01.10';
 		$this->conf_file_path = dirname(__DIR__) . '/arco-gen-grub-menu-entry/conf.php';
 	}
@@ -48,6 +50,12 @@ class App {
 		$this->serializeData($this->serialize_txt_file_path, $data);
 
 		//$meta = $this->unserializeData($this->serialize_txt_file_path);
+
+		$this->serializeData_ToJson($this->serialize_json_file_path, $data);
+
+		//$meta = $this->unserializeData_FromJson($this->serialize_json_file_path);
+
+		$this->serializeData_ToCsv($this->serialize_csv_file_path, $data);
 
 		$this->createConfFile($data);
 
@@ -211,7 +219,7 @@ class App {
 
 	protected function serializeData ($file, $data=array())
 	{
-		//https://www.php.net/manual/en/function.serialize
+		// https://www.php.net/manual/en/function.serialize
 
 		$content = serialize($data);
 
@@ -222,7 +230,7 @@ class App {
 
 	protected function unserializeData ($file)
 	{
-		//https://www.php.net/manual/en/function.unserialize.php
+		// https://www.php.net/manual/en/function.unserialize.php
 
 
 		$content = file_get_contents($file);
@@ -230,6 +238,54 @@ class App {
 		$rtn = unserialize($content);
 
 		return $rtn;
+
+	}
+
+	protected function serializeData_ToJson ($file, $data=array())
+	{
+		// https://www.php.net/manual/en/function.json-encode.php
+
+		$content = json_encode($data);
+
+		file_put_contents($file, $content);
+
+	}
+
+	protected function unserializeData_FromJson ($file)
+	{
+		// https://www.php.net/manual/en/function.json-decode.php
+
+
+		$content = file_get_contents($file);
+
+		$rtn = json_decode($content, true);
+
+		return $rtn;
+
+	}
+
+	protected function serializeData_ToCsv ($file, $data=array())
+	{
+		$rtn = '';
+		$rtn .= 'title, version, file, url' . PHP_EOL;
+
+		foreach ($data as $item) {
+
+			$rtn .= sprintf(
+				"%s, %s, %s, %s\n",
+				$item['title'],
+				$item['version'],
+				$item['file'],
+				$item['url']
+			);
+
+
+		}
+
+
+		file_put_contents($file, $rtn);
+
+		//return $rtn;
 
 	}
 
