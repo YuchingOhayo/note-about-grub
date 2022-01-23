@@ -1,7 +1,6 @@
 #!/usr/bin/env php
 <?php
 
-	require_once(__DIR__ . '/conf.php');
 	require_once(__DIR__ . '/util.php');
 
 class App {
