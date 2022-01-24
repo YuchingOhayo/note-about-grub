@@ -220,4 +220,5 @@ grub2-theme-preview /boot/grub/themes/dracula
 ## See Also
 
 * [Grub2 theme tutorial](http://wiki.rosalab.ru/en/index.php/Grub2_theme_tutorial)
+* [Grub2 theme reference](http://wiki.rosalab.ru/en/index.php/Grub2_theme_/_reference)
 * [Theme file format](https://www.gnu.org/software/grub/manual/grub/html_node/Theme-file-format.html)
