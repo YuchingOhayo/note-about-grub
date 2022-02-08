@@ -27,6 +27,7 @@ grand_parent: 專案
 | [virtual_future](#virtual_future) | [Virtual Future](https://gitlab.com/deck451/virtual_future_grub_theme) | /boot/grub/themes/virtual_future |
 | [deepin](#deepin) | [Deepin](https://github.com/linuxdeepin/deepin-grub2-themes) | /boot/grub/themes/deepin |
 | [big_sur](#big_sur) | [Big Sur](https://github.com/Teraskull/bigsur-grub2-theme) | /boot/grub/themes/big_sur |
+| [atomic](#atomic) | [Atomic](https://github.com/lfelipe1501/Atomic-GRUB2-Theme) | /boot/grub/themes/atomic |
 
 
 ### fzf
@@ -102,6 +103,15 @@ grubrc-theme-get big_sur
 ```
 
 
+### atomic
+
+執行下面指令，單一安裝「theme / [atomic](https://github.com/lfelipe1501/Atomic-GRUB2-Theme/tree/master/Atomic)」
+
+``` sh
+grubrc-theme-get atomic
+```
+
+
 ## 搭配使用範例
 
 
@@ -118,4 +128,20 @@ grubrc-theme-ctrl preview poly_dark
 
 ``` sh
 grubrc-theme-ctrl set poly_dark
+```
+
+## 搭配fzf選單範例
+
+若要搭配fzf選單，
+
+預覽選單的指令如下
+
+``` sh
+grubrc-theme-ctrl preview_fzf
+```
+
+採用選單的指令如下
+
+``` sh
+grubrc-theme-ctrl fzf
 ```
