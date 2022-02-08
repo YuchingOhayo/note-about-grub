@@ -68,6 +68,11 @@ has_children: true
 * [Theme file format](https://www.gnu.org/software/grub/manual/grub/html_node/Theme-file-format.html)
 
 
+## Grub2 tweaks tutorial
+
+* [grub-tweaks](https://github.com/vandalsoul/grub-tweaks)
+
+
 ## Just the Docs
 
 * [Just the Docs](https://pmarsceill.github.io/just-the-docs/) ([GitHub](https://github.com/pmarsceill/just-the-docs))
