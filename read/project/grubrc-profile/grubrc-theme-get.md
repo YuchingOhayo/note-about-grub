@@ -27,6 +27,7 @@ grand_parent: 專案
 | [virtual_future](#virtual_future) | [Virtual Future](https://gitlab.com/deck451/virtual_future_grub_theme) | /boot/grub/themes/virtual_future |
 | [deepin](#deepin) | [Deepin](https://github.com/linuxdeepin/deepin-grub2-themes) | /boot/grub/themes/deepin |
 | [big_sur](#big_sur) | [Big Sur](https://github.com/Teraskull/bigsur-grub2-theme) | /boot/grub/themes/big_sur |
+| [monterey](#monterey) | [Monterey](https://github.com/sandesh236/monterey-grub-theme) | /boot/grub/themes/monterey |
 | [atomic](#atomic) | [Atomic](https://github.com/lfelipe1501/Atomic-GRUB2-Theme) | /boot/grub/themes/atomic |
 
 
@@ -100,6 +101,14 @@ grubrc-theme-get deepin
 
 ``` sh
 grubrc-theme-get big_sur
+```
+
+### monterey
+
+執行下面指令，單一安裝「theme / [monterey](https://github.com/sandesh236/monterey-grub-theme/tree/main/monterey-grub-theme)」
+
+``` sh
+grubrc-theme-get monterey
 ```
 
 

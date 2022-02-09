@@ -35,6 +35,7 @@ dracula
 virtual_future
 deepin
 big_sur
+monterey
 atomic
 EOF
 )"

@@ -956,6 +956,8 @@ dracula
 virtual_future
 deepin
 big_sur
+monterey
+atomic
 EOF
 )"
 
@@ -993,6 +995,8 @@ mod_all_install () {
 	mod_theme_virtual_future_install
 	mod_theme_deepin_install
 	mod_theme_big_sur_install
+	mod_theme_monterey_install
+	mod_theme_atomic_install
 
 }
 
@@ -1452,6 +1456,68 @@ mod_theme_big_sur_install () {
 
 
 ################################################################################
+### Head: Model theme_monterey
+##
+
+mod_theme_monterey_install () {
+
+	##
+	## https://www.gnome-look.org/p/1577873/
+	## https://github.com/sandesh236/monterey-grub-theme
+	## https://github.com/sandesh236/monterey-grub-theme/tree/main/monterey-grub-theme
+	##
+
+	local name='monterey'
+	local repo_url='https://github.com/sandesh236/monterey-grub-theme.git'
+
+
+	if [ "none$name" = "none" ]; then
+		util_error_echo
+		util_error_echo "## Need name: "
+		util_error_echo
+		return 1
+	fi
+
+
+	local target_theme_path="$THE_GRUBRC_THEMES_DIR_PATH/$name"
+
+	if [ -d "$target_theme_path" ]; then
+		util_error_echo "## Theme is Exist: $target_theme_path"
+		util_error_echo "## Please Remove First:"
+		util_error_echo "grubrc-theme-ctrl remove $name"
+		return 1
+	fi
+
+	util_error_echo "sudo mkdir -p $THE_GRUBRC_THEMES_DIR_PATH"
+	sudo mkdir -p "$THE_GRUBRC_THEMES_DIR_PATH"
+
+
+	util_error_echo
+	grubrc_theme_repo_clone_to_tmp "$name" "$repo_url"
+	util_error_echo
+
+
+	util_error_echo "sudo cp -a $name/monterey-grub-theme $target_theme_path"
+	sudo cp -a "$name/monterey-grub-theme" "$target_theme_path"
+
+	util_error_echo
+	util_error_echo "cd $OLDPWD"
+	cd "$OLDPWD"
+
+	util_error_echo
+	util_error_echo "## Please Run to Change:"
+	util_error_echo
+	util_error_echo "grubrc-theme-ctrl set $name"
+	util_error_echo
+
+}
+
+##
+### Tail: Model theme_monterey
+################################################################################
+
+
+################################################################################
 ### Head: Model theme_atomic
 ##
 
@@ -1595,6 +1661,12 @@ sub_run_big_sur () {
 }
 
 
+sub_run_monterey () {
+	#echo "sub_run_monterey_rounded"
+	mod_theme_monterey_install "$@"
+}
+
+
 sub_run_atomic () {
 	#echo "sub_run_atomic_rounded"
 	mod_theme_atomic_install "$@"
@@ -1659,6 +1731,8 @@ Example:
 		$ $cmd_name main
 
 		$ $cmd_name big_sur
+
+		$ $cmd_name monterey
 
 		$ $cmd_name atomic
 
