@@ -6,7 +6,10 @@
 
 mod_theme_poly_light_install () {
 
+	##
+	## https://www.gnome-look.org/p/1176413/
 	## https://github.com/shvchk/poly-light
+	##
 
 	local name='poly_light'
 	local repo_url='https://github.com/shvchk/poly-light.git'

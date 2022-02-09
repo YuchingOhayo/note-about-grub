@@ -6,7 +6,10 @@
 
 mod_theme_poly_dark_install () {
 
+	##
+	## https://www.gnome-look.org/p/1230780/
 	## https://github.com/shvchk/poly-dark
+	##
 
 	local name='poly_dark'
 	local repo_url='https://github.com/shvchk/poly-dark.git'

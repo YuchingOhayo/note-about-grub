@@ -1013,7 +1013,10 @@ mod_all_install () {
 
 mod_theme_poly_dark_install () {
 
+	##
+	## https://www.gnome-look.org/p/1230780/
 	## https://github.com/shvchk/poly-dark
+	##
 
 	local name='poly_dark'
 	local repo_url='https://github.com/shvchk/poly-dark.git'
@@ -1043,7 +1046,10 @@ mod_theme_poly_dark_install () {
 
 mod_theme_poly_light_install () {
 
+	##
+	## https://www.gnome-look.org/p/1176413/
 	## https://github.com/shvchk/poly-light
+	##
 
 	local name='poly_light'
 	local repo_url='https://github.com/shvchk/poly-light.git'
@@ -1073,7 +1079,10 @@ mod_theme_poly_light_install () {
 
 mod_theme_fallout_install () {
 
+	##
+	## https://www.gnome-look.org/p/1230882/
 	## https://github.com/shvchk/fallout-grub-theme
+	##
 
 	local name='fallout'
 	local repo_url='https://github.com/shvchk/fallout-grub-theme.git'
