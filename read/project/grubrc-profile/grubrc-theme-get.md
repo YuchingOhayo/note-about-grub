@@ -141,7 +141,7 @@ grubrc-theme-get atomic
 安裝某個「GRUB佈景主題後」，可以搭配「[grubrc-theme-ctrl](https://samwhelp.github.io/note-about-grub/read/project/grubrc-profile/grubrc-theme-ctrl.html)」這個指令，來執行相關的操作。
 
 
-舉例，安裝完「[poly_dark](#poly_dark)」後，
+舉例：安裝完「[poly_dark](#poly_dark)」後，
 
 
 若要預覽，則要搭配執行下面指令
