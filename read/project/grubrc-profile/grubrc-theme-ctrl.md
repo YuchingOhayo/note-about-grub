@@ -75,6 +75,9 @@ export DEBUG_GRUBRC_THEME_CTRL=true
 grubrc-theme-ctrl install poly_dark https://github.com/shvchk/poly-dark.git
 ```
 
+> 也可以先透過「[grubrc-theme-get](https://samwhelp.github.io/note-about-grub/read/project/grubrc-profile/grubrc-theme-get.html)」這個指令，來輔助安裝「GRUB佈景主題」。
+
+
 ### remove
 
 執行
