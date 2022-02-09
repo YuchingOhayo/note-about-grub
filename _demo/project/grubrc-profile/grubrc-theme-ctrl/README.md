@@ -67,6 +67,8 @@ grubrc-theme-ctrl help
 
 ### debug
 
+run
+
 ``` sh
 export DEBUG_GRUBRC_THEME_CTRL=true
 ```
