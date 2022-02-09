@@ -40,6 +40,7 @@ has_children: true
 * [http://www.jinbuguo.com/linux/grub.cfg.html](http://www.jinbuguo.com/linux/grub.cfg.html)
 * [https://ttys3.dev/post/how-to-boot-fedora32-live-cd-iso-from-grub2/](https://ttys3.dev/post/how-to-boot-fedora32-live-cd-iso-from-grub2/)
 * [https://ttys3.dev/post/how-to-boot-ubuntu-live-cd-iso-from-grub2/](https://ttys3.dev/post/how-to-boot-ubuntu-live-cd-iso-from-grub2/)
+* [https://blog.gtwang.org/linux/boot-iso-image-from-your-hard-drive-in-ubuntu/](https://blog.gtwang.org/linux/boot-iso-image-from-your-hard-drive-in-ubuntu/)
 
 
 ## Intro
