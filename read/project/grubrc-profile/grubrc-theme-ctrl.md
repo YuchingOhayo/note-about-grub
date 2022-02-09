@@ -35,7 +35,6 @@ grand_parent: 專案
 | [get](#get) | 目前採用佈景主題(目前採用名稱) |
 | [fzf](#fzf) | 設定採用佈景主題選單 |
 | [preview_fzf](#preview_fzf) | 預覽佈景主題選單 |
-| [preview_fzf](#preview_fzf) | 預覽佈景主題選單 |
 
 
 | 選項 | 動作 |
