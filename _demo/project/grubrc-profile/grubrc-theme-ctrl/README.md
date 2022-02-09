@@ -4,7 +4,7 @@
 
 ## Install
 
-Run
+run
 
 ``` sh
 mkdir -p "$HOME/.local/bin"
@@ -14,13 +14,13 @@ wget 'https://raw.githubusercontent.com/samwhelp/note-about-grub/gh-pages/_demo/
 chmod 755 "$HOME/.local/bin/grubrc-theme-ctrl"
 ```
 
-Or Run
+or run
 
 ``` sh
 curl -fsSL 'https://raw.githubusercontent.com/samwhelp/note-about-grub/gh-pages/_demo/project/grubrc-profile/grubrc-theme-ctrl/remote-install.sh' | bash
 ```
 
-Or Run
+or run
 
 ``` sh
 wget 'https://raw.githubusercontent.com/samwhelp/note-about-grub/gh-pages/_demo/project/grubrc-profile/grubrc-theme-ctrl/remote-install.sh' -q -O - | bash
