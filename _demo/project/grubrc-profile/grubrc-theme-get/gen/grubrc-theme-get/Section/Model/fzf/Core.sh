@@ -34,6 +34,7 @@ fallout
 dracula
 virtual_future
 deepin
+pentract
 big_sur
 monterey
 atomic

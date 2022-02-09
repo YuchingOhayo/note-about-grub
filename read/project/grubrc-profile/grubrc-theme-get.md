@@ -26,6 +26,7 @@ grand_parent: 專案
 | [dracula](#dracula) | [Dracula](https://github.com/zshzero/dracula-grub2) | /boot/grub/themes/dracula |
 | [virtual_future](#virtual_future) | [Virtual Future](https://gitlab.com/deck451/virtual_future_grub_theme) | /boot/grub/themes/virtual_future |
 | [deepin](#deepin) | [Deepin](https://github.com/linuxdeepin/deepin-grub2-themes) | /boot/grub/themes/deepin |
+| [pentract](#pentract) | [Pentract](https://github.com/sarancodes/pentract-grub-theme) | /boot/grub/themes/pentract |
 | [big_sur](#big_sur) | [Big Sur](https://github.com/Teraskull/bigsur-grub2-theme) | /boot/grub/themes/big_sur |
 | [monterey](#monterey) | [Monterey](https://github.com/sandesh236/monterey-grub-theme) | /boot/grub/themes/monterey |
 | [atomic](#atomic) | [Atomic](https://github.com/lfelipe1501/Atomic-GRUB2-Theme) | /boot/grub/themes/atomic |
@@ -95,6 +96,14 @@ grubrc-theme-get virtual_future
 grubrc-theme-get deepin
 ```
 
+### pentract
+
+執行下面指令，單一安裝「theme / [pentract](https://github.com/sarancodes/pentract-grub-theme)」
+
+``` sh
+grubrc-theme-get pentract
+```
+
 ### big_sur
 
 執行下面指令，單一安裝「theme / [big_sur](https://github.com/Teraskull/bigsur-grub2-theme/tree/master/bigsur)」
@@ -110,7 +119,6 @@ grubrc-theme-get big_sur
 ``` sh
 grubrc-theme-get monterey
 ```
-
 
 ### atomic
 
