@@ -45,13 +45,24 @@ grubrc-theme-ctrl list
 show
 
 ```
+atomic
 big_sur
 deepin
 dracula
 fallout
+monterey
+pentract
 poly_dark
 poly_light
 virtual_future
+```
+
+### preview
+
+run
+
+``` sh
+grubrc-theme-ctrl preview poly_dark
 ```
 
 ### set
@@ -106,10 +117,13 @@ grubrc-theme-ctrl path_list
 show
 
 ```
+/boot/grub/themes/atomic/theme.txt
 /boot/grub/themes/big_sur/theme.txt
 /boot/grub/themes/deepin/theme.txt
 /boot/grub/themes/dracula/theme.txt
 /boot/grub/themes/fallout/theme.txt
+/boot/grub/themes/monterey/theme.txt
+/boot/grub/themes/pentract/theme.txt
 /boot/grub/themes/poly_dark/theme.txt
 /boot/grub/themes/poly_light/theme.txt
 /boot/grub/themes/virtual_future/theme.txt
