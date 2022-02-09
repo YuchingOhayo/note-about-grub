@@ -3,7 +3,7 @@
 
 ## Install
 
-Run
+run
 
 ``` sh
 mkdir -p "$HOME/.local/bin"
@@ -13,13 +13,13 @@ wget 'https://raw.githubusercontent.com/samwhelp/note-about-grub/gh-pages/_demo/
 chmod 755 "$HOME/.local/bin/grubrc-theme-get"
 ```
 
-Or Run
+or run
 
 ``` sh
 curl -fsSL 'https://raw.githubusercontent.com/samwhelp/note-about-grub/gh-pages/_demo/project/grubrc-profile/grubrc-theme-get/remote-install.sh' | bash
 ```
 
-Or Run
+or run
 
 ``` sh
 wget 'https://raw.githubusercontent.com/samwhelp/note-about-grub/gh-pages/_demo/project/grubrc-profile/grubrc-theme-get/remote-install.sh' -q -O - | bash
@@ -29,21 +29,30 @@ wget 'https://raw.githubusercontent.com/samwhelp/note-about-grub/gh-pages/_demo/
 ## Usage
 
 
-### Help
+### help
+
+run
 
 ``` sh
-$ grubrc-theme-get
+grubrc-theme-get
 ```
 
-or
+or run
 
 ``` sh
-$ grubrc-theme-get help
+grubrc-theme-get help
 ```
 
 
-### Debug
+### debug
+
+run
 
 ``` sh
-$ export DEBUG_GRUBRC_THEME_GET=true
+export DEBUG_GRUBRC_THEME_GET=true
 ```
+
+
+## Link
+
+* [Note](https://samwhelp.github.io/note-about-grub/read/project/grubrc-profile/grubrc-theme-get.html)
