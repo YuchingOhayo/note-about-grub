@@ -14,3 +14,7 @@ parent: 連結
 
 * Arch Wiki / [Ventoy](https://wiki.archlinux.org/title/Ventoy)
 * Arch Wiki / [USB flash installation medium](https://wiki.archlinux.org/title/USB_flash_installation_medium) / [Using ventoy](https://wiki.archlinux.org/title/USB_flash_installation_medium#Using_ventoy)
+
+* Wiki / [Ventoy](https://en.wikipedia.org/wiki/Ventoy) ([中文](https://zh.wikipedia.org/zh-tw/Ventoy))
+
+* [https://github.com/Teraskull/bigsur-grub2-theme/tree/master/ventoy](https://github.com/Teraskull/bigsur-grub2-theme/tree/master/ventoy)
