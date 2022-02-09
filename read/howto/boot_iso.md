@@ -12,3 +12,8 @@ parent: 如何
 ## GRUB Boot ISO 範例
 
 * [GRUB Boot ISO 範例](https://github.com/samwhelp/note-about-grub/tree/gh-pages/_demo/prototype/boot_iso)
+
+
+## See Also
+
+* [grml-rescueboot](https://samwhelp.github.io/note-about-grub/read/link/grml-rescueboot.html)

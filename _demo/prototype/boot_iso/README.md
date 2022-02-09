@@ -1,10 +1,10 @@
 
+# Grub Boot Iso
 
-## Demo Grub Boot ISO
+## Demo
 
-* /etc/grub.d/41_custom
-* /boot/grub/custom.cfg
-
+* [demo_40_custom](demo_40_custom)
+* [demo_41_custom](demo_41_custom)
 
 ## See Also
 
