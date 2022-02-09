@@ -23,6 +23,27 @@ grand_parent: 專案
 ## 使用範例
 
 
+| 選項 | 動作 |
+| --- | --- |
+| [install](#install) | 安裝單一佈景主題 |
+| [remove](#remove) | 移除單一佈景主題 |
+| [list](#list) | 佈景主題列表(已經安裝) |
+| [preview](#preview) | 預覽佈景主題(指定名稱) |
+| [set](#set) | 採用佈景主題 |
+| [get](#get) | 目前採用佈景主題(目前採用名稱) |
+| [fzf](#fzf) | 設定採用佈景主題選單 |
+| [preview_fzf](#preview_fzf) | 預覽佈景主題選單 |
+| [preview_fzf](#preview_fzf) | 預覽佈景主題選單 |
+
+
+| 選項 | 動作 |
+| --- | --- |
+| [path_list](#path_list) | 佈景主題路徑列表(已經安裝) |
+| [path_preview](#path_preview) | 預覽佈景主題(指定路徑) |
+| [path_set](#path_set) | 採用佈景主題(指定路徑) |
+| [path_get](#path_get) | 目前採用佈景主題(目前採用路徑) |
+
+
 ### install
 
 run
