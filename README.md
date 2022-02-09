@@ -20,7 +20,7 @@
 | 議題 | 簡介 |
 | --- | --- |
 | [GRUB Theme](https://samwhelp.github.io/note-about-grub/read/howto/use_theme.html) | GRUB如何安裝和設定採用某個佈景主題 |
-| [GRUB Boot ISO](https://samwhelp.github.io/note-about-grub/read/howto/boot_iso.html) | |
+| [GRUB Boot ISO](https://samwhelp.github.io/note-about-grub/read/howto/boot_iso.html) | 透過GRUB和ISO檔開機的設定範例 |
 
 
 ## 專案
@@ -36,5 +36,3 @@
 | 工具 | 簡介 |
 | --- | --- |
 | [grub2-theme-preview](https://samwhelp.github.io/note-about-manjaro/read/adjustment/tool/grub2-theme-preview.html) | 用來輔助「預覽」GRUB佈景主題 |
-
-
