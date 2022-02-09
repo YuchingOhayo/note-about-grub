@@ -9,6 +9,12 @@ grand_parent: 專案
 # grubrc-theme-get
 
 
+## 連結
+
+* [GRUB Themes](https://www.gnome-look.org/browse?cat=109)
+* [Howto Set GRUB Theme](https://samwhelp.github.io/note-about-grub/read/howto/use_theme.html)
+
+
 ## 專案連結
 
 * [grubrc-theme-get](https://github.com/samwhelp/note-about-grub/tree/gh-pages/_demo/project/grubrc-profile/grubrc-theme-get)
