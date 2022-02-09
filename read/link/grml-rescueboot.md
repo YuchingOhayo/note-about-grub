@@ -1,7 +1,7 @@
 ---
 title: grml-rescueboot
 nav_order: 9010
-has_children: true
+has_children: false
 parent: 連結
 ---
 
@@ -46,15 +46,15 @@ sudo apt-get install grml-rescueboot
 
 ## grml
 
-* https://grml.org/
-* https://grml.org/download/
-* https://grml.org/download/mirrors/
-* https://download.grml.org/
+* [https://grml.org/](https://grml.org/)
+* [https://grml.org/download/](https://grml.org/download/)
+* [https://grml.org/download/mirrors/](https://grml.org/download/mirrors/)
+* [https://download.grml.org/](https://download.grml.org/)
 
 
-* https://grml.github.io/
-* https://github.com/grml
-* https://github.com/grml/grml-live
+* [https://grml.github.io/](https://grml.github.io/)
+* [https://github.com/grml](https://github.com/grml)
+* [https://github.com/grml/grml-live](https://github.com/grml/grml-live)
 
 
 
@@ -68,7 +68,7 @@ https://download.grml.org/grml96-small_2021.07.iso
 
 ## fai
 
-* https://fai-project.org/
-* https://fai-project.org/fai-cd/
-* https://fai-project.org/sources/
-* https://github.com/faiproject/fai
+* [https://fai-project.org/](https://fai-project.org/)
+* [https://fai-project.org/fai-cd/](https://fai-project.org/fai-cd/)
+* [https://fai-project.org/sources/](https://fai-project.org/sources/)
+* [https://github.com/faiproject/fai](https://github.com/faiproject/fai)
