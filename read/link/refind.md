@@ -7,7 +7,8 @@ parent: 連結
 
 ## Link
 
-* Wiki / [REFInd](https://en.wikipedia.org/wiki/REaFInd)
+* Wiki / [REFInd](https://en.wikipedia.org/wiki/REFInd)
+* Wiki / [Comparison of boot loaders](https://en.wikipedia.org/wiki/Comparison_of_boot_loaders)
 * Arch Wiki / [REFInd](https://wiki.archlinux.org/title/REFInd)
 * AUR / Search / [rEFInd](https://aur.archlinux.org/packages?K=rEFInd)
 * AUR / Package / [refind-git](https://aur.archlinux.org/packages/refind-git) / [PKGBUILD](https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=refind-git)
