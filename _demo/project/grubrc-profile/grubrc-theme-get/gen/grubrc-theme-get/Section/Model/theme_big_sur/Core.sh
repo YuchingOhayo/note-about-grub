@@ -7,7 +7,7 @@
 mod_theme_big_sur_install () {
 
 	##
-	## https://www.gnome-look.org/p/1443844/
+	## https://www.gnome-look.org/p/1443844
 	## https://github.com/Teraskull/bigsur-grub2-theme
 	## https://github.com/Teraskull/bigsur-grub2-theme/tree/master/bigsur
 	##

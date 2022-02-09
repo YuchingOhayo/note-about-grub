@@ -6,7 +6,10 @@
 
 mod_theme_dracula_install () {
 
+	##
+	## https://www.gnome-look.org/p/1382440
 	## https://github.com/zshzero/dracula-grub2.git
+	##
 
 	local name='dracula'
 	local repo_url='https://github.com/zshzero/dracula-grub2.git'

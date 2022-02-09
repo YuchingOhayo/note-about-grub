@@ -7,7 +7,7 @@
 mod_theme_monterey_install () {
 
 	##
-	## https://www.gnome-look.org/p/1577873/
+	## https://www.gnome-look.org/p/1577873
 	## https://github.com/sandesh236/monterey-grub-theme
 	## https://github.com/sandesh236/monterey-grub-theme/tree/main/monterey-grub-theme
 	##

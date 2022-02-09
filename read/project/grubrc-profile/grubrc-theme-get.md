@@ -26,16 +26,16 @@ grand_parent: 專案
 | --- | --- | --- |
 | [fzf](#fzf) | 提供fzf列表選項安裝 | |
 | [all](#all) | 安裝以下所有的「theme」| |
-| [poly_dark](#poly_dark) | [Poly dark](https://github.com/shvchk/poly-dark) | /boot/grub/themes/poly_dark |
-| [poly_light](#poly_light) | [Poly light](https://github.com/shvchk/poly-light) | /boot/grub/themes/poly_light |
-| [fallout](#fallout) | [Fallout](https://github.com/shvchk/fallout-grub-theme) | /boot/grub/themes/fallout |
-| [dracula](#dracula) | [Dracula](https://github.com/zshzero/dracula-grub2) | /boot/grub/themes/dracula |
-| [virtual_future](#virtual_future) | [Virtual Future](https://gitlab.com/deck451/virtual_future_grub_theme) | /boot/grub/themes/virtual_future |
+| [poly_dark](#poly_dark) | [Poly dark](https://github.com/shvchk/poly-dark) ([簡介](https://www.gnome-look.org/p/1230780)) | /boot/grub/themes/poly_dark |
+| [poly_light](#poly_light) | [Poly light](https://github.com/shvchk/poly-light) ([簡介](https://www.gnome-look.org/p/1176413)) | /boot/grub/themes/poly_light |
+| [fallout](#fallout) | [Fallout](https://github.com/shvchk/fallout-grub-theme) ([簡介](https://www.gnome-look.org/p/1230882)) | /boot/grub/themes/fallout |
+| [dracula](#dracula) | [Dracula](https://github.com/zshzero/dracula-grub2) ([簡介](https://www.gnome-look.org/p/1382440)) | /boot/grub/themes/dracula |
+| [virtual_future](#virtual_future) | [Virtual Future](https://gitlab.com/deck451/virtual_future_grub_theme) ([簡介](https://www.gnome-look.org/p/1529571/)) | /boot/grub/themes/virtual_future |
 | [deepin](#deepin) | [Deepin](https://github.com/linuxdeepin/deepin-grub2-themes) | /boot/grub/themes/deepin |
-| [pentract](#pentract) | [Pentract](https://github.com/sarancodes/pentract-grub-theme) | /boot/grub/themes/pentract |
-| [big_sur](#big_sur) | [Big Sur](https://github.com/Teraskull/bigsur-grub2-theme) | /boot/grub/themes/big_sur |
-| [monterey](#monterey) | [Monterey](https://github.com/sandesh236/monterey-grub-theme) | /boot/grub/themes/monterey |
-| [atomic](#atomic) | [Atomic](https://github.com/lfelipe1501/Atomic-GRUB2-Theme) | /boot/grub/themes/atomic |
+| [pentract](#pentract) | [Pentract](https://github.com/sarancodes/pentract-grub-theme) ([簡介](https://www.gnome-look.org/p/1661288)) | /boot/grub/themes/pentract |
+| [big_sur](#big_sur) | [Big Sur](https://github.com/Teraskull/bigsur-grub2-theme) ([簡介](https://www.gnome-look.org/p/1443844)) | /boot/grub/themes/big_sur |
+| [monterey](#monterey) | [Monterey](https://github.com/sandesh236/monterey-grub-theme) ([簡介](https://www.gnome-look.org/p/1577873)) | /boot/grub/themes/monterey |
+| [atomic](#atomic) | [Atomic](https://github.com/lfelipe1501/Atomic-GRUB2-Theme) ([簡介](https://www.gnome-look.org/p/1443844)) | /boot/grub/themes/atomic |
 
 
 ### fzf

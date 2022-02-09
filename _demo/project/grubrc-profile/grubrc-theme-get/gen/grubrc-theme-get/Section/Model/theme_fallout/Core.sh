@@ -7,7 +7,7 @@
 mod_theme_fallout_install () {
 
 	##
-	## https://www.gnome-look.org/p/1230882/
+	## https://www.gnome-look.org/p/1230882
 	## https://github.com/shvchk/fallout-grub-theme
 	##
 

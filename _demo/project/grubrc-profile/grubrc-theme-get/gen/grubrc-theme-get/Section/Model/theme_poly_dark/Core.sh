@@ -7,7 +7,7 @@
 mod_theme_poly_dark_install () {
 
 	##
-	## https://www.gnome-look.org/p/1230780/
+	## https://www.gnome-look.org/p/1230780
 	## https://github.com/shvchk/poly-dark
 	##
 

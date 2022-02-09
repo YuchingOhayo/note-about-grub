@@ -7,7 +7,7 @@
 mod_theme_atomic_install () {
 
 	##
-	## https://www.gnome-look.org/p/1443844/
+	## https://www.gnome-look.org/p/1443844
 	## https://github.com/lfelipe1501/Atomic-GRUB2-Theme
 	## https://github.com/lfelipe1501/Atomic-GRUB2-Theme/tree/master/Atomic
 	##

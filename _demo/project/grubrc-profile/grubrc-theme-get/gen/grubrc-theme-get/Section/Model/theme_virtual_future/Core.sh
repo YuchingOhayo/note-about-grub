@@ -7,7 +7,7 @@
 mod_theme_virtual_future_install () {
 
 	##
-	## https://www.gnome-look.org/p/1529571/
+	## https://www.gnome-look.org/p/1529571
 	## https://gitlab.com/deck451/virtual_future_grub_theme
 	## https://gitlab.com/deck451/virtual_future_grub_theme/-/tree/main/virtual_future
 	##
