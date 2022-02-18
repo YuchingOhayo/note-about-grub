@@ -17,3 +17,7 @@ parent: 如何
 ## See Also
 
 * [grml-rescueboot](https://samwhelp.github.io/note-about-grub/read/link/grml-rescueboot.html)
+* [ventoy](https://www.ventoy.net/)
+* [grub-iso-boot](https://github.com/Jimmy-Z/grub-iso-boot)
+* [glim](https://github.com/thias/glim)
+* [multibootusb](https://github.com/aguslr/multibootusb)
