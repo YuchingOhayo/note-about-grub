@@ -1,0 +1,6 @@
+https://alpha.de.repo.voidlinux.org/live/20210930/void-live-x86_64-20210930-xfce.iso
+https://alpha.de.repo.voidlinux.org/live/20210930/void-live-x86_64-musl-20210930-xfce.iso
+https://alpha.de.repo.voidlinux.org/live/20210930/void-live-x86_64-20210930.iso
+https://alpha.de.repo.voidlinux.org/live/20210930/void-live-x86_64-musl-20210930.iso
+https://alpha.de.repo.voidlinux.org/live/20210930/void-x86_64-ROOTFS-20210930.tar.xz
+https://alpha.de.repo.voidlinux.org/live/20210930/void-x86_64-musl-ROOTFS-20210930.tar.xz
