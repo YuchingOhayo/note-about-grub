@@ -280,6 +280,41 @@ dpkg -L grub-common | grep '/man/man.*/' | grep '8.gz' | awk -F '/' '{print $6}'
 * man [grub-probe](http://manpages.ubuntu.com/manpages/focal/en/man8/grub-probe.8.html)
 
 
+## bin
+
+執行
+
+``` sh
+dpkg -L grub-common | grep 'bin/'
+```
+
+顯示
+
+```
+/usr/bin/grub-editenv
+/usr/bin/grub-file
+/usr/bin/grub-fstest
+/usr/bin/grub-glue-efi
+/usr/bin/grub-kbdcomp
+/usr/bin/grub-menulst2cfg
+/usr/bin/grub-mkfont
+/usr/bin/grub-mkimage
+/usr/bin/grub-mklayout
+/usr/bin/grub-mknetdir
+/usr/bin/grub-mkpasswd-pbkdf2
+/usr/bin/grub-mkrelpath
+/usr/bin/grub-mkrescue
+/usr/bin/grub-mkstandalone
+/usr/bin/grub-mount
+/usr/bin/grub-render-label
+/usr/bin/grub-script-check
+/usr/bin/grub-syslinux2cfg
+/usr/sbin/grub-macbless
+/usr/sbin/grub-mkconfig
+/usr/sbin/grub-mkdevicemap
+/usr/sbin/grub-probe
+```
+
 ## Link
 
 * Ubuntu Basic Skill / [如何查詢某個套件有哪些使用手冊(man page)](https://samwhelp.github.io/book-ubuntu-basic-skill/book/content/manual/how-to-find-out-manpages-by-a-package.html)

@@ -155,6 +155,24 @@ dpkg -L grub2-common | grep '/man/man.*/' | awk -F '/' '{print $6}' | sort -u | 
 * man [update-grub](http://manpages.ubuntu.com/manpages/focal/en/man8/update-grub.8.html)
 
 
+## bin
+
+執行
+
+``` sh
+dpkg -L grub2-common | grep 'bin/'
+```
+
+顯示
+
+```
+/usr/sbin/grub-install
+/usr/sbin/grub-reboot
+/usr/sbin/grub-set-default
+/usr/sbin/update-grub
+/usr/sbin/update-grub2
+```
+
 ## Link
 
 * Ubuntu Basic Skill / [如何查詢某個套件有哪些使用手冊(man page)](https://samwhelp.github.io/book-ubuntu-basic-skill/book/content/manual/how-to-find-out-manpages-by-a-package.html)
