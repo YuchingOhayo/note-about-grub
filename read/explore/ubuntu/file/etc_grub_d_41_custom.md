@@ -55,3 +55,7 @@ elif [ -z "\${config_directory}" -a -f  \$prefix/custom.cfg ]; then
 fi
 EOF
 ```
+
+## 對照
+
+請參考「[/etc/grub.d/41_custom](https://samwhelp.github.io/note-about-grub/read/explore/ubuntu/file/etc_grub_d_41_custom.html)」
