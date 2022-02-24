@@ -1,6 +1,6 @@
 ---
 title: /etc/default/grub
-nav_order: 1010
+nav_order: 1020
 has_children: false
 parent: 入門
 ---

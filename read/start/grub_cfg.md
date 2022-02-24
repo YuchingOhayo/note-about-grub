@@ -1,6 +1,6 @@
 ---
 title: grub.cfg
-nav_order: 1020
+nav_order: 1010
 has_children: false
 parent: 入門
 ---
