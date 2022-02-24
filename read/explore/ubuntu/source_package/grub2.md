@@ -114,3 +114,258 @@ apt-cache showsrc grub2 | grep '^Binary:'
 ```
 Binary: grub2, grub-linuxbios, grub-efi, grub-common, grub2-common, grub-emu, grub-emu-dbg, grub-pc-bin, grub-pc-dbg, grub-pc, grub-rescue-pc, grub-coreboot-bin, grub-coreboot-dbg, grub-coreboot, grub-efi-ia32-bin, grub-efi-ia32-dbg, grub-efi-ia32, grub-efi-ia32-signed-template, grub-efi-amd64-bin, grub-efi-amd64-dbg, grub-efi-amd64, grub-efi-amd64-signed-template, grub-efi-ia64-bin, grub-efi-ia64-dbg, grub-efi-ia64, grub-efi-arm-bin, grub-efi-arm-dbg, grub-efi-arm, grub-efi-arm64-bin, grub-efi-arm64-dbg, grub-efi-arm64, grub-efi-arm64-signed-template, grub-ieee1275-bin, grub-ieee1275-dbg, grub-ieee1275, grub-firmware-qemu, grub-uboot-bin, grub-uboot-dbg, grub-uboot, grub-xen-bin, grub-xen-dbg, grub-xen, grub-xen-host, grub-yeeloong-bin, grub-yeeloong-dbg, grub-yeeloong, grub-theme-starfield, grub-mount-udeb
 ```
+
+執行
+
+``` sh
+apt-cache showsrc grub2 | grep '^Binary:' | awk -F ': ' '{print $2}' | sed 's/, /\n/g' | sort -u
+```
+
+顯示
+
+```
+grub2
+grub2-common
+grub-common
+grub-coreboot
+grub-coreboot-bin
+grub-coreboot-dbg
+grub-efi
+grub-efi-amd64
+grub-efi-amd64-bin
+grub-efi-amd64-dbg
+grub-efi-amd64-signed-template
+grub-efi-arm
+grub-efi-arm64
+grub-efi-arm64-bin
+grub-efi-arm64-dbg
+grub-efi-arm64-signed-template
+grub-efi-arm-bin
+grub-efi-arm-dbg
+grub-efi-ia32
+grub-efi-ia32-bin
+grub-efi-ia32-dbg
+grub-efi-ia32-signed-template
+grub-efi-ia64
+grub-efi-ia64-bin
+grub-efi-ia64-dbg
+grub-emu
+grub-emu-dbg
+grub-firmware-qemu
+grub-ieee1275
+grub-ieee1275-bin
+grub-ieee1275-dbg
+grub-linuxbios
+grub-mount-udeb
+grub-pc
+grub-pc-bin
+grub-pc-dbg
+grub-rescue-pc
+grub-theme-starfield
+grub-uboot
+grub-uboot-bin
+grub-uboot-dbg
+grub-xen
+grub-xen-bin
+grub-xen-dbg
+grub-xen-host
+grub-yeeloong
+grub-yeeloong-bin
+grub-yeeloong-dbg
+```
+
+
+
+## 使用 dctrl-tools 探索
+
+先安裝「[dctrl-tools](https://packages.ubuntu.com/focal/dctrl-tools)」。
+
+``` sh
+sudo apt-get install dctrl-tools
+```
+
+接著執行
+
+``` sh
+grep-aptavail -F Source 'grub2'
+```
+
+或是執行下面指令，只有顯示某些欄位
+
+``` sh
+grep-aptavail -F Source 'grub2' -s Package,Version,Source,Maintainer
+```
+
+顯示
+
+```
+Package: grub-common
+Version: 2.04-1ubuntu26.13
+Source: grub2
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+
+Package: grub-efi
+Version: 2.04-1ubuntu26.13
+Source: grub2
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+
+Package: grub-efi-amd64
+Version: 2.04-1ubuntu44.2
+Source: grub2-unsigned
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+
+Package: grub-efi-amd64-bin
+Version: 2.04-1ubuntu44.2
+Source: grub2-unsigned
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+
+Package: grub-efi-amd64-dbg
+Version: 2.04-1ubuntu44.2
+Source: grub2-unsigned
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+
+Package: grub-efi-amd64-signed
+Version: 1.167.2+2.04-1ubuntu44.2
+Source: grub2-signed (1.167.2)
+Maintainer: Colin Watson <cjwatson@ubuntu.com>
+
+Package: grub-efi-ia32
+Version: 2.04-1ubuntu26.13
+Source: grub2
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+
+Package: grub-efi-ia32-bin
+Version: 2.04-1ubuntu26.13
+Source: grub2
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+
+Package: grub-efi-ia32-dbg
+Version: 2.04-1ubuntu26.13
+Source: grub2
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+
+Package: grub-ieee1275
+Version: 2.04-1ubuntu26.13
+Source: grub2
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+
+Package: grub-ieee1275-bin
+Version: 2.04-1ubuntu26.13
+Source: grub2
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+
+Package: grub-ieee1275-dbg
+Version: 2.04-1ubuntu26.13
+Source: grub2
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+
+Package: grub-pc
+Version: 2.04-1ubuntu26.13
+Source: grub2
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+
+Package: grub-pc-bin
+Version: 2.04-1ubuntu26.13
+Source: grub2
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+
+Package: grub-pc-dbg
+Version: 2.04-1ubuntu26.13
+Source: grub2
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+
+Package: grub-xen
+Version: 2.04-1ubuntu26.13
+Source: grub2
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+
+Package: grub-xen-bin
+Version: 2.04-1ubuntu26.13
+Source: grub2
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+
+Package: grub-xen-dbg
+Version: 2.04-1ubuntu26.13
+Source: grub2
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+
+Package: grub2-common
+Version: 2.04-1ubuntu26.13
+Source: grub2
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+
+Package: grub-efi-amd64
+Version: 2.04-1ubuntu44
+Source: grub2-unsigned
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+
+Package: grub-efi-amd64-bin
+Version: 2.04-1ubuntu44
+Source: grub2-unsigned
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+
+Package: grub-efi-amd64-dbg
+Version: 2.04-1ubuntu44
+Source: grub2-unsigned
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+
+Package: grub-coreboot
+Version: 2.04-1ubuntu26.13
+Source: grub2
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+
+Package: grub-coreboot-bin
+Version: 2.04-1ubuntu26.13
+Source: grub2
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+
+Package: grub-coreboot-dbg
+Version: 2.04-1ubuntu26.13
+Source: grub2
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+
+Package: grub-efi-amd64-signed-template
+Version: 2.04-1ubuntu26.13
+Source: grub2
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+
+Package: grub-emu
+Version: 2.04-1ubuntu26.13
+Source: grub2
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+
+Package: grub-emu-dbg
+Version: 2.04-1ubuntu26.13
+Source: grub2
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+
+Package: grub-firmware-qemu
+Version: 2.04-1ubuntu26.13
+Source: grub2
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+
+Package: grub-linuxbios
+Version: 2.04-1ubuntu26.13
+Source: grub2
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+
+Package: grub-rescue-pc
+Version: 2.04-1ubuntu26.13
+Source: grub2
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+
+Package: grub-theme-starfield
+Version: 2.04-1ubuntu26.13
+Source: grub2
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+
+Package: grub-xen-host
+Version: 2.04-1ubuntu26.13
+Source: grub2
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+```
+
+
+## Link
+
+* [[索引] 在 泛Ubuntu 底下，「套件」的操作實務](https://www.ubuntu-tw.org/modules/newbb/viewtopic.php?post_id=333562#forumpost333562)
