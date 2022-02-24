@@ -5,8 +5,7 @@
 
 ## Grub Config
 
-* /etc/grub.d/41_custom
-* [/boot/grub/custom.cfg](custom.cfg)
+* [/etc/grub.d/40_custom](40_custom)
 
 
 ## Reference
