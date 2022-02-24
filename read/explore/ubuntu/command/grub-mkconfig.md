@@ -1,6 +1,6 @@
 ---
 title: grub-mkconfig
-nav_order: 6012
+nav_order: 6032
 has_children: false
 parent: Command
 grand_parent: Ubuntu

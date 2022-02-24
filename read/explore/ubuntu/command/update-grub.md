@@ -1,6 +1,6 @@
 ---
 title: update-grub
-nav_order: 6011
+nav_order: 6031
 has_children: false
 parent: Command
 grand_parent: Ubuntu
