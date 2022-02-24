@@ -125,3 +125,37 @@ Description-en: GRand Unified Bootloader (common files for version 2)
 Description-md5: a969e6536e745e177a340b30bdb5ba3f
 Task: ubuntu-live, kubuntu-live, xubuntu-live, lubuntu-live, ubuntustudio-desktop-core, ubuntustudio-desktop, ubuntukylin-live, ubuntu-mate-live, ubuntu-budgie-live
 ```
+
+## Manpage
+
+執行
+
+``` sh
+dpkg -L grub2-common | grep '/man/man.*/'
+```
+
+顯示
+
+``` sh
+/usr/share/man/man8/grub-install.8.gz
+/usr/share/man/man8/grub-reboot.8.gz
+/usr/share/man/man8/grub-set-default.8.gz
+/usr/share/man/man8/update-grub.8.gz
+/usr/share/man/man8/update-grub2.8.gz
+```
+
+``` sh
+dpkg -L grub2-common | grep '/man/man.*/' | awk -F '/' '{print $6}' | sort -u | awk -F '.' '{print "* man ["$1"](http://manpages.ubuntu.com/manpages/focal/en/man8/"$1".8.html)"}'
+```
+
+* man [grub-install](http://manpages.ubuntu.com/manpages/focal/en/man8/grub-install.8.html)
+* man [grub-reboot](http://manpages.ubuntu.com/manpages/focal/en/man8/grub-reboot.8.html)
+* man [grub-set-default](http://manpages.ubuntu.com/manpages/focal/en/man8/grub-set-default.8.html)
+* man [update-grub2](http://manpages.ubuntu.com/manpages/focal/en/man8/update-grub2.8.html)
+* man [update-grub](http://manpages.ubuntu.com/manpages/focal/en/man8/update-grub.8.html)
+
+
+## Link
+
+* Ubuntu Basic Skill / [如何查詢某個套件有哪些使用手冊(man page)](https://samwhelp.github.io/book-ubuntu-basic-skill/book/content/manual/how-to-find-out-manpages-by-a-package.html)
+* Debian Reference / Chapter 12. Programming / [12.1.6. Utility programs for shell script](https://www.debian.org/doc/manuals/debian-reference/ch12.en.html#_utility_programs_for_shell_script)

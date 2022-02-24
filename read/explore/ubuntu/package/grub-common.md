@@ -210,3 +210,77 @@ Description-en: GRand Unified Bootloader (common files)
 Description-md5: 6e1c01c5245ffb9578aee58ee944229b
 Task: ubuntu-live, kubuntu-live, xubuntu-live, lubuntu-live, ubuntustudio-desktop-core, ubuntustudio-desktop, ubuntukylin-live, ubuntu-mate-live, ubuntu-budgie-live
 ```
+
+## Manpage
+
+執行
+
+``` sh
+dpkg -L grub-common | grep '/man/man.*/'
+```
+
+顯示
+
+``` sh
+/usr/share/man/man1/grub-editenv.1.gz
+/usr/share/man/man1/grub-file.1.gz
+/usr/share/man/man1/grub-fstest.1.gz
+/usr/share/man/man1/grub-glue-efi.1.gz
+/usr/share/man/man1/grub-kbdcomp.1.gz
+/usr/share/man/man1/grub-menulst2cfg.1.gz
+/usr/share/man/man1/grub-mkfont.1.gz
+/usr/share/man/man1/grub-mkimage.1.gz
+/usr/share/man/man1/grub-mklayout.1.gz
+/usr/share/man/man1/grub-mknetdir.1.gz
+/usr/share/man/man1/grub-mkpasswd-pbkdf2.1.gz
+/usr/share/man/man1/grub-mkrelpath.1.gz
+/usr/share/man/man1/grub-mkrescue.1.gz
+/usr/share/man/man1/grub-mkstandalone.1.gz
+/usr/share/man/man1/grub-mount.1.gz
+/usr/share/man/man1/grub-render-label.1.gz
+/usr/share/man/man1/grub-script-check.1.gz
+/usr/share/man/man1/grub-syslinux2cfg.1.gz
+/usr/share/man/man8/grub-macbless.8.gz
+/usr/share/man/man8/grub-mkconfig.8.gz
+/usr/share/man/man8/grub-mkdevicemap.8.gz
+/usr/share/man/man8/grub-probe.8.gz
+```
+
+``` sh
+dpkg -L grub-common | grep '/man/man.*/' | grep '1.gz' | awk -F '/' '{print $6}' | sort -u | awk -F '.' '{print "* man ["$1"](http://manpages.ubuntu.com/manpages/focal/en/man1/"$1".1.html)"}'
+```
+
+* man [grub-editenv](http://manpages.ubuntu.com/manpages/focal/en/man1/grub-editenv.1.html)
+* man [grub-file](http://manpages.ubuntu.com/manpages/focal/en/man1/grub-file.1.html)
+* man [grub-fstest](http://manpages.ubuntu.com/manpages/focal/en/man1/grub-fstest.1.html)
+* man [grub-glue-efi](http://manpages.ubuntu.com/manpages/focal/en/man1/grub-glue-efi.1.html)
+* man [grub-kbdcomp](http://manpages.ubuntu.com/manpages/focal/en/man1/grub-kbdcomp.1.html)
+* man [grub-menulst2cfg](http://manpages.ubuntu.com/manpages/focal/en/man1/grub-menulst2cfg.1.html)
+* man [grub-mkfont](http://manpages.ubuntu.com/manpages/focal/en/man1/grub-mkfont.1.html)
+* man [grub-mkimage](http://manpages.ubuntu.com/manpages/focal/en/man1/grub-mkimage.1.html)
+* man [grub-mklayout](http://manpages.ubuntu.com/manpages/focal/en/man1/grub-mklayout.1.html)
+* man [grub-mknetdir](http://manpages.ubuntu.com/manpages/focal/en/man1/grub-mknetdir.1.html)
+* man [grub-mkpasswd-pbkdf2](http://manpages.ubuntu.com/manpages/focal/en/man1/grub-mkpasswd-pbkdf2.1.html)
+* man [grub-mkrelpath](http://manpages.ubuntu.com/manpages/focal/en/man1/grub-mkrelpath.1.html)
+* man [grub-mkrescue](http://manpages.ubuntu.com/manpages/focal/en/man1/grub-mkrescue.1.html)
+* man [grub-mkstandalone](http://manpages.ubuntu.com/manpages/focal/en/man1/grub-mkstandalone.1.html)
+* man [grub-mount](http://manpages.ubuntu.com/manpages/focal/en/man1/grub-mount.1.html)
+* man [grub-render-label](http://manpages.ubuntu.com/manpages/focal/en/man1/grub-render-label.1.html)
+* man [grub-script-check](http://manpages.ubuntu.com/manpages/focal/en/man1/grub-script-check.1.html)
+* man [grub-syslinux2cfg](http://manpages.ubuntu.com/manpages/focal/en/man1/grub-syslinux2cfg.1.html)
+
+
+``` sh
+dpkg -L grub-common | grep '/man/man.*/' | grep '8.gz' | awk -F '/' '{print $6}' | sort -u | awk -F '.' '{print "* man ["$1"](http://manpages.ubuntu.com/manpages/focal/en/man8/"$1".8.html)"}'
+```
+
+* man [grub-macbless](http://manpages.ubuntu.com/manpages/focal/en/man8/grub-macbless.8.html)
+* man [grub-mkconfig](http://manpages.ubuntu.com/manpages/focal/en/man8/grub-mkconfig.8.html)
+* man [grub-mkdevicemap](http://manpages.ubuntu.com/manpages/focal/en/man8/grub-mkdevicemap.8.html)
+* man [grub-probe](http://manpages.ubuntu.com/manpages/focal/en/man8/grub-probe.8.html)
+
+
+## Link
+
+* Ubuntu Basic Skill / [如何查詢某個套件有哪些使用手冊(man page)](https://samwhelp.github.io/book-ubuntu-basic-skill/book/content/manual/how-to-find-out-manpages-by-a-package.html)
+* Debian Reference / Chapter 12. Programming / [12.1.6. Utility programs for shell script](https://www.debian.org/doc/manuals/debian-reference/ch12.en.html#_utility_programs_for_shell_script)
