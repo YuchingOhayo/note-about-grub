@@ -35,3 +35,7 @@ dpkg -S /boot/grub/custom.cfg
 ```
 dpkg-query: no path found matching pattern /boot/grub/custom.cfg
 ```
+
+## 對照
+
+請參考「[/etc/grub.d/41_custom](https://samwhelp.github.io/note-about-grub/read/explore/ubuntu/file/etc_grub_d_41_custom.html)」

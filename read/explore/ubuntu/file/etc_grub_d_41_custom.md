@@ -58,4 +58,4 @@ EOF
 
 ## 對照
 
-請參考「[/etc/grub.d/41_custom](https://samwhelp.github.io/note-about-grub/read/explore/ubuntu/file/etc_grub_d_41_custom.html)」
+請參考「[/boot/grub/custom.cfg](https://samwhelp.github.io/note-about-grub/read/explore/ubuntu/file/boot_grub_custom_cfg.html)」
