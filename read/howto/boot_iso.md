@@ -18,6 +18,10 @@ parent: 如何
 | [demo_40_custom](https://github.com/samwhelp/note-about-grub/tree/gh-pages/_demo/prototype/boot_iso/demo_40_custom)| [/etc/grub.d/40_custom](https://samwhelp.github.io/note-about-grub/read/explore/ubuntu/file/etc_grub_d_40_custom.html) | 修改後，需要執行 `sudo update-grub` |
 | [demo_41_custom](https://github.com/samwhelp/note-about-grub/tree/gh-pages/_demo/prototype/boot_iso/demo_41_custom)| [/boot/grub/custom.cfg](https://samwhelp.github.io/note-about-grub/read/explore/ubuntu/file/boot_grub_custom_cfg.html) | 修改後，不需要執行 `sudo update-grub` |
 
+| Distro | /etc/grub.d/40_custom | /boot/grub/custom.cfg |
+| --- | --- | --- |
+| Ubuntu | [/etc/grub.d/40_custom](https://github.com/samwhelp/note-about-grub/blob/gh-pages/_demo/prototype/boot_iso/demo_40_custom/Ubuntu/daily-live/40_custom) | [/boot/grub/custom.cfg](https://github.com/samwhelp/note-about-grub/blob/gh-pages/_demo/prototype/boot_iso/demo_41_custom/Ubuntu/daily-live/custom.cfg) |
+
 
 ## See Also
 
