@@ -365,6 +365,86 @@ Source: grub2
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 ```
 
+執行
+
+``` sh
+grep-aptavail -F Source 'grub2' -s Package | awk -F ': ' '{print $2}' | sort -u
+```
+
+顯示
+
+```
+grub2-common
+grub-common
+grub-coreboot
+grub-coreboot-bin
+grub-coreboot-dbg
+grub-efi
+grub-efi-amd64
+grub-efi-amd64-bin
+grub-efi-amd64-dbg
+grub-efi-amd64-signed
+grub-efi-amd64-signed-template
+grub-efi-ia32
+grub-efi-ia32-bin
+grub-efi-ia32-dbg
+grub-emu
+grub-emu-dbg
+grub-firmware-qemu
+grub-ieee1275
+grub-ieee1275-bin
+grub-ieee1275-dbg
+grub-linuxbios
+grub-pc
+grub-pc-bin
+grub-pc-dbg
+grub-rescue-pc
+grub-theme-starfield
+grub-xen
+grub-xen-bin
+grub-xen-dbg
+grub-xen-host
+```
+
+執行
+
+``` sh
+grep-aptavail -F Source 'grub2' -s Package | awk -F ': ' '{print $2}' | sort -u | awk '{print "* ["$1"](https://packages.ubuntu.com/focal/"$1")"}'
+```
+
+
+* [grub2-common](https://packages.ubuntu.com/focal/grub2-common)
+* [grub-common](https://packages.ubuntu.com/focal/grub-common)
+* [grub-coreboot](https://packages.ubuntu.com/focal/grub-coreboot)
+* [grub-coreboot-bin](https://packages.ubuntu.com/focal/grub-coreboot-bin)
+* [grub-coreboot-dbg](https://packages.ubuntu.com/focal/grub-coreboot-dbg)
+* [grub-efi](https://packages.ubuntu.com/focal/grub-efi)
+* [grub-efi-amd64](https://packages.ubuntu.com/focal/grub-efi-amd64)
+* [grub-efi-amd64-bin](https://packages.ubuntu.com/focal/grub-efi-amd64-bin)
+* [grub-efi-amd64-dbg](https://packages.ubuntu.com/focal/grub-efi-amd64-dbg)
+* [grub-efi-amd64-signed](https://packages.ubuntu.com/focal/grub-efi-amd64-signed)
+* [grub-efi-amd64-signed-template](https://packages.ubuntu.com/focal/grub-efi-amd64-signed-template)
+* [grub-efi-ia32](https://packages.ubuntu.com/focal/grub-efi-ia32)
+* [grub-efi-ia32-bin](https://packages.ubuntu.com/focal/grub-efi-ia32-bin)
+* [grub-efi-ia32-dbg](https://packages.ubuntu.com/focal/grub-efi-ia32-dbg)
+* [grub-emu](https://packages.ubuntu.com/focal/grub-emu)
+* [grub-emu-dbg](https://packages.ubuntu.com/focal/grub-emu-dbg)
+* [grub-firmware-qemu](https://packages.ubuntu.com/focal/grub-firmware-qemu)
+* [grub-ieee1275](https://packages.ubuntu.com/focal/grub-ieee1275)
+* [grub-ieee1275-bin](https://packages.ubuntu.com/focal/grub-ieee1275-bin)
+* [grub-ieee1275-dbg](https://packages.ubuntu.com/focal/grub-ieee1275-dbg)
+* [grub-linuxbios](https://packages.ubuntu.com/focal/grub-linuxbios)
+* [grub-pc](https://packages.ubuntu.com/focal/grub-pc)
+* [grub-pc-bin](https://packages.ubuntu.com/focal/grub-pc-bin)
+* [grub-pc-dbg](https://packages.ubuntu.com/focal/grub-pc-dbg)
+* [grub-rescue-pc](https://packages.ubuntu.com/focal/grub-rescue-pc)
+* [grub-theme-starfield](https://packages.ubuntu.com/focal/grub-theme-starfield)
+* [grub-xen](https://packages.ubuntu.com/focal/grub-xen)
+* [grub-xen-bin](https://packages.ubuntu.com/focal/grub-xen-bin)
+* [grub-xen-dbg](https://packages.ubuntu.com/focal/grub-xen-dbg)
+* [grub-xen-host](https://packages.ubuntu.com/focal/grub-xen-host)
+
+
 
 ## Link
 
