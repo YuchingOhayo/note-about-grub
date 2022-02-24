@@ -129,6 +129,10 @@ set -e
 exec grub-mkconfig -o /boot/grub/grub.cfg "$@"
 ```
 
+## 關於 grub-mkconfig
+
+請參考「[grub-mkconfig](grub-mkconfig)」。
+
 
 ## Manpage
 
@@ -138,4 +142,4 @@ exec grub-mkconfig -o /boot/grub/grub.cfg "$@"
 
 ## Package
 
-* [grub2-common](https://packages.ubuntu.com/focal/grub2-common)
+* [grub2-common](https://packages.ubuntu.com/focal/grub2-common) / [filelist](https://packages.ubuntu.com/focal/amd64/grub2-common/filelist)
