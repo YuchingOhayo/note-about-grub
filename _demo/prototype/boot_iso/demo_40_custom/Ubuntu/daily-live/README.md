@@ -31,7 +31,7 @@
 | Ubuntu Server 22.04 Daily Live ISO | [/opt/iso/ubuntu/daily-live/ubuntu-server/jammy-live-server-amd64.iso](https://cdimage.ubuntu.com/ubuntu-server/daily-live/current/jammy-live-server-amd64.iso) |
 
 
-## iso-download.txt
+## iso-file
 
 ```
 https://cdimage.ubuntu.com/daily-live/current/jammy-desktop-amd64.iso
@@ -41,11 +41,4 @@ https://cdimage.ubuntu.com/kubuntu/daily-live/current/jammy-desktop-amd64.iso
 https://cdimage.ubuntu.com/ubuntu-mate/daily-live/current/jammy-desktop-amd64.iso
 https://cdimage.ubuntu.com/ubuntu-budgie/daily-live/current/jammy-desktop-amd64.iso
 https://cdimage.ubuntu.com/ubuntu-server/daily-live/current/jammy-live-server-amd64.iso
-```
-
-
-## iso-download.sh
-
-``` sh
-wget -c -i iso-download.txt
 ```
