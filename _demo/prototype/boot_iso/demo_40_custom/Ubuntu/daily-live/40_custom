@@ -6,7 +6,6 @@ exec tail -n +3 $0
 
 
 menuentry "Ubuntu 22.04 Daily Live ISO" --class Ubuntu {
-	set use_driver="free"
 	set iso_file="/opt/iso/ubuntu/daily-live/ubuntu/jammy-desktop-amd64.iso"
 	search --no-floppy -f --set=iso_partition $iso_file
 	probe -u $iso_partition --set=iso_partition_uuid
@@ -15,13 +14,12 @@ menuentry "Ubuntu 22.04 Daily Live ISO" --class Ubuntu {
 	set boot_option=""
 	#set boot_option="locale=zh_TW"
 	#set boot_option="quiet splash"
-	linux (loop)/casper/vmlinuz iso-scan/filename=$iso_file boot=casper driver=$use_driver $boot_option
+	linux (loop)/casper/vmlinuz iso-scan/filename=$iso_file boot=casper $boot_option
 	initrd (loop)/casper/initrd
 }
 
 
 menuentry "Xubuntu 22.04 Daily Live ISO" --class Ubuntu {
-	set use_driver="free"
 	set iso_file="/opt/iso/ubuntu/daily-live/xubuntu/jammy-desktop-amd64.iso"
 	search --no-floppy -f --set=iso_partition $iso_file
 	probe -u $iso_partition --set=iso_partition_uuid
@@ -30,13 +28,12 @@ menuentry "Xubuntu 22.04 Daily Live ISO" --class Ubuntu {
 	set boot_option=""
 	#set boot_option="locale=zh_TW"
 	#set boot_option="quiet splash"
-	linux (loop)/casper/vmlinuz iso-scan/filename=$iso_file boot=casper driver=$use_driver $boot_option
+	linux (loop)/casper/vmlinuz iso-scan/filename=$iso_file boot=casper $boot_option
 	initrd (loop)/casper/initrd
 }
 
 
 menuentry "Lubuntu 22.04 Daily Live ISO" --class Ubuntu {
-	set use_driver="free"
 	set iso_file="/opt/iso/ubuntu/daily-live/lubuntu/jammy-desktop-amd64.iso"
 	search --no-floppy -f --set=iso_partition $iso_file
 	probe -u $iso_partition --set=iso_partition_uuid
@@ -45,13 +42,12 @@ menuentry "Lubuntu 22.04 Daily Live ISO" --class Ubuntu {
 	set boot_option=""
 	#set boot_option="locale=zh_TW"
 	#set boot_option="quiet splash"
-	linux (loop)/casper/vmlinuz iso-scan/filename=$iso_file boot=casper driver=$use_driver $boot_option
+	linux (loop)/casper/vmlinuz iso-scan/filename=$iso_file boot=casper $boot_option
 	initrd (loop)/casper/initrd
 }
 
 
 menuentry "Kubuntu 22.04 Daily Live ISO" --class Ubuntu {
-	set use_driver="free"
 	set iso_file="/opt/iso/ubuntu/daily-live/kubuntu/jammy-desktop-amd64.iso"
 	search --no-floppy -f --set=iso_partition $iso_file
 	probe -u $iso_partition --set=iso_partition_uuid
@@ -60,13 +56,12 @@ menuentry "Kubuntu 22.04 Daily Live ISO" --class Ubuntu {
 	set boot_option=""
 	#set boot_option="locale=zh_TW"
 	#set boot_option="quiet splash"
-	linux (loop)/casper/vmlinuz iso-scan/filename=$iso_file boot=casper driver=$use_driver $boot_option
+	linux (loop)/casper/vmlinuz iso-scan/filename=$iso_file boot=casper $boot_option
 	initrd (loop)/casper/initrd
 }
 
 
 menuentry "Ubuntu Mate 22.04 Daily Live ISO" --class Ubuntu {
-	set use_driver="free"
 	set iso_file="/opt/iso/ubuntu/daily-live/ubuntu-mate/jammy-desktop-amd64.iso"
 	search --no-floppy -f --set=iso_partition $iso_file
 	probe -u $iso_partition --set=iso_partition_uuid
@@ -75,13 +70,12 @@ menuentry "Ubuntu Mate 22.04 Daily Live ISO" --class Ubuntu {
 	set boot_option=""
 	#set boot_option="locale=zh_TW"
 	#set boot_option="quiet splash"
-	linux (loop)/casper/vmlinuz iso-scan/filename=$iso_file boot=casper driver=$use_driver $boot_option
+	linux (loop)/casper/vmlinuz iso-scan/filename=$iso_file boot=casper $boot_option
 	initrd (loop)/casper/initrd
 }
 
 
 menuentry "Ubuntu Budgie 22.04 Daily Live ISO" --class Ubuntu {
-	set use_driver="free"
 	set iso_file="/opt/iso/ubuntu/daily-live/ubuntu-budgie/jammy-desktop-amd64.iso"
 	search --no-floppy -f --set=iso_partition $iso_file
 	probe -u $iso_partition --set=iso_partition_uuid
@@ -90,13 +84,12 @@ menuentry "Ubuntu Budgie 22.04 Daily Live ISO" --class Ubuntu {
 	set boot_option=""
 	#set boot_option="locale=zh_TW"
 	#set boot_option="quiet splash"
-	linux (loop)/casper/vmlinuz iso-scan/filename=$iso_file boot=casper driver=$use_driver $boot_option
+	linux (loop)/casper/vmlinuz iso-scan/filename=$iso_file boot=casper $boot_option
 	initrd (loop)/casper/initrd
 }
 
 
 menuentry "Ubuntu Server 22.04 Daily Live ISO" --class Ubuntu {
-	set use_driver="free"
 	set iso_file="/opt/iso/ubuntu/daily-live/ubuntu-server/jammy-live-server-amd64.iso"
 	search --no-floppy -f --set=iso_partition $iso_file
 	probe -u $iso_partition --set=iso_partition_uuid
@@ -105,6 +98,6 @@ menuentry "Ubuntu Server 22.04 Daily Live ISO" --class Ubuntu {
 	set boot_option=""
 	#set boot_option="locale=zh_TW"
 	#set boot_option="quiet splash"
-	linux (loop)/casper/vmlinuz iso-scan/filename=$iso_file boot=casper driver=$use_driver $boot_option
+	linux (loop)/casper/vmlinuz iso-scan/filename=$iso_file boot=casper $boot_option
 	initrd (loop)/casper/initrd
 }
