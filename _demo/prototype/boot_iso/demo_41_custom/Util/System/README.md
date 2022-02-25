@@ -23,8 +23,8 @@
 
 | Title | Command |
 | --- | --- |
-| Reboot Computer | reboot |
-| Shutdown Computer | halt |
+| Reboot Computer | [reboot](https://www.gnu.org/software/grub/manual/grub/html_node/reboot.html) |
+| Shutdown Computer | [halt](https://www.gnu.org/software/grub/manual/grub/html_node/halt.html) |
 
 
 ## Info
