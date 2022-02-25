@@ -21,3 +21,19 @@ DISTRIB_RELEASE=20.04
 DISTRIB_CODENAME=focal
 DISTRIB_DESCRIPTION="Ubuntu 20.04.3 LTS"
 ```
+
+或是執行
+
+``` sh
+lsb_release -a
+```
+
+顯示
+
+```
+No LSB modules are available.
+Distributor ID:	Ubuntu
+Description:	Ubuntu 20.04.3 LTS
+Release:	20.04
+Codename:	focal
+```
