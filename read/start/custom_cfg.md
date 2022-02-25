@@ -1,6 +1,6 @@
 ---
 title: /boot/grub/custom.cfg
-nav_order: 1050
+nav_order: 1060
 has_children: false
 parent: 入門
 ---

@@ -1,6 +1,6 @@
 ---
 title: /etc/grub.d/40_custom
-nav_order: 1040
+nav_order: 1050
 has_children: false
 parent: 入門
 ---
