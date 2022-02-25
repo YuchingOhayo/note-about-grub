@@ -10,11 +10,11 @@ parent: 入門
 
 ## Path
 
-* [/boot/grub/grub.cfg](https://samwhelp.github.io/note-about-grub/read/explore/ubuntu/file/etc_default_grub.html)
+* [/etc/default/grub](https://samwhelp.github.io/note-about-grub/read/explore/ubuntu/file/etc_default_grub.html)
 
 ## 關於「/etc/default/grub」
 
-延續上一篇提到的「[/boot/grub/grub.cfg](https://samwhelp.github.io/note-about-grub/read/start/custom_cfg.html)」，
+延續[上一篇](https://samwhelp.github.io/note-about-grub/read/start/grub_cfg.html)提到的，
 
 在實務上，會先修改「/etc/default/grub」這個檔案，
 
