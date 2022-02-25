@@ -60,6 +60,12 @@ exec grub-mkconfig -o /boot/grub/grub.cfg "$@"
 ```
 
 
+* $ man [update-grub](http://manpages.ubuntu.com/manpages/focal/en/man8/update-grub.8.html)
+* $ man [grub-mkconfig](http://manpages.ubuntu.com/manpages/focal/en/man8/grub-mkconfig.8.html)
+* $ info grub -n '[Simple configuration](https://www.gnu.org/software/grub/manual/grub/html_node/Simple-configuration.html)'
+* $ info grub -n '[Invoking grub-mkconfig](https://www.gnu.org/software/grub/manual/grub/html_node/Invoking-grub_002dmkconfig.html)'
+
+
 ## 接下來
 
 接下來，來了解「[/etc/default/grub](https://samwhelp.github.io/note-about-grub/read/start/etc_default_grub.html)」這個檔案的用處。
