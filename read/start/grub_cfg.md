@@ -1,12 +1,12 @@
 ---
-title: grub.cfg
+title: /boot/grub/grub.cfg
 nav_order: 1010
 has_children: false
 parent: 入門
 ---
 
 
-# grub.cfg
+# /boot/grub/grub.cfg
 
 ## Path
 

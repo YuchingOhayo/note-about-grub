@@ -1,12 +1,12 @@
 ---
-title: custom.cfg
+title: /boot/grub/custom.cfg
 nav_order: 1050
 has_children: false
 parent: 入門
 ---
 
 
-# custom.cfg
+# /boot/grub/custom.cfg
 
 ## Path
 
