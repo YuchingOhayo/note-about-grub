@@ -68,4 +68,4 @@ the menu; and then adjust the default setting via /etc/default/grub.
 
 接下來，來探討「/etc/grub.d」這裡面的腳本，
 
-先從「[/etc/grub.d/40_custom](https://samwhelp.github.io/note-about-grub/read/start/40_custom.html)」來探索起。
+先從「[/etc/grub.d/40_custom](https://samwhelp.github.io/note-about-grub/read/start/40_custom.html)」來探索「[如何自訂 Gurb Menu Entry](https://samwhelp.github.io/note-about-grub/read/start/custom_menu_entry.html)」。

@@ -34,3 +34,8 @@ parent: 入門
 ## 相關文件
 
 * $ info grub -n '[Simple configuration](https://www.gnu.org/software/grub/manual/grub/html_node/Simple-configuration.html#Simple-configuration)'
+
+
+## 接下來
+
+接下來探索「[/etc/grub.d/40_custom](https://samwhelp.github.io/note-about-grub/read/start/40_custom.html)」這個檔案的用法。
