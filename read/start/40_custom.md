@@ -43,7 +43,7 @@ menuentry 'Shutdown Computer' --class shutdown {
 }
 ```
 
-特別要注意的是，「最前面兩行ㄖㄨ，一定要保留」
+特別要注意的是，「最前面兩行，一定要保留」
 
 ``` sh
 #!/bin/sh
