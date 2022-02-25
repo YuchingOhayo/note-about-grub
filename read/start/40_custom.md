@@ -1,6 +1,6 @@
 ---
 title: 40_custom
-nav_order: 1030
+nav_order: 1040
 has_children: false
 parent: 入門
 ---
