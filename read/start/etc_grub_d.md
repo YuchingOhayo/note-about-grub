@@ -62,3 +62,10 @@ the menu; and then adjust the default setting via /etc/default/grub.
 * Ubuntu Package / grub-common / [filelist](https://packages.ubuntu.com/focal/amd64/grub-common/filelist)
 * launchpad / grub / util / [grub.d](https://git.launchpad.net/~ubuntu-core-dev/grub/+git/ubuntu/tree/util/grub.d)
 * savannah / grub / util / [grub.d](https://git.savannah.gnu.org/cgit/grub.git/tree/util/grub.d)
+
+
+## 接下來
+
+接下來，來探討「/etc/grub.d」這裡面的腳本，
+
+先從「[/etc/grub.d/40_custom](https://samwhelp.github.io/note-about-grub/read/start/40_custom.html)」來探索起。

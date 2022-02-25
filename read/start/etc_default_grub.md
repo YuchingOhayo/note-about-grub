@@ -55,6 +55,4 @@ sudo update-grub
 
 ## 接下來
 
-接下來，來探討「/etc/grub.d」這裡面的腳本，
-
-先從「[/etc/grub.d/40_custom](https://samwhelp.github.io/note-about-grub/read/start/40_custom.html)」來探索起。
+接下來，來探索「[/etc/grub.d](https://samwhelp.github.io/note-about-grub/read/start/etc_grub_d.html)」這個資料夾。
