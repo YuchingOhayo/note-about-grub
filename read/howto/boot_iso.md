@@ -22,6 +22,9 @@ parent: 如何
 | --- | --- | --- |
 | Ubuntu | [/etc/grub.d/40_custom](https://github.com/samwhelp/note-about-grub/blob/gh-pages/_demo/prototype/boot_iso/demo_40_custom/Ubuntu/daily-live/40_custom) | [/boot/grub/custom.cfg](https://github.com/samwhelp/note-about-grub/blob/gh-pages/_demo/prototype/boot_iso/demo_41_custom/Ubuntu/daily-live/custom.cfg) |
 
+## 對照
+
+* [如何自訂 Gurb Menu Entry](https://samwhelp.github.io/note-about-grub/read/start/custom_menu_entry.html)
 
 ## See Also
 
