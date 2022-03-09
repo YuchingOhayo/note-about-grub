@@ -48,3 +48,13 @@
 | 工具 | 簡介 |
 | --- | --- |
 | [grub2-theme-preview](https://samwhelp.github.io/note-about-manjaro/read/adjustment/tool/grub2-theme-preview.html) | 用來輔助「預覽」GRUB佈景主題 |
+
+
+
+## 相關筆記
+
+* [Theme 探索筆記](https://samwhelp.github.io/note-about-theme/)
+
+## 相關收藏
+
+* [theme-collections-grub](https://github.com/samwhelp/theme-collections-grub)
