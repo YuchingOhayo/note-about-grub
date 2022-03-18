@@ -20,7 +20,7 @@ parent: 如何
 
 | Distro | /etc/grub.d/40_custom | /boot/grub/custom.cfg |
 | --- | --- | --- |
-| Arch | [/etc/grub.d/40_custom](https://github.com/samwhelp/note-about-grub/blob/gh-pages/_demo/prototype/boot_iso/demo_41_custom/Arch/2022.01.01/40_custom) | [/boot/grub/custom.cfg](https://github.com/samwhelp/note-about-grub/blob/gh-pages/_demo/prototype/boot_iso/demo_41_custom/Arch/2022.01.01/custom.cfg) |
+| Arch | [/etc/grub.d/40_custom](https://github.com/samwhelp/note-about-grub/blob/gh-pages/_demo/prototype/boot_iso/demo_40_custom/Arch/2022.01.01/40_custom) | [/boot/grub/custom.cfg](https://github.com/samwhelp/note-about-grub/blob/gh-pages/_demo/prototype/boot_iso/demo_41_custom/Arch/2022.01.01/custom.cfg) |
 | Ubuntu | [/etc/grub.d/40_custom](https://github.com/samwhelp/note-about-grub/blob/gh-pages/_demo/prototype/boot_iso/demo_40_custom/Ubuntu/daily-live/40_custom) | [/boot/grub/custom.cfg](https://github.com/samwhelp/note-about-grub/blob/gh-pages/_demo/prototype/boot_iso/demo_41_custom/Ubuntu/daily-live/custom.cfg) |
 
 
