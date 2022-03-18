@@ -46,6 +46,43 @@ menuentry "Arch 2022.01.01 ISO" --class Arch {
 }
 ```
 
+
+## GRUB Menu Entry / Boot ISO 樣板 / Manjaro
+
+``` sh
+menuentry "Manjaro xfce 21.2.1 ISO" --class Manjaro {
+	set iso_file="/opt/iso/manjaro/21.2.1/manjaro-xfce-21.2.1-220103-linux515.iso"
+	search --no-floppy -f --set=iso_partition $iso_file
+	probe -u $iso_partition --set=iso_partition_uuid
+	set img_dev="/dev/disk/by-uuid/$iso_partition_uuid"
+	loopback loop ($iso_partition)$iso_file
+	set boot_option=""
+	#set boot_option="lang=zh_TW keytable=us tz=Asia/Taipei"
+	#set boot_option="quiet splash"
+	linux (loop)/boot/vmlinuz-x86_64 img_dev=$img_dev img_loop=$iso_file $boot_option
+	initrd (loop)/boot/intel_ucode.img (loop)/boot/amd_ucode.img (loop)/boot/initramfs-x86_64.img
+}
+```
+
+
+## GRUB Menu Entry / Boot ISO 樣板 / Debian
+
+``` sh
+menuentry "Debian 11 Xfce ISO" --class Debian {
+	set iso_file="/opt/iso/debian/11/debian-live-11.2.0-amd64-xfce.iso"
+	search --no-floppy -f --set=iso_partition $iso_file
+	probe -u $iso_partition --set=iso_partition_uuid
+	set img_dev="/dev/disk/by-uuid/$iso_partition_uuid"
+	loopback loop ($iso_partition)$iso_file
+	set boot_option=""
+	#set boot_option="components splash quiet"
+	#set boot_option="components locales=zh_TW.UTF-8 quiet splash"
+	linux (loop)/live/vmlinuz-5.10.0-10-amd64 boot=live buuid=$iso_partition_uuid findiso=$iso_file $boot_option
+	initrd (loop)/live/initrd.img-5.10.0-10-amd64
+}
+```
+
+
 ## GRUB Menu Entry / Boot ISO 樣板 / Ubuntu
 
 
