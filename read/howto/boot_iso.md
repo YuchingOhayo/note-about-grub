@@ -26,6 +26,22 @@ parent: 如何
 
 * [如何自訂 Gurb Menu Entry](https://samwhelp.github.io/note-about-grub/read/start/custom_menu_entry.html)
 
+## 參考文章
+
+* [使用 GRUB 以硬碟中的 ISO 映像檔開機](https://blog.gtwang.org/linux/boot-iso-image-from-your-hard-drive-in-ubuntu/)
+* [如何從 grub2 啟動 Ubuntu Live CD iso](https://ttys3.dev/post/how-to-boot-ubuntu-live-cd-iso-from-grub2/)
+
+
+## Reference
+
+* [https://archcraft.io/blog/grub.html](https://archcraft.io/blog/grub.html)
+* [https://archcraft.io/wiki/installation/boot/grub/](https://archcraft.io/wiki/installation/boot/grub/)
+* Arch Wiki / [Multiboot USB drive](https://wiki.archlinux.org/title/Multiboot_USB_drive#Configuring_GRUB)
+* Arch Wiki / [Kernel parameters](https://wiki.archlinux.org/title/Kernel_parameters#GRUB)
+* Ubuntu Community Help Wiki / [Grub2/ISOBoot](https://help.ubuntu.com/community/Grub2/ISOBoot)
+* Ubuntu Community Help Wiki / [Grub2/ISOBoot/Examples](https://help.ubuntu.com/community/Grub2/ISOBoot/Examples)
+
+
 ## See Also
 
 * [grml-rescueboot](https://samwhelp.github.io/note-about-grub/read/link/grml-rescueboot.html)
