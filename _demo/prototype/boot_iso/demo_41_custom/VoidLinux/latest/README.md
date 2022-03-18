@@ -1,6 +1,6 @@
 
 
-# Demo Grub Boot ISO / Ubuntu / 22.04 Daily Build
+# Demo Grub Boot ISO / VoidLinux
 
 
 ## Grub Config

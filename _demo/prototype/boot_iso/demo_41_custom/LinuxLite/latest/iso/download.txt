@@ -1,0 +1,1 @@
+http://repo.linuxliteos.com/linuxlite/isos/5.8/linux-lite-5.8-64bit.iso
