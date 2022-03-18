@@ -20,11 +20,50 @@ parent: 如何
 
 | Distro | /etc/grub.d/40_custom | /boot/grub/custom.cfg |
 | --- | --- | --- |
+| Arch | [/etc/grub.d/40_custom](https://github.com/samwhelp/note-about-grub/blob/gh-pages/_demo/prototype/boot_iso/demo_41_custom/Arch/2022.01.01/40_custom) | [/boot/grub/custom.cfg](https://github.com/samwhelp/note-about-grub/blob/gh-pages/_demo/prototype/boot_iso/demo_41_custom/Arch/2022.01.01/custom.cfg) |
 | Ubuntu | [/etc/grub.d/40_custom](https://github.com/samwhelp/note-about-grub/blob/gh-pages/_demo/prototype/boot_iso/demo_40_custom/Ubuntu/daily-live/40_custom) | [/boot/grub/custom.cfg](https://github.com/samwhelp/note-about-grub/blob/gh-pages/_demo/prototype/boot_iso/demo_41_custom/Ubuntu/daily-live/custom.cfg) |
+
 
 ## 對照
 
 * [如何自訂 Gurb Menu Entry](https://samwhelp.github.io/note-about-grub/read/start/custom_menu_entry.html)
+
+
+## GRUB Menu Entry / Boot ISO 樣板 / Arch
+
+
+``` sh
+menuentry "Arch 2022.01.01 ISO" --class Arch {
+	set iso_file="/opt/iso/arch/2022.01.01/archlinux-2022.01.01-x86_64.iso"
+	search --no-floppy -f --set=iso_partition $iso_file
+	probe -u $iso_partition --set=iso_partition_uuid
+	set img_dev="/dev/disk/by-uuid/$iso_partition_uuid"
+	loopback loop ($iso_partition)$iso_file
+	set boot_option=""
+	#set boot_option="quiet splash"
+	linux (loop)/arch/boot/x86_64/vmlinuz-linux img_dev=$img_dev img_loop=$iso_file $boot_option
+	initrd (loop)/arch/boot/intel-ucode.img (loop)/arch/boot/amd-ucode.img (loop)/arch/boot/x86_64/initramfs-linux.img
+}
+```
+
+## GRUB Menu Entry / Boot ISO 樣板 / Ubuntu
+
+
+``` sh
+menuentry "Ubuntu 22.04 Daily Live ISO" --class Ubuntu {
+	set iso_file="/opt/iso/ubuntu/daily-live/ubuntu/jammy-desktop-amd64.iso"
+	search --no-floppy -f --set=iso_partition $iso_file
+	probe -u $iso_partition --set=iso_partition_uuid
+	set img_dev="/dev/disk/by-uuid/$iso_partition_uuid"
+	loopback loop ($iso_partition)$iso_file
+	set boot_option=""
+	#set boot_option="locale=zh_TW"
+	#set boot_option="quiet splash"
+	linux (loop)/casper/vmlinuz iso-scan/filename=$iso_file boot=casper $boot_option
+	initrd (loop)/casper/initrd
+}
+```
+
 
 ## 參考文章
 

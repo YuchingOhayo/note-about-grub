@@ -1,11 +1,11 @@
 
+
 # Demo Grub Boot ISO / Arch / 2022.01.01
 
 
 ## Grub Config
 
-* /etc/grub.d/41_custom
-* [/boot/grub/custom.cfg](custom.cfg)
+* [/etc/grub.d/40_custom](40_custom)
 
 
 ## Menu Entry
