@@ -19,4 +19,4 @@ has_children: true
 
 ## 相關討論
 
-* [如何設定雙系統開機選項](https://www.ubuntu-tw.org/modules/newbb/viewtopic.php?post_id=363530#forumpost363530)
+* [#5 回覆: 如何設定雙系統開機選項](https://www.ubuntu-tw.org/modules/newbb/viewtopic.php?post_id=363530#forumpost363530)
