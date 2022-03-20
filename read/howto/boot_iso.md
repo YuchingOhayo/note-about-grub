@@ -50,8 +50,10 @@ menuentry "Arch 2022.01.01 ISO" --class Arch {
 ## GRUB Menu Entry / Boot ISO 樣板 / Manjaro
 
 ``` sh
-menuentry "Manjaro xfce 21.2.1 ISO" --class Manjaro {
-	set iso_file="/opt/iso/manjaro/21.2.1/manjaro-xfce-21.2.1-220103-linux515.iso"
+
+
+menuentry "Manjaro xfce 21.2.5 ISO" --class Manjaro {
+	set iso_file="/opt/iso/manjaro/latest/manjaro-xfce-21.2.5-220314-linux515.iso"
 	search --no-floppy -f --set=iso_partition $iso_file
 	probe -u $iso_partition --set=iso_partition_uuid
 	set img_dev="/dev/disk/by-uuid/$iso_partition_uuid"
