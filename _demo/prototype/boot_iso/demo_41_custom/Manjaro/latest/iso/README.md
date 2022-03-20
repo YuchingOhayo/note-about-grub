@@ -1,5 +1,5 @@
 
-# Mabox Linux
+# Download ISO / Manjaro
 
 ## Mount
 
