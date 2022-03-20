@@ -2,10 +2,10 @@
 
 # Demo Grub Boot ISO / Debian / 11
 
+
 ## Grub Config
 
-* /etc/grub.d/41_custom
-* [/boot/grub/custom.cfg](custom.cfg)
+* [/etc/grub.d/40_custom](40_custom)
 
 
 ## Menu Entry
@@ -68,3 +68,4 @@ wget -c -i iso-download.txt
 * Search : [[mxlinux+grub+boot+iso](https://www.google.com/search?q=mxlinux+grub+boot+iso)]
 * [https://forum.mxlinux.org/viewtopic.php?t=40215](https://forum.mxlinux.org/viewtopic.php?t=40215)
 * Debian / man [live-boot](https://manpages.debian.org/unstable/live-boot-doc/live-boot.7.en.html)
+
