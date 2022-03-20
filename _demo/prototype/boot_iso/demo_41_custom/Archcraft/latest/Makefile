@@ -13,10 +13,6 @@ help:
 	@echo
 	@echo '	$$ make remove'
 	@echo
-	@echo '	$$ make download'
-	@echo
-
-
 .PHONY: help
 
 
@@ -28,8 +24,3 @@ install:
 remove:
 	sudo rm -f /boot/grub/custom.cfg
 .PHONY: remove
-
-
-download:
-	wget -c 'https://github.com/archcraft-os/releases/releases/download/v21.09/archcraft-2021.09.25-x86_64.iso'
-.PHONY: download
