@@ -11,6 +11,8 @@ has_children: true
 * [https://www.gnu.org/software/grub/](https://www.gnu.org/software/grub/)
 * [https://www.gnu.org/software/grub/grub-documentation.html](https://www.gnu.org/software/grub/grub-documentation.html)
 * [https://www.gnu.org/software/grub/manual/grub/](https://www.gnu.org/software/grub/manual/grub/)
+* $ info grub -n '[Simple configuration](https://www.gnu.org/software/grub/manual/grub/html_node/Simple-configuration.html)'
+
 
 ## Manual
 
