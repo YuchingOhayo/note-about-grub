@@ -2,6 +2,7 @@
 
 ##
 ## https://wiki.archcraft.io/docs/boot-iso/boot-with-usb
+## https://maboxlinux.org/users-guide/download-and-installation/
 ## Please run `lsblk` to find `of=/dev/sdb`
 ##
 
