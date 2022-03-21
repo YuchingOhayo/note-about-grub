@@ -1,5 +1,5 @@
 ---
-title: 下載
+title: 如何下載「Ventoy」
 nav_order: 9021
 has_children: false
 parent: ventoy
@@ -7,7 +7,7 @@ grand_parent: 連結
 ---
 
 
-# 下載
+# 如何下載「Ventoy」
 
 
 可以到「[https://github.com/ventoy/Ventoy/releases](https://github.com/ventoy/Ventoy/releases)」找到最新的版本。

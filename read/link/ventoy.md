@@ -14,7 +14,7 @@ parent: 連結
 | --- |
 | [如何下載「Ventoy」](ventoy/download) |
 | [如何安裝「Ventoy」到「USB隨身碟」](ventoy/install) |
-
+| [如何更改「Ventoy」的「佈景主題」](ventoy/theme) |
 
 ## 相關連結
 

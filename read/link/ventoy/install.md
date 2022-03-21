@@ -1,5 +1,5 @@
 ---
-title: 安裝
+title: 如何安裝「Ventoy」到「USB隨身碟」
 nav_order: 9022
 has_children: false
 parent: ventoy
@@ -7,7 +7,7 @@ grand_parent: 連結
 ---
 
 
-# 安裝
+# 如何安裝「Ventoy」到「USB隨身碟」
 
 
 延續前面[如何下載「Ventoy」](download)，
