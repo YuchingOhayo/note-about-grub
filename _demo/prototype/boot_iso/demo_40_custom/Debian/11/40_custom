@@ -7,8 +7,8 @@ exec tail -n +3 $0
 
 menuentry "Debian 11 netinst ISO" --class Debian {
 	set iso_file="/opt/iso/debian/11/debian-11.2.0-amd64-netinst.iso"
-	search --no-floppy -f --set=iso_partition $iso_file
-	probe -u $iso_partition --set=iso_partition_uuid
+	search --set=iso_partition --no-floppy --file $iso_file
+	probe --set=iso_partition_uuid --fs-uuid $iso_partition
 	set img_dev="/dev/disk/by-uuid/$iso_partition_uuid"
 	loopback loop ($iso_partition)$iso_file
 	set boot_option="vga=788"
@@ -20,8 +20,8 @@ menuentry "Debian 11 netinst ISO" --class Debian {
 
 menuentry "Debian 11 Xfce ISO" --class Debian {
 	set iso_file="/opt/iso/debian/11/debian-live-11.2.0-amd64-xfce.iso"
-	search --no-floppy -f --set=iso_partition $iso_file
-	probe -u $iso_partition --set=iso_partition_uuid
+	search --set=iso_partition --no-floppy --file $iso_file
+	probe --set=iso_partition_uuid --fs-uuid $iso_partition
 	set img_dev="/dev/disk/by-uuid/$iso_partition_uuid"
 	loopback loop ($iso_partition)$iso_file
 	set boot_option=""
@@ -34,8 +34,8 @@ menuentry "Debian 11 Xfce ISO" --class Debian {
 
 menuentry "Debian 11 Standard ISO" --class Debian {
 	set iso_file="/opt/iso/debian/11/debian-live-11.2.0-amd64-standard.iso"
-	search --no-floppy -f --set=iso_partition $iso_file
-	probe -u $iso_partition --set=iso_partition_uuid
+	search --set=iso_partition --no-floppy --file $iso_file
+	probe --set=iso_partition_uuid --fs-uuid $iso_partition
 	set img_dev="/dev/disk/by-uuid/$iso_partition_uuid"
 	loopback loop ($iso_partition)$iso_file
 	set boot_option=""
@@ -48,8 +48,8 @@ menuentry "Debian 11 Standard ISO" --class Debian {
 
 menuentry "Debian 11 Mate ISO" --class Debian {
 	set iso_file="/opt/iso/debian/11/debian-live-11.2.0-amd64-mate.iso"
-	search --no-floppy -f --set=iso_partition $iso_file
-	probe -u $iso_partition --set=iso_partition_uuid
+	search --set=iso_partition --no-floppy --file $iso_file
+	probe --set=iso_partition_uuid --fs-uuid $iso_partition
 	set img_dev="/dev/disk/by-uuid/$iso_partition_uuid"
 	loopback loop ($iso_partition)$iso_file
 	set boot_option=""
@@ -62,8 +62,8 @@ menuentry "Debian 11 Mate ISO" --class Debian {
 
 menuentry "Debian 11 Lxqt ISO" --class Debian {
 	set iso_file="/opt/iso/debian/11/debian-live-11.2.0-amd64-lxqt.iso"
-	search --no-floppy -f --set=iso_partition $iso_file
-	probe -u $iso_partition --set=iso_partition_uuid
+	search --set=iso_partition --no-floppy --file $iso_file
+	probe --set=iso_partition_uuid --fs-uuid $iso_partition
 	set img_dev="/dev/disk/by-uuid/$iso_partition_uuid"
 	loopback loop ($iso_partition)$iso_file
 	set boot_option=""
@@ -76,8 +76,8 @@ menuentry "Debian 11 Lxqt ISO" --class Debian {
 
 menuentry "Debian 11 Lxde ISO" --class Debian {
 	set iso_file="/opt/iso/debian/11/debian-live-11.2.0-amd64-lxde.iso"
-	search --no-floppy -f --set=iso_partition $iso_file
-	probe -u $iso_partition --set=iso_partition_uuid
+	search --set=iso_partition --no-floppy --file $iso_file
+	probe --set=iso_partition_uuid --fs-uuid $iso_partition
 	set img_dev="/dev/disk/by-uuid/$iso_partition_uuid"
 	loopback loop ($iso_partition)$iso_file
 	set boot_option=""
@@ -90,8 +90,8 @@ menuentry "Debian 11 Lxde ISO" --class Debian {
 
 menuentry "Debian 11 Kde ISO" --class Debian {
 	set iso_file="/opt/iso/debian/11/debian-live-11.2.0-amd64-kde.iso"
-	search --no-floppy -f --set=iso_partition $iso_file
-	probe -u $iso_partition --set=iso_partition_uuid
+	search --set=iso_partition --no-floppy --file $iso_file
+	probe --set=iso_partition_uuid --fs-uuid $iso_partition
 	set img_dev="/dev/disk/by-uuid/$iso_partition_uuid"
 	loopback loop ($iso_partition)$iso_file
 	set boot_option=""
@@ -104,8 +104,8 @@ menuentry "Debian 11 Kde ISO" --class Debian {
 
 menuentry "Debian 11 Gnome ISO" --class Debian {
 	set iso_file="/opt/iso/debian/11/debian-live-11.2.0-amd64-gnome.iso"
-	search --no-floppy -f --set=iso_partition $iso_file
-	probe -u $iso_partition --set=iso_partition_uuid
+	search --set=iso_partition --no-floppy --file $iso_file
+	probe --set=iso_partition_uuid --fs-uuid $iso_partition
 	set img_dev="/dev/disk/by-uuid/$iso_partition_uuid"
 	loopback loop ($iso_partition)$iso_file
 	set boot_option=""
@@ -118,8 +118,8 @@ menuentry "Debian 11 Gnome ISO" --class Debian {
 
 menuentry "Debian 11 Cinnamon ISO" --class Debian {
 	set iso_file="/opt/iso/debian/debian-live-11.2.0-amd64-cinnamon.iso"
-	search --no-floppy -f --set=iso_partition $iso_file
-	probe -u $iso_partition --set=iso_partition_uuid
+	search --set=iso_partition --no-floppy --file $iso_file
+	probe --set=iso_partition_uuid --fs-uuid $iso_partition
 	set img_dev="/dev/disk/by-uuid/$iso_partition_uuid"
 	loopback loop ($iso_partition)$iso_file
 	set boot_option=""

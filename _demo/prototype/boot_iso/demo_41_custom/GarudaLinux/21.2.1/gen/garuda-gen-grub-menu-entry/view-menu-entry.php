@@ -3,8 +3,8 @@
 menuentry "<?php echo $data['iso.title']; ?>" --class Garuda {
 	set use_driver="free"
 	set iso_file="<?php echo $data['iso.path']; ?>"
-	search --no-floppy -f --set=iso_partition $iso_file
-	probe -u $iso_partition --set=iso_partition_uuid
+	search --set=iso_partition --no-floppy --file $iso_file
+	probe --set=iso_partition_uuid --fs-uuid $iso_partition
 	set img_dev="/dev/disk/by-uuid/$iso_partition_uuid"
 	loopback loop ($iso_partition)$iso_file
 	set boot_option=""

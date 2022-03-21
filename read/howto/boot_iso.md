@@ -37,8 +37,8 @@ parent: 如何
 ``` sh
 menuentry "Arch 2022.01.01 ISO" --class Arch {
 	set iso_file="/opt/iso/arch/2022.01.01/archlinux-2022.01.01-x86_64.iso"
-	search --no-floppy -f --set=iso_partition $iso_file
-	probe -u $iso_partition --set=iso_partition_uuid
+	search --set=iso_partition --no-floppy --file $iso_file
+	probe --set=iso_partition_uuid --fs-uuid $iso_partition
 	set img_dev="/dev/disk/by-uuid/$iso_partition_uuid"
 	loopback loop ($iso_partition)$iso_file
 	set boot_option=""
@@ -54,8 +54,8 @@ menuentry "Arch 2022.01.01 ISO" --class Arch {
 ``` sh
 menuentry "Manjaro xfce 21.2.5 ISO" --class Manjaro {
 	set iso_file="/opt/iso/manjaro/latest/manjaro-xfce-21.2.5-220314-linux515.iso"
-	search --no-floppy -f --set=iso_partition $iso_file
-	probe -u $iso_partition --set=iso_partition_uuid
+	search --set=iso_partition --no-floppy --file $iso_file
+	probe --set=iso_partition_uuid --fs-uuid $iso_partition
 	set img_dev="/dev/disk/by-uuid/$iso_partition_uuid"
 	loopback loop ($iso_partition)$iso_file
 	set boot_option=""
@@ -72,8 +72,8 @@ menuentry "Manjaro xfce 21.2.5 ISO" --class Manjaro {
 ``` sh
 menuentry "Debian 11 Xfce ISO" --class Debian {
 	set iso_file="/opt/iso/debian/11/debian-live-11.2.0-amd64-xfce.iso"
-	search --no-floppy -f --set=iso_partition $iso_file
-	probe -u $iso_partition --set=iso_partition_uuid
+	search --set=iso_partition --no-floppy --file $iso_file
+	probe --set=iso_partition_uuid --fs-uuid $iso_partition
 	set img_dev="/dev/disk/by-uuid/$iso_partition_uuid"
 	loopback loop ($iso_partition)$iso_file
 	set boot_option=""
@@ -91,8 +91,8 @@ menuentry "Debian 11 Xfce ISO" --class Debian {
 ``` sh
 menuentry "Ubuntu 22.04 Daily Live ISO" --class Ubuntu {
 	set iso_file="/opt/iso/ubuntu/daily-live/ubuntu/jammy-desktop-amd64.iso"
-	search --no-floppy -f --set=iso_partition $iso_file
-	probe -u $iso_partition --set=iso_partition_uuid
+	search --set=iso_partition --no-floppy --file $iso_file
+	probe --set=iso_partition_uuid --fs-uuid $iso_partition
 	set img_dev="/dev/disk/by-uuid/$iso_partition_uuid"
 	loopback loop ($iso_partition)$iso_file
 	set boot_option=""

@@ -7,8 +7,8 @@ exec tail -n +3 $0
 
 menuentry "Ubuntu 22.04 Daily Live ISO" --class Ubuntu {
 	set iso_file="/opt/iso/ubuntu/daily-live/ubuntu/jammy-desktop-amd64.iso"
-	search --no-floppy -f --set=iso_partition $iso_file
-	probe -u $iso_partition --set=iso_partition_uuid
+	search --set=iso_partition --no-floppy --file $iso_file
+	probe --set=iso_partition_uuid --fs-uuid $iso_partition
 	set img_dev="/dev/disk/by-uuid/$iso_partition_uuid"
 	loopback loop ($iso_partition)$iso_file
 	set boot_option=""
@@ -21,8 +21,8 @@ menuentry "Ubuntu 22.04 Daily Live ISO" --class Ubuntu {
 
 menuentry "Xubuntu 22.04 Daily Live ISO" --class Ubuntu {
 	set iso_file="/opt/iso/ubuntu/daily-live/xubuntu/jammy-desktop-amd64.iso"
-	search --no-floppy -f --set=iso_partition $iso_file
-	probe -u $iso_partition --set=iso_partition_uuid
+	search --set=iso_partition --no-floppy --file $iso_file
+	probe --set=iso_partition_uuid --fs-uuid $iso_partition
 	set img_dev="/dev/disk/by-uuid/$iso_partition_uuid"
 	loopback loop ($iso_partition)$iso_file
 	set boot_option=""
@@ -35,8 +35,8 @@ menuentry "Xubuntu 22.04 Daily Live ISO" --class Ubuntu {
 
 menuentry "Lubuntu 22.04 Daily Live ISO" --class Ubuntu {
 	set iso_file="/opt/iso/ubuntu/daily-live/lubuntu/jammy-desktop-amd64.iso"
-	search --no-floppy -f --set=iso_partition $iso_file
-	probe -u $iso_partition --set=iso_partition_uuid
+	search --set=iso_partition --no-floppy --file $iso_file
+	probe --set=iso_partition_uuid --fs-uuid $iso_partition
 	set img_dev="/dev/disk/by-uuid/$iso_partition_uuid"
 	loopback loop ($iso_partition)$iso_file
 	set boot_option=""
@@ -49,8 +49,8 @@ menuentry "Lubuntu 22.04 Daily Live ISO" --class Ubuntu {
 
 menuentry "Kubuntu 22.04 Daily Live ISO" --class Ubuntu {
 	set iso_file="/opt/iso/ubuntu/daily-live/kubuntu/jammy-desktop-amd64.iso"
-	search --no-floppy -f --set=iso_partition $iso_file
-	probe -u $iso_partition --set=iso_partition_uuid
+	search --set=iso_partition --no-floppy --file $iso_file
+	probe --set=iso_partition_uuid --fs-uuid $iso_partition
 	set img_dev="/dev/disk/by-uuid/$iso_partition_uuid"
 	loopback loop ($iso_partition)$iso_file
 	set boot_option=""
@@ -63,8 +63,8 @@ menuentry "Kubuntu 22.04 Daily Live ISO" --class Ubuntu {
 
 menuentry "Ubuntu Mate 22.04 Daily Live ISO" --class Ubuntu {
 	set iso_file="/opt/iso/ubuntu/daily-live/ubuntu-mate/jammy-desktop-amd64.iso"
-	search --no-floppy -f --set=iso_partition $iso_file
-	probe -u $iso_partition --set=iso_partition_uuid
+	search --set=iso_partition --no-floppy --file $iso_file
+	probe --set=iso_partition_uuid --fs-uuid $iso_partition
 	set img_dev="/dev/disk/by-uuid/$iso_partition_uuid"
 	loopback loop ($iso_partition)$iso_file
 	set boot_option=""
@@ -77,8 +77,8 @@ menuentry "Ubuntu Mate 22.04 Daily Live ISO" --class Ubuntu {
 
 menuentry "Ubuntu Budgie 22.04 Daily Live ISO" --class Ubuntu {
 	set iso_file="/opt/iso/ubuntu/daily-live/ubuntu-budgie/jammy-desktop-amd64.iso"
-	search --no-floppy -f --set=iso_partition $iso_file
-	probe -u $iso_partition --set=iso_partition_uuid
+	search --set=iso_partition --no-floppy --file $iso_file
+	probe --set=iso_partition_uuid --fs-uuid $iso_partition
 	set img_dev="/dev/disk/by-uuid/$iso_partition_uuid"
 	loopback loop ($iso_partition)$iso_file
 	set boot_option=""
@@ -91,8 +91,8 @@ menuentry "Ubuntu Budgie 22.04 Daily Live ISO" --class Ubuntu {
 
 menuentry "Ubuntu Server 22.04 Daily Live ISO" --class Ubuntu {
 	set iso_file="/opt/iso/ubuntu/daily-live/ubuntu-server/jammy-live-server-amd64.iso"
-	search --no-floppy -f --set=iso_partition $iso_file
-	probe -u $iso_partition --set=iso_partition_uuid
+	search --set=iso_partition --no-floppy --file $iso_file
+	probe --set=iso_partition_uuid --fs-uuid $iso_partition
 	set img_dev="/dev/disk/by-uuid/$iso_partition_uuid"
 	loopback loop ($iso_partition)$iso_file
 	set boot_option=""
