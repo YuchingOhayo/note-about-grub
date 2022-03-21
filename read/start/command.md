@@ -13,6 +13,7 @@ parent: 入門
 
 * $ info grub -n 'Interface' ## [14 GRUB’s user interface](https://www.gnu.org/software/grub/manual/grub/html_node/Interface.html#Interface)
 * $ info grub -n 'Commands' ## [16 The list of available commands](https://www.gnu.org/software/grub/manual/grub/html_node/Commands.html#Commands)
+* $ info grub -n 'Shell-like scripting' ## [6.3 Writing full configuration files directly](https://www.gnu.org/software/grub/manual/grub/html_node/Shell_002dlike-scripting.html#Shell_002dlike-scripting)
 
 
 ## 如何進入「指令模式」
