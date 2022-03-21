@@ -17,7 +17,7 @@
 
 ## 入門
 
-| 議題 |
+| 設定入門 |
 | --- |
 | [/boot/grub/grub.cfg](https://samwhelp.github.io/note-about-grub/read/start/grub_cfg.html) |
 | [/etc/default/grub](https://samwhelp.github.io/note-about-grub/read/start/etc_default_grub.html) |
@@ -25,6 +25,16 @@
 | [自訂 Gurb Menu Entry](https://samwhelp.github.io/note-about-grub/read/start/custom_menu_entry.html) |
 | [/etc/grub.d/40_custom](https://samwhelp.github.io/note-about-grub/read/start/40_custom.html) |
 | [/boot/grub/custom.cfg](https://samwhelp.github.io/note-about-grub/read/start/custom_cfg.html) |
+
+
+| 指令入門 |
+| --- |
+| [Command](https://samwhelp.github.io/note-about-grub/read/start/command.html) |
+| [help](https://samwhelp.github.io/note-about-grub/read/start/command/help.html) |
+| [clear](https://samwhelp.github.io/note-about-grub/read/start/command/clear.html) |
+| [variable](https://samwhelp.github.io/note-about-grub/read/start/command/variable.html) |
+| [probe](https://samwhelp.github.io/note-about-grub/read/start/command/probe.html) |
+
 
 
 ## 如何
