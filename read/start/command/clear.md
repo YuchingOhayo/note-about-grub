@@ -39,3 +39,8 @@ clear
 ## 相關文件
 
 * $ info grub -n 'clear' ## [16.3.11 clear](https://www.gnu.org/software/grub/manual/grub/html_node/clear.html#clear)
+
+
+## 接下來
+
+接下來，先來了解「[variable](variable) (變數)」的概念。
