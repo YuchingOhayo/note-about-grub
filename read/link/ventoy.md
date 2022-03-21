@@ -7,6 +7,17 @@ parent: 連結
 
 # ventoy
 
+
+## 使用說明
+
+| 使用說明 |
+| --- |
+| [如何下載「Ventoy」](ventoy/download) |
+| [如何安裝「Ventoy」到「USB隨身碟」](ventoy/install) |
+
+
+## 相關連結
+
 * [https://www.ventoy.net](https://www.ventoy.net)
 * [https://github.com/ventoy/Ventoy/releases](https://github.com/ventoy/Ventoy/releases)
 
