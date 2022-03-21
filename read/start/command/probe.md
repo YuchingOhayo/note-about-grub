@@ -65,7 +65,7 @@ probe --fs-uuid (hd0,msdos2)
 1be9c668-05ea-48fd-a1f6-4692a9c01d2d
 ```
 
-> 就類似在「bash」底下，執行「lsblk」，可以找到該「Device」的「UUID」。
+> 就類似在「bash」底下，執行「blkid」，可以找到該「Device」的「UUID」。
 
 而「probe」，也可以將「找到的值」，存到一個「變數」，
 
