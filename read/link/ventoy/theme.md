@@ -267,3 +267,4 @@ cat /media/$(id -un)/Ventoy/ventoy/ventoy.json
 * [[教學] 多重開機隨身碟製作工具 – Ventoy (1.0.14)](https://izaka.tw/ventoy-bootable-usb-solution-user-guide/)
 * [要如何套用 Ventoy 多重開機系統選單主題 (2020.7)](https://izaka.tw/ventoy-theme-apply-guide/)
 * [Ventoy 教學，新世代USB重灌工具，支援WinPE/Linux](https://www.gdaily.org/23174/ventoy-iso)
+* Ventoy / Docs / [Ventoy Theme Plugin](https://www.ventoy.net/en/plugin_theme.html) ([中文](https://www.ventoy.net/cn/plugin_theme.html))
