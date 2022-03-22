@@ -7,14 +7,19 @@ parent: 連結
 
 # ventoy
 
+## 相關筆記
+
+* [ventoy 探索筆記](https://samwhelp.github.io/note-about-ventoy/)
+
 
 ## 使用說明
 
 | 使用說明 |
 | --- |
-| [如何下載「Ventoy」](ventoy/download) |
-| [如何安裝「Ventoy」到「USB隨身碟」](ventoy/install) |
-| [如何更改「Ventoy」的「佈景主題」](ventoy/theme) |
+| [如何下載「Ventoy」](https://samwhelp.github.io/note-about-ventoy/read/start/download.html) |
+| [如何安裝「Ventoy」到「USB隨身碟」](https://samwhelp.github.io/note-about-ventoy/read/start/install.html) |
+| [如何更改「Ventoy」的「佈景主題」](https://samwhelp.github.io/note-about-ventoy/read/start/theme.html) |
+
 
 ## 相關連結
 
