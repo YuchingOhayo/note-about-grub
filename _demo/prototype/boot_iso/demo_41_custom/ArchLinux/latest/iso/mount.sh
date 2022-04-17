@@ -9,7 +9,7 @@ mount_iso () {
 }
 
 mount_archlinux () {
-	sudo mount -o loop archlinux-2022.01.01-x86_64.iso mnt
+	sudo mount -o loop archlinux-2022.04.05-x86_64.iso mnt
 }
 
 __main__ () {

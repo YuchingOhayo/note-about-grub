@@ -20,7 +20,7 @@ parent: 如何
 
 | Distro | /etc/grub.d/40_custom | /boot/grub/custom.cfg |
 | --- | --- | --- |
-| Arch | [/etc/grub.d/40_custom](https://github.com/samwhelp/note-about-grub/blob/gh-pages/_demo/prototype/boot_iso/demo_40_custom/Arch/2022.01.01/40_custom) | [/boot/grub/custom.cfg](https://github.com/samwhelp/note-about-grub/blob/gh-pages/_demo/prototype/boot_iso/demo_41_custom/Arch/2022.01.01/custom.cfg) |
+| Arch | [/etc/grub.d/40_custom](https://github.com/samwhelp/note-about-grub/blob/gh-pages/_demo/prototype/boot_iso/demo_40_custom/ArchLinux/latest/40_custom) | [/boot/grub/custom.cfg](https://github.com/samwhelp/note-about-grub/blob/gh-pages/_demo/prototype/boot_iso/demo_41_custom/ArchLinux/latest/custom.cfg) |
 | Manjaro | [/etc/grub.d/40_custom](https://github.com/samwhelp/note-about-grub/blob/gh-pages/_demo/prototype/boot_iso/demo_40_custom/Manjaro/latest/40_custom) | [/boot/grub/custom.cfg](https://github.com/samwhelp/note-about-grub/blob/gh-pages/_demo/prototype/boot_iso/demo_41_custom/Manjaro/latest/custom.cfg) |
 | Debian | [/etc/grub.d/40_custom](https://github.com/samwhelp/note-about-grub/blob/gh-pages/_demo/prototype/boot_iso/demo_40_custom/Debian/11/40_custom) | [/boot/grub/custom.cfg](https://github.com/samwhelp/note-about-grub/blob/gh-pages/_demo/prototype/boot_iso/demo_41_custom/Debian/11/custom.cfg) |
 | Ubuntu | [/etc/grub.d/40_custom](https://github.com/samwhelp/note-about-grub/blob/gh-pages/_demo/prototype/boot_iso/demo_40_custom/Ubuntu/daily-live/40_custom) | [/boot/grub/custom.cfg](https://github.com/samwhelp/note-about-grub/blob/gh-pages/_demo/prototype/boot_iso/demo_41_custom/Ubuntu/daily-live/custom.cfg) |
@@ -35,8 +35,8 @@ parent: 如何
 
 
 ``` sh
-menuentry "Arch 2022.01.01 ISO" --class Arch {
-	set iso_file="/opt/iso/arch/2022.01.01/archlinux-2022.01.01-x86_64.iso"
+menuentry "Arch 2022.04.05 ISO" --class Arch {
+	set iso_file="/opt/iso/arch/latest/archlinux-2022.04.05-x86_64.iso"
 	search --set=iso_partition --no-floppy --file $iso_file
 	probe --set=iso_partition_uuid --fs-uuid $iso_partition
 	set img_dev="/dev/disk/by-uuid/$iso_partition_uuid"

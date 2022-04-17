@@ -10,13 +10,13 @@
 
 ## Menu Entry
 
-* [/opt/iso/arch/2022.01.01/archlinux-2022.01.01-x86_64.iso](https://free.nchc.org.tw/arch/iso/2022.01.01/archlinux-2022.01.01-x86_64.iso)
+* [/opt/iso/arch/latest/archlinux-2022.04.05-x86_64.iso](https://mirror.archlinux.tw/ArchLinux/iso/latest/archlinux-2022.04.05-x86_64.iso)
 
 
 ## iso-download.txt
 
 ``` sh
-https://free.nchc.org.tw/arch/iso/2022.01.01/archlinux-2022.01.01-x86_64.iso
+https://mirror.archlinux.tw/ArchLinux/iso/latest/archlinux-2022.04.05-x86_64.iso
 ```
 
 ## iso-download.sh
@@ -29,8 +29,8 @@ wget -c -i iso-download.txt
 ## Link
 
 * [https://archlinux.org/download/](https://archlinux.org/download/)
-* [https://free.nchc.org.tw/arch/iso/](https://free.nchc.org.tw/arch/iso/)
-* [https://free.nchc.org.tw/arch/iso/2022.01.01/](https://free.nchc.org.tw/arch/iso/2022.01.01/)
+* [https://mirror.archlinux.tw/ArchLinux/iso/](https://mirror.archlinux.tw/ArchLinux/iso/)
+* [https://mirror.archlinux.tw/ArchLinux/iso/latest/](https://mirror.archlinux.tw/ArchLinux/iso/latest/)
 * [https://gitlab.archlinux.org/archlinux/archiso](https://gitlab.archlinux.org/archlinux/archiso)
 
 
