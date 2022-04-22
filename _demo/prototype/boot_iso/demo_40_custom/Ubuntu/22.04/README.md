@@ -5,8 +5,7 @@
 
 ## Grub Config
 
-* /etc/grub.d/41_custom
-* [/boot/grub/custom.cfg](custom.cfg)
+* [/etc/grub.d/40_custom](40_custom)
 
 
 ## Menu Entry
@@ -33,6 +32,7 @@ https://cdimage.ubuntu.com/lubuntu/releases/22.04/release/lubuntu-22.04-desktop-
 https://cdimage.ubuntu.com/ubuntu-mate/releases/22.04/release/ubuntu-mate-22.04-desktop-amd64.iso
 https://cdimage.ubuntu.com/ubuntu-budgie/releases/22.04/release/ubuntu-budgie-22.04-desktop-amd64.iso
 https://cdimage.ubuntu.com/ubuntustudio/releases/22.04/release/ubuntustudio-22.04-dvd-amd64.iso
+https://releases.ubuntu.com/22.04/ubuntu-22.04-live-server-amd64.iso
 ```
 
 ## iso-download.sh
