@@ -23,7 +23,7 @@ parent: 如何
 | Arch | [/etc/grub.d/40_custom](https://github.com/samwhelp/note-about-grub/blob/gh-pages/_demo/prototype/boot_iso/demo_40_custom/ArchLinux/latest/40_custom) | [/boot/grub/custom.cfg](https://github.com/samwhelp/note-about-grub/blob/gh-pages/_demo/prototype/boot_iso/demo_41_custom/ArchLinux/latest/custom.cfg) |
 | Manjaro | [/etc/grub.d/40_custom](https://github.com/samwhelp/note-about-grub/blob/gh-pages/_demo/prototype/boot_iso/demo_40_custom/Manjaro/latest/40_custom) | [/boot/grub/custom.cfg](https://github.com/samwhelp/note-about-grub/blob/gh-pages/_demo/prototype/boot_iso/demo_41_custom/Manjaro/latest/custom.cfg) |
 | Debian | [/etc/grub.d/40_custom](https://github.com/samwhelp/note-about-grub/blob/gh-pages/_demo/prototype/boot_iso/demo_40_custom/Debian/11/40_custom) | [/boot/grub/custom.cfg](https://github.com/samwhelp/note-about-grub/blob/gh-pages/_demo/prototype/boot_iso/demo_41_custom/Debian/11/custom.cfg) |
-| Ubuntu | [/etc/grub.d/40_custom](https://github.com/samwhelp/note-about-grub/blob/gh-pages/_demo/prototype/boot_iso/demo_40_custom/Ubuntu/daily-live/40_custom) | [/boot/grub/custom.cfg](https://github.com/samwhelp/note-about-grub/blob/gh-pages/_demo/prototype/boot_iso/demo_41_custom/Ubuntu/daily-live/custom.cfg) |
+| Ubuntu | [/etc/grub.d/40_custom](https://github.com/samwhelp/note-about-grub/blob/gh-pages/_demo/prototype/boot_iso/demo_40_custom/Ubuntu/22.04/40_custom) | [/boot/grub/custom.cfg](https://github.com/samwhelp/note-about-grub/blob/gh-pages/_demo/prototype/boot_iso/demo_41_custom/Ubuntu/22.04/custom.cfg) |
 
 
 ## 指引
@@ -89,8 +89,9 @@ menuentry "Debian 11 Xfce ISO" --class Debian {
 
 
 ``` sh
-menuentry "Ubuntu 22.04 Daily Live ISO" --class Ubuntu {
-	set iso_file="/opt/iso/ubuntu/daily-live/ubuntu/jammy-desktop-amd64.iso"
+menuentry "Xubuntu 22.04 Live ISO" --class Ubuntu {
+	set gfxpayload=keep
+	set iso_file="/opt/iso/ubuntu/22.04/xubuntu-22.04-desktop-amd64.iso"
 	search --set=iso_partition --no-floppy --file $iso_file
 	probe --set=iso_partition_uuid --fs-uuid $iso_partition
 	set img_dev="/dev/disk/by-uuid/$iso_partition_uuid"
@@ -98,6 +99,7 @@ menuentry "Ubuntu 22.04 Daily Live ISO" --class Ubuntu {
 	set boot_option=""
 	#set boot_option="locale=zh_TW"
 	#set boot_option="quiet splash"
+	#set boot_option="file=/cdrom/preseed/xubuntu.seed maybe-ubiquity ---"
 	linux (loop)/casper/vmlinuz iso-scan/filename=$iso_file boot=casper $boot_option
 	initrd (loop)/casper/initrd
 }
