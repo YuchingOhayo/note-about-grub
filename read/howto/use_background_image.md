@@ -11,7 +11,7 @@ parent: 如何
 ## 主題
 
 * [放置路徑](#放置路徑)
-* [下載圖片](#下載圖片)
+* [下載背景圖片](#下載背景圖片)
 * [設定採用](#設定採用)
 * [深入探索](#深入探索)
 
@@ -27,12 +27,12 @@ parent: 如何
 sudo mkdir -p /boot/grub/backgrounds
 ```
 
-## 下載圖片
+## 下載背景圖片
 
 執行下面指令，產生「~/Downloads/grub_background_image」這個資料夾
 
 ``` sh
-mkdir ~/Downloads/grub_background_image
+mkdir -p ~/Downloads/grub_background_image
 ```
 
 執行下面指令，切換到「~/Downloads/grub_background_image」這個資料夾
@@ -60,7 +60,7 @@ sudo cp ubuntu-2.png /boot/grub/backgrounds/console-background.png
 
 ## 設定採用
 
-接著來說明，如何設定「GRUB」採用某個佈景主題
+接著來說明，如何設定「GRUB」採用某個「背景圖片」
 
 主要是編輯「/etc/default/grub」這個檔案
 
@@ -86,7 +86,7 @@ sudo update-grub
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
-會出現下面的提示訊息
+會顯示類似下面的提示訊息
 
 ```
 Sourcing file `/etc/default/grub'
@@ -97,9 +97,11 @@ Found background image: /boot/grub/backgrounds/console-background.png
 ...略...
 ```
 
-接著重開機，就會看到「grub」的「boot menu」和「console」都會有背景圖
+接著重開機，就會看到「grub」的「boot menu」和「console」都會有背景圖片
 
 > 在「boot menu」畫面，按下「e」或「c」都會進到「grub console mode」。
+
+> 按下「Enter」除了選擇某個選項開機，也會進到「grub console mode」。
 
 ## 深入探索
 
@@ -229,3 +231,140 @@ fi
 
 
 ## 同時設定「GRUB_BACKGROUND」和「GRUB_THEME」
+
+
+## 下載佈景主題
+
+執行下面指令，產生「~/Downloads/grub_theme」這個資料夾
+
+``` sh
+mkdir -p ~/Downloads/grub_theme
+```
+
+執行下面指令，切換到「~/Downloads/grub_theme」這個資料夾
+
+``` sh
+cd ~/Downloads/grub_theme
+```
+
+執行下面指令，clone「[poly-dark](https://github.com/shvchk/poly-dark)」這個「GRUB 佈景主題」。
+
+``` sh
+git clone 'https://github.com/shvchk/poly-dark.git'
+```
+
+執行下面指令，產生「/boot/grub/themes/poly-dark」這個資料夾
+
+``` sh
+sudo mkdir -p /boot/grub/themes/poly-dark
+```
+
+執行下面指令，複製上面的「GRUB 佈景主題」到「/boot/grub/themes/poly-dark/」這個資料夾。
+
+``` sh
+sudo cp -v -a poly-dark/* /boot/grub/themes/poly-dark/
+```
+
+
+編輯「/etc/default/grub」這個檔案
+
+``` sh
+sudo vi /etc/default/grub
+```
+
+加入下面這兩行，同時設定「GRUB_BACKGROUND」和「GRUB_THEME」這兩個「參數」。
+
+```
+GRUB_BACKGROUND="/boot/grub/backgrounds/console-background.png"
+GRUB_THEME="/boot/grub/themes/poly-dark/theme.txt"
+```
+
+接著執行下面指令，更新「grub的設定」
+
+``` sh
+sudo update-grub
+```
+
+
+會顯示類似下面的提示訊息
+
+```
+Sourcing file `/etc/default/grub'
+Sourcing file `/etc/default/grub.d/init-select.cfg'
+Generating grub configuration file ...
+Found theme: /boot/grub/themes/poly-dark/theme.txt
+Found background image: /boot/grub/backgrounds/console-background.png
+...略...
+```
+
+你會發現到，只剩下
+
+```
+Found background image: /boot/grub/backgrounds/console-background.png
+```
+
+而「Found background: /boot/grub/backgrounds/console-background.png」這個訊息不見了
+
+由此推論「/etc/grub.d/00_header」裡面的演算法
+
+只會根據「GRUB_BACKGROUND」或「GRUB_THEME」其中一個設定。
+
+接下來重新開機
+
+可以發現到
+
+> 在「console」的「背景圖片」是「/boot/grub/backgrounds/console-background.png」。
+
+> 在「boot menu」的「背景圖片」則是「/boot/grub/themes/poly-dark/background.png」。
+
+> 而「/boot/grub/themes/poly-dark/background.png」這張圖是在「/boot/grub/themes/poly-dark/theme.txt」設定的。
+
+執行
+
+``` sh
+grep 'desktop-image' /boot/grub/themes/poly-dark/theme.txt
+```
+
+顯示
+
+```
+desktop-image: "background.png"
+```
+
+執行
+
+``` sh
+file /boot/grub/themes/poly-dark/background.png
+```
+
+顯示
+
+```
+/boot/grub/themes/poly-dark/background.png: PNG image data, 1920 x 1080, 8-bit grayscale, non-interlaced
+```
+
+執行下面指令，觀看「/boot/grub/themes/poly-dark/background.png」這張圖片
+
+``` sh
+viewnior /boot/grub/themes/poly-dark/background.png
+```
+
+## 再次探索
+
+執行
+
+``` sh
+grep '/boot/grub/themes/poly-dark/theme.txt' /boot/grub/grub.cfg
+```
+
+顯示
+
+```
+set theme=($root)/boot/grub/themes/poly-dark/theme.txt
+```
+
+> 可以了解到
+
+> 在「/etc/default/grub」設定「GRUB_THEME="/boot/grub/themes/poly-dark/theme.txt"」
+
+> 在「/boot/grub/grub.cfg」，會被轉譯成「set theme=($root)/boot/grub/themes/poly-dark/theme.txt」
