@@ -21,7 +21,7 @@ parent: 如何
 
 * $ `info grub -n 'Simple configuration'` ## [6.1 Simple configuration handling](https://www.gnu.org/software/grub/manual/grub/html_node/Simple-configuration.html)
 * $ `info grub -n 'background_image'` ## [16.3.5 background_image](https://www.gnu.org/software/grub/manual/grub/html_node/background_005fimage.html#background_005fimage)
-* $ `info grub -n 'Theme file format'` ## [7 Theme file format](https://www.gnu.org/software/grub/manual/grub/html_node/Theme-file-format.html#Theme-file-format)
+* $ `info grub -n 'Theme file format'` ## [7 Theme file format](https://www.gnu.org/software/grub/manual/grub/html_node/Theme-file-format.html#Global-Properties)
 
 
 ## 放置路徑
@@ -362,7 +362,7 @@ viewnior /boot/grub/themes/poly-dark/background.png
 
 > 關於「desktop-image」，可以從下面文件找到相關說明。
 
-* $ `info grub -n 'Theme file format'` ## [7 Theme file format](https://www.gnu.org/software/grub/manual/grub/html_node/Theme-file-format.html#Theme-file-format)
+* $ `info grub -n 'Theme file format'` ## [7 Theme file format](https://www.gnu.org/software/grub/manual/grub/html_node/Theme-file-format.html#Global-Properties)
 
 
 ## 再次探索
@@ -423,7 +423,7 @@ terminal-border: "0"
 
 > 關於「terminal-」開頭的這幾個「theme.txt 參數」，可以從下面文件找到相關說明。
 
-* $ `info grub -n 'Theme file format'` ## [7 Theme file format](https://www.gnu.org/software/grub/manual/grub/html_node/Theme-file-format.html#Theme-file-format)
+* $ `info grub -n 'Theme file format'` ## [7 Theme file format](https://www.gnu.org/software/grub/manual/grub/html_node/Theme-file-format.html#Global-Properties)
 
 
 ## 設定同個背景圖片
