@@ -368,3 +368,38 @@ set theme=($root)/boot/grub/themes/poly-dark/theme.txt
 > 在「/etc/default/grub」設定「GRUB_THEME="/boot/grub/themes/poly-dark/theme.txt"」
 
 > 在「/boot/grub/grub.cfg」，會被轉譯成「set theme=($root)/boot/grub/themes/poly-dark/theme.txt」
+
+
+## 設定「console」畫面大小
+
+編輯「[/boot/grub/themes/poly-dark/theme.txt]()」
+
+``` sh
+sudo vi /boot/grub/themes/poly-dark/theme.txt
+```
+
+將原本的
+
+```
+terminal-left: "0"
+terminal-top: "0"
+terminal-width: "100%"
+terminal-height: "100%"
+terminal-border: "0"
+```
+
+改成如下
+
+```
+terminal-left: "10%"
+terminal-top: "10%"
+terminal-width: "80%"
+terminal-height: "80%"
+terminal-border: "0"
+```
+
+接著重新開機，按下「e」或「c」進到「console mode」，
+
+發現「console mode」不再是全螢幕，而是略微縮小，顯示在畫面中間。
+
+而且可以同時看到「boot menu」的背景圖片，和「console」的背景圖片。
