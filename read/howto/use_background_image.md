@@ -62,7 +62,9 @@ wget -c 'https://raw.githubusercontent.com/dracula/wallpaper/master/ubuntu-2.png
 sudo cp ubuntu-2.png /boot/grub/backgrounds/console-background.png
 ```
 
-並且改名為「console-background.png」，也就是「/boot/grub/backgrounds/console-background.png」。
+並且改名為「console-background.png」，
+
+也就是「/boot/grub/backgrounds/console-background.png」。
 
 這個名稱只是舉例，並沒有限定什麼名稱。
 
