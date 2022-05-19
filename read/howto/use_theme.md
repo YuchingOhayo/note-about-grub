@@ -1,6 +1,6 @@
 ---
 title: Use Theme
-nav_order: 7010
+nav_order: 7020
 has_children: false
 parent: 如何
 ---
