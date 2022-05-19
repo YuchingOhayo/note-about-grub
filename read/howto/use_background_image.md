@@ -10,10 +10,19 @@ parent: 如何
 
 ## 主題
 
+* [參考文件](#參考文件)
 * [放置路徑](#放置路徑)
 * [下載背景圖片](#下載背景圖片)
 * [設定採用](#設定採用)
 * [深入探索](#深入探索)
+
+
+## 參考文件
+
+* $ `info grub -n 'Simple configuration'` ## [6.1 Simple configuration handling](https://www.gnu.org/software/grub/manual/grub/html_node/Simple-configuration.html)
+* $ `info grub -n 'background_image'` ## [16.3.5 background_image](https://www.gnu.org/software/grub/manual/grub/html_node/background_005fimage.html#background_005fimage)
+* $ `info grub -n 'Theme file format'` ## [7 Theme file format](https://www.gnu.org/software/grub/manual/grub/html_node/Theme-file-format.html#Theme-file-format)
+
 
 ## 放置路徑
 
@@ -349,6 +358,11 @@ file /boot/grub/themes/poly-dark/background.png
 viewnior /boot/grub/themes/poly-dark/background.png
 ```
 
+> 關於「desktop-image」，可以從下面文件找到相關說明。
+
+* $ `info grub -n 'Theme file format'` ## [7 Theme file format](https://www.gnu.org/software/grub/manual/grub/html_node/Theme-file-format.html#Theme-file-format)
+
+
 ## 再次探索
 
 執行
@@ -403,3 +417,52 @@ terminal-border: "0"
 發現「console mode」不再是全螢幕，而是略微縮小，顯示在畫面中間。
 
 而且可以同時看到「boot menu」的背景圖片，和「console」的背景圖片。
+
+
+> 關於「terminal-」開頭的這幾個「theme.txt 參數」，可以從下面文件找到相關說明。
+
+* $ `info grub -n 'Theme file format'` ## [7 Theme file format](https://www.gnu.org/software/grub/manual/grub/html_node/Theme-file-format.html#Theme-file-format)
+
+
+## 設定同個背景圖片
+
+我們也可以設定「boot menu」和「console」是同一個背景圖片。
+
+編輯「/etc/default/grub」這個檔案
+
+``` sh
+sudo vi /etc/default/grub
+```
+
+加入下面這兩行，同時設定「GRUB_BACKGROUND」和「GRUB_THEME」這兩個「參數」。
+
+這樣「boot menu」和「console」是同一個背景圖片「/boot/grub/themes/poly-dark/background.png」。
+
+```
+GRUB_BACKGROUND="/boot/grub/themes/poly-dark/background.png"
+GRUB_THEME="/boot/grub/themes/poly-dark/theme.txt"
+```
+
+接著執行下面指令，更新「grub的設定」
+
+``` sh
+sudo update-grub
+```
+
+
+會顯示類似下面的提示訊息
+
+```
+Sourcing file `/etc/default/grub'
+Sourcing file `/etc/default/grub.d/init-select.cfg'
+Generating grub configuration file ...
+Found theme: /boot/grub/themes/poly-dark/theme.txt
+Found background image: /boot/grub/themes/poly-dark/background.png
+...略...
+```
+
+接著重新開機，
+
+在「boot menu」畫面，按下「e」或「c」進到「console mode」看看是否是同個圖片。
+
+按下「Esc」從「console mode」回到「boot menu」。
