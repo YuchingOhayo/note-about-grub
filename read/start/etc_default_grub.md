@@ -111,6 +111,16 @@ Found background image: /boot/grub/backgrounds/console-background.png
 ...略...
 ```
 
+## 使用案例
+
+* [lubuntu-grub-theme](https://packages.ubuntu.com/jammy/lubuntu-grub-theme)
+
+可以在「[filelist](https://packages.ubuntu.com/jammy/all/lubuntu-grub-theme/filelist)」
+
+找到「/etc/default/grub.d/lubuntu-grub-theme.cfg」。
+
+
+
 ## 深入探索
 
 ``` sh
