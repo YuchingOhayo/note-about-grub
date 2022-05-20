@@ -114,6 +114,9 @@ Found background image: /boot/grub/backgrounds/console-background.png
 
 > 按下「Enter」除了選擇某個選項開機，也會進到「grub console mode」。
 
+> 也可以產生一個檔案「/etc/default/grub.d/background.cfg」來設定「GRUB_BACKGROUND="/boot/grub/backgrounds/console-background.png"」。
+
+
 ## 深入探索
 
 
