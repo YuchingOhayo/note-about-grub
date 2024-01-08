@@ -35,7 +35,7 @@ grand_parent: 專案
 | [pentract](#pentract) | [Pentract](https://github.com/sarancodes/pentract-grub-theme) ([簡介](https://www.gnome-look.org/p/1661288)) | /boot/grub/themes/pentract |
 | [big_sur](#big_sur) | [Big Sur](https://github.com/Teraskull/bigsur-grub2-theme) ([簡介](https://www.gnome-look.org/p/1443844)) | /boot/grub/themes/big_sur |
 | [monterey](#monterey) | [Monterey](https://github.com/sandesh236/monterey-grub-theme) ([簡介](https://www.gnome-look.org/p/1577873)) | /boot/grub/themes/monterey |
-| [atomic](#atomic) | [Atomic](https://github.com/lfelipe1501/Atomic-GRUB2-Theme) ([簡介](https://www.gnome-look.org/p/1443844)) | /boot/grub/themes/atomic |
+| [atomic](#atomic) | [Atomic](https://github.com/lfelipe1501/Atomic-GRUB2-Theme) ([簡介](https://www.gnome-look.org/p/1200710)) | /boot/grub/themes/atomic |
 
 
 ### fzf
